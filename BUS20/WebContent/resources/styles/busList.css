@@ -1,0 +1,85 @@
+@charset "ISO-8859-1";
+
+ .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+
+        .bus-block {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .bus-block:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color:#d8f2f0 ;
+            
+            
+        }
+
+        .bus-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .bus-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .bus-details p {
+            margin: 0;
+        }
+
+        .bus-details .label {
+            font-weight: 500;
+        }
+
+        .bus-details .time {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .bus-details .date {
+            margin-right: 20px;
+        }
+
+        .bus-details .seats {
+            font-weight: bold;
+        }
+
+        .btn-book {
+            background-color: #0069d9;
+            border-color: #007bff;
+            margin-left: 820px;
+        }
+
+        .btn-book:hover {
+            background-color:#4CAF50 ;
+            border-color: #4CAF50;
+        }
+        
+        .green {
+    color: black;
+}
+
+	.black{
+	color: #249630;
+	}
+
+        .red {
+    color: #7d2215;
+}
+
+.bold {
+            font-weight: bold;
+            font-size: 25px;
+            font-family: "Brush Script MT", cursive;
+        }
+        

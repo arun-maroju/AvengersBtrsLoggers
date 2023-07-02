@@ -1,0 +1,551 @@
+@charset "ISO-8859-1";
+
+/* CSS styles for the dashboard */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+    .sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 200px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: width 0.3s;
+        font-size: 20px; 
+    }
+    .sidebar:hover {
+  width: 220px;
+}
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-top: auto;
+      padding-bottom: 500px;
+    }
+    .sidebar li {
+      margin-bottom: 20px;
+    }
+    .sidebar li a {
+     font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .sidebar li a:hover {
+      background-color: #ddd;
+      color:black;
+    }
+    .sidebar-text {
+  margin-left: 10px; /* Adjust the value to increase or decrease the space between the icon and text */
+}
+    
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .user-info img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .user-info span {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .logout-link {
+      position: absolute;
+  bottom: 25px; /* Adjust the value to position the "Logout" link vertically */
+  width: 50%;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .user-details p {
+      margin-bottom: 5px;
+    }
+    .user-details.show {
+      display: block;
+    }
+    .user-details {
+      display: none;
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .dashboard p {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      margin: 0;
+      flex-basis: 50%;
+    }
+    
+    /* Added styles and colors for the user profile */
+    .user-details h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+    .user-details label {
+      font-weight: bold;
+    }
+    .user-details input[type="int"],
+    .user-details input[type="text"],
+    .user-details input[type="double"],
+    .user-details input[type="password"],
+    .user-details input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .user-details button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .user-details button:hover {
+      background-color: #555;
+    }   
+    
+    
+    table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table thead {
+    background-color: #333;
+    color: #fff;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+   .ticket-details {
+      display: none;
+      }
+      .passenger-details {
+      display: none;
+      }
+  .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+}  
+    #ticketDetails{
+    width:100%;
+    
+    }
+    
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.popup-content {
+  margin-bottom: 20px;
+}
+
+.popup-table {
+  width: 100%;
+}
+
+.popup-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.popup-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.popup-table td:first-child {
+  font-weight: bold;
+}
+
+.popup-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.edit-button,
+.delete-button {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    line-height: 1;
+}
+ #editFormContainer {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #editForm {
+        width: 300px;
+    }
+
+    #formTitle {
+        text-align: center;
+    }
+.form-group {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 5px;
+    }
+
+    button[type="submit"] {
+        width: 100px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+    #editFormContainer h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #editFormContainer label {
+        font-weight: bold;
+    }
+
+    #editFormContainer .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    #editFormContainer .form-group label {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    #editFormContainer .form-group input[type="text"],
+    #editFormContainer .form-group input[type="number"],
+    #editFormContainer .form-group select {
+        font-size: 16px;
+        width: 300px; 
+    }
+
+    #editFormContainer button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+  .dashboard2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .dashboard {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .stat {
+    margin-bottom: 10px;
+ border-radius: 20px; 
+  }
+
+  .stat-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+  }
+
+  .stat-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .stat strong {
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+    padding: 8px 12px;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-item:nth-child(2n) {
+    background-color: #f2f2f2;
+  }
+  
+  .stat-item-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  
+ #preview-button,
+#cancel-button {
+  background-color: green; /* Change to blue for the preview button if desired */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#preview-button:hover
+{
+ background-color: red;
+}
+#cancel-button:hover {
+  background-color: darkgreen; /* Change to darkblue for the preview button if desired */
+}
+
+#cancel-button {
+  background-color: red;
+}
+/* Rating Popup Styles */
+.rating-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.rating-popup-show {
+  animation: fadeIn 0.3s ease, slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -60%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.rating-popup p {
+  margin: 0 0 10px;
+}
+
+.rating-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rating-star {
+  font-size: 24px;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.rating-star.selected {
+  color: yellow;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #23527c;
+}
+
+#rating-button {
+  background-color: lightblue;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+    border-radius: 5px; 
+}
+
+#rating-button:hover {
+  background-color: darkblue;
+  color:white;
+}
+
+
+/* Style the modal dialog */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+color:black;
+  background-color: #fefefe;
+  margin: 25% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+}
+
+/* Style the logout button and cancel button */
+#logoutBtn,
+#cancelBtn {
+  margin-top: 10px;
+}
+
+ .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        }
+
+        /* Loading spinner styles */
+        .spinner {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 5px solid #fff;
+          border-top-color: #888; /* Change color as needed */
+          animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }

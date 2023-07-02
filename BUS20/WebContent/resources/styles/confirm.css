@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        .passenger-table {
+            margin-top: 20px;
+        }
+
+        .passenger-table th {
+            text-align: center;
+        }
+
+        .passenger-table td {
+            text-align: center;
+        }
+
+        .total-fare {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+          .print-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .buttonStyle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px; /* Apply border-radius for a rounded shape */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle box shadow */
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  background-color: #184a57;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}

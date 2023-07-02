@@ -1,0 +1,240 @@
+@charset "ISO-8859-1";
+#body1 {
+            margin: 0;
+            padding: 50px;
+            font-family: "Brush Script MT", cursive;
+        }
+        .deck-names
+        {
+ 		font-family: "Times New Roman";
+ 		 display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+    
+    .whole-bus-seat-layout{
+     		display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 700px;
+    
+    
+    }
+    
+    
+    
+       .bus-seat-layout {
+        
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        
+          .space-layout {
+          
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+           
+        }
+            .bus-seat-layout1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            height: 463.5px;
+       		}
+       		
+       		.bus-seat1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 87px;
+            margin: 5px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        	}
+       		
+       		
+       	.bus-seat1.selected {
+       		
+            background-color: #2ecc71;
+            color: rgb(256, 256, 256);
+        }
+
+        .bus-seat1.disabled {
+            background-color: #ddd;
+            color: black;
+            cursor: not-allowed;
+        }
+       		
+       		
+       		
+       		
+
+        .bus-seat {
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .bus-seat.selected {
+            background-color: #2ecc71;
+            color: rgb(256, 256, 256);
+        }
+
+        .bus-seat.disabled {
+            background-color: #ddd;
+            color: black;
+            cursor: not-allowed;
+        }
+        
+            .bus-container {            
+            border: 1px solid black;
+            border-top: 20px solid maroon;
+            border-bottom: 3px solid black;
+          	background-color: silver;            
+        }              
+         
+  
+  
+  
+    .btn-addPassengers {
+            background-color: #0069d9;
+            border-color: #007bff;
+            margin-top: 10px;            
+            margin-left: 1000px;
+        }
+
+        .btn-addPassengers:hover {
+            background-color:#4CAF50 ;
+            border-color: #4CAF50;
+        }
+        
+        
+              .bus-block {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .bus-block:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color:#d8f2f0 ;
+            
+            
+        }
+
+        .bus-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .bus-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .bus-details p {
+            margin: 0;
+        }
+
+        .bus-details .label {
+            font-weight: 500;
+        }
+
+        .bus-details .time {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .bus-details .date {
+            margin-right: 20px;
+        }
+
+        .bus-details .seats {
+            font-weight: bold;
+        }
+        
+         
+        .green {
+    color: black;
+}
+
+	.black{
+	color: #249630;
+	}
+
+        .red {
+    color: #7d2215;
+}
+
+.bold {
+            font-weight: bold;
+            font-size: 25px;
+            font-family: "Brush Script MT", cursive;
+        }
+        
+        
+        
+              .rectangle-container {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            margin-top: 0px;
+        }
+        
+        .rectangle {
+            width: 50px;
+            height: 20px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+        
+        .rectangle-text {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        
+           #fare_cal_block{
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: -400px;
+    margin-left:800px;
+    width: 500px;
+    height: 300px;
+    
+    }
+        
