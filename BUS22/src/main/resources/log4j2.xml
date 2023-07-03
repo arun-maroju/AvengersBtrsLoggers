@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n</Property>
+         <!--<Property name="basePath">c:/btrs-log</Property>-->
+                <Property name="basePath">D:/logs/BTRS</Property> 
+        
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <RollingFile name="fileLogger"
+                      fileName="${basePath}/app-%d{yyyy-MM-dd}.log"
+                      filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="userProfileLogger"
+                     fileName="${basePath}/user-profile.log"
+                     filePattern="${basePath}/user-profile-%d{yyyy-MM-dd-HH-mm-ss}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="adminLogger"
+                     fileName="${basePath}/admin.log"
+                     filePattern="${basePath}/admin-%d{yyyy-MM-dd-HH-mm-ss}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+      <RollingFile name="BookingflowLogger"
+                     fileName="${basePath}/Bookingflow.log"
+                     filePattern="${basePath}/admin-%d{yyyy-MM-dd-HH-mm-ss}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="fileLogger"/>
+            <AppenderRef ref="console"/>
+        </Root>
+        <Logger name="com.avengers.bus.controllers.AuthenticationController" level="info" additivity="false">
+            <AppenderRef ref="BookingflowLogger"/>
+        </Logger>
+		<Logger name="com.avengers.bus.controllers.BookingController" level="info" additivity="false">
+            <AppenderRef ref="BookingflowLogger"/>
+        </Logger>
+        <Logger name="com.avengers.bus.controllers.BusSearchController" level="info" additivity="false">
+            <AppenderRef ref="BookingflowLogger"/>
+        </Logger>
+        <Logger name="com.avengers.bus.controllers.EmailController" level="info" additivity="false">
+            <AppenderRef ref="BookingflowLogger"/>
+        </Logger>
+        <Logger name="com.avengers.bus.controllers.PaymentController" level="info" additivity="false">
+            <AppenderRef ref="BookingflowLogger"/>
+        </Logger>
+        <Logger name="com.avengers.bus.controllers.UserProfileController" level="info" additivity="false">
+            <AppenderRef ref="userProfileLogger"/>
+        </Logger>
+        <Logger name="com.avengers.bus.controllers.AdminController" level="debug" additivity="false">
+    		<AppenderRef ref="adminLogger"/>
+		</Logger>
+    </Loggers>
+</Configuration>
