@@ -34,12 +34,12 @@ public class FetchUserImplTest {
 
 	@Test
 	public void testGetUserList() {
-		int userId = 1;
+		int userId = 2;
 
 		List<User> users = new ArrayList<>();
 		User user1 = new User();
-		user1.setUser_id(1);
-		user1.setFull_name("Imran Streak");
+		user1.setUser_id(2);
+		user1.setFull_name("Renu");
 		users.add(user1);
 
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -49,6 +49,24 @@ public class FetchUserImplTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		when(userListDAO.UserList(userId)).thenReturn(users);
+
+		String actualJson = fetchUser.getUserList(userId);
+
+		verify(userListDAO).UserList(userId);
+
+		Assert.assertEquals(actualJson, expectedJson);
+	}
+
+	@Test
+	public void testGetUserListWithEmptyList() {
+		int userId = 12;
+
+		List<User> users = new ArrayList<>();
+
+		ObjectMapper objectMapper = new ObjectMapper();
+		String expectedJson = "[]";
 
 		when(userListDAO.UserList(userId)).thenReturn(users);
 
@@ -70,5 +88,36 @@ public class FetchUserImplTest {
 		fetchUser.add(user);
 
 		verify(userListDAO).updateUser(user);
+	}
+
+	@Test
+	public void testAddUserWithValidUser() {
+		User user = new User();
+		user.setUser_id(1);
+		user.setFull_name("Imran Streak");
+
+		doNothing().when(userListDAO).updateUser(user);
+
+		fetchUser.add(user);
+
+		verify(userListDAO).updateUser(user);
+	}
+
+	@Test
+	public void testEmptyUserListSerializationToJson() {
+		int userId = 1;
+
+		List<User> users = new ArrayList<>();
+
+		ObjectMapper objectMapper = new ObjectMapper();
+		String expectedJson = "[]";
+
+		when(userListDAO.UserList(userId)).thenReturn(users);
+
+		String actualJson = fetchUser.getUserList(userId);
+
+		verify(userListDAO).UserList(userId);
+
+		Assert.assertEquals(actualJson, expectedJson);
 	}
 }
