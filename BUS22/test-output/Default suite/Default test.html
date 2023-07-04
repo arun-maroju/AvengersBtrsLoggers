@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>38/15/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 03 15:49:52 IST 2023</td>
+<td>Started on:</td><td>Tue Jul 04 18:30:37 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (323 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1304 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList()'><b>testGetPastTicketList</b><br>Test class: com.avengers.bus.services.test.FetchUserTicketsImplTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
-	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
-	at com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUsername()'><b>testGetUsername</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching Username for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,10 +114,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace645476639", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace645476639'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
-	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
-	at com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace246994233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace246994233'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching Username for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -142,7 +154,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.test.FetchUserTicketsImplTest@1dd6d4b7</td></tr>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
 <tr>
 <td title='com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetTicketList()'><b>testGetTicketList</b><br>Test class: com.avengers.bus.services.test.FetchUserTicketsImplTest</td>
 <td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
@@ -176,8 +188,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1473313929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1473313929'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
+</pre></div><a href='#' onClick='toggleBox("stack-trace740835659", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace740835659'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
 	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getticketList(FetchUserTicketsImpl.java:37)
 	at com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetTicketList(FetchUserTicketsImplTest.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -210,7 +222,1242 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.test.FetchUserTicketsImplTest@1dd6d4b7</td></tr>
+<td>com.avengers.bus.services.test.FetchUserTicketsImplTest@3dc14f80</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserWallet()'><b>testGetUserWallet</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Wallet for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace206784532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace206784532'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Wallet for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserTravelCount()'><b>testGetUserTravelCount</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1249990700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1249990700'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserCounts()'><b>testGetUserCounts</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Counts for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace549277650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace549277650'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Counts for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserImplTest.testGetUserListException()'><b>testGetUserListException</b><br>Test class: com.avengers.bus.services.test.FetchUserImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace969371592", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace969371592'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserImplTest@4b45c8e4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddeditedPassengers()'><b>testAddeditedPassengers</b><br>Test class: com.avengers.bus.services.test.FetchUserPassengersImplTest</td>
+<td><div><pre>Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+	at com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1231684154", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1231684154'><pre>Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+	at com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserPassengersImplTest@627a890f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.SaveTicketServiceImplTest.testSaveTheTicket()'><b>testSaveTheTicket</b><br>Test class: com.avengers.bus.services.test.SaveTicketServiceImplTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1306)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+	at com.avengers.bus.services.test.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1608412044", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1608412044'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1306)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+	at com.avengers.bus.services.test.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.SaveTicketServiceImplTest@400d1c30</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.TicketDetailsImplTest.testGenerateTicketDetails()'><b>testGenerateTicketDetails</b><br>Test class: com.avengers.bus.services.test.TicketDetailsImplTest</td>
+<td><div><pre>java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.avengers.bus.models.dtoModels.BusSearchListDto.setTrip_date(BusSearchListDto.java:85)
+	at com.avengers.bus.services.test.TicketDetailsImplTest.testGenerateTicketDetails(TicketDetailsImplTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1712941358", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1712941358'><pre>java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.avengers.bus.models.dtoModels.BusSearchListDto.setTrip_date(BusSearchListDto.java:85)
+	at com.avengers.bus.services.test.TicketDetailsImplTest.testGenerateTicketDetails(TicketDetailsImplTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.TicketDetailsImplTest@5d957cf0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserImplTest.testGetUserList()'><b>testGetUserList</b><br>Test class: com.avengers.bus.services.test.FetchUserImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1955126065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1955126065'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserImplTest@4b45c8e4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserPassengersImplTest.testDeleteUserPassengers()'><b>testDeleteUserPassengers</b><br>Test class: com.avengers.bus.services.test.FetchUserPassengersImplTest</td>
+<td><div><pre>Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.test.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+	at com.avengers.bus.services.test.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1221022878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1221022878'><pre>Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.test.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+	at com.avengers.bus.services.test.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserPassengersImplTest@627a890f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserFutureTravelCount()'><b>testGetUserFutureTravelCount</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Future Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace515599904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace515599904'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Future Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserImplTest.testAddUser()'><b>testAddUser</b><br>Test class: com.avengers.bus.services.test.FetchUserImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Adding or updating user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1528002767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1528002767'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Adding or updating user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserImplTest@4b45c8e4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList()'><b>testGetPastTicketList</b><br>Test class: com.avengers.bus.services.test.FetchUserTicketsImplTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
+	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
+	at com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1417854396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1417854396'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
+	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
+	at com.avengers.bus.services.test.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserTicketsImplTest@3dc14f80</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserBookedCount()'><b>testGetUserBookedCount</b><br>Test class: com.avengers.bus.services.test.FetchUserCountsImplTest</td>
+<td><div><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Booked Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace549269634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace549269634'><pre>Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Booked Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.test.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserCountsImplTest@51b11186</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserPassengersImplTest.testAddUserPassengers()'><b>testAddUserPassengers</b><br>Test class: com.avengers.bus.services.test.FetchUserPassengersImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserPassengersImplTest@627a890f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchDetailsImplTest.testGetRouteDetails()'><b>testGetRouteDetails</b><br>Test class: com.avengers.bus.services.test.FetchDetailsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchDetailsImplTest@2c9aeec6</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAllWithEmptyStations()'><b>testListAllWithEmptyStations</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetFutureTicketCollection()'><b>testGetFutureTicketCollection</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetPastTicketCollection()'><b>testGetPastTicketCollection</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchDetailsImplTest.testGetServiceDetails()'><b>testGetServiceDetails</b><br>Test class: com.avengers.bus.services.test.FetchDetailsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchDetailsImplTest@2c9aeec6</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.CancelTicketServiceImplTest.testCancelTicket()'><b>testCancelTicket</b><br>Test class: com.avengers.bus.services.test.CancelTicketServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.CancelTicketServiceImplTest@1a48a582</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusTypeServiceImplTest.testListAll_NoBusTypes()'><b>testListAll_NoBusTypes</b><br>Test class: com.avengers.bus.services.test.BusTypeServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusTypeServiceImplTest@50aa9a91</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetTripCount()'><b>testGetTripCount</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAllWithMultipleStations()'><b>testListAllWithMultipleStations</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetRouteCount()'><b>testGetRouteCount</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.AdminCountsServiceImplTest.getCountsTest()'><b>getCountsTest</b><br>Test class: com.avengers.bus.services.test.AdminCountsServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.AdminCountsServiceImplTest@1b901f7b</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetBusCount()'><b>testGetBusCount</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAllWithNoStations()'><b>testListAllWithNoStations</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.CancelTicketServiceImplTest.cancelTicket_NullBookingId_ReturnsFalse()'><b>cancelTicket_NullBookingId_ReturnsFalse</b><br>Test class: com.avengers.bus.services.test.CancelTicketServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.CancelTicketServiceImplTest@1a48a582</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchGraphDataImplTest.testGetRouteCollection()'><b>testGetRouteCollection</b><br>Test class: com.avengers.bus.services.test.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchGraphDataImplTest@1a1e38ab</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchGraphDataImplTest.testGetTripCollection()'><b>testGetTripCollection</b><br>Test class: com.avengers.bus.services.test.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchGraphDataImplTest@1a1e38ab</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.CheckSeatImplTest.checkAvailability_SeatsAvailable_ReturnsTrue()'><b>checkAvailability_SeatsAvailable_ReturnsTrue</b><br>Test class: com.avengers.bus.services.test.CheckSeatImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.CheckSeatImplTest@5bfdabf3</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAllWithException()'><b>testListAllWithException</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.UserPassengersServiceImplTest.testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList()'><b>testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList</b><br>Test class: com.avengers.bus.services.test.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.UserPassengersServiceImplTest@3b9a2629</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.UserPassengersServiceImplTest.testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList()'><b>testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList</b><br>Test class: com.avengers.bus.services.test.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.UserPassengersServiceImplTest@3b9a2629</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusTypeServiceImplTest.testListAll()'><b>testListAll</b><br>Test class: com.avengers.bus.services.test.BusTypeServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusTypeServiceImplTest@50aa9a91</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAllWithLargeNumberOfStations()'><b>testListAllWithLargeNumberOfStations</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetUserCount()'><b>testGetUserCount</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.CancelTicketServiceImplTest.cancelTicket_InvalidBookingId_ReturnsFalse()'><b>cancelTicket_InvalidBookingId_ReturnsFalse</b><br>Test class: com.avengers.bus.services.test.CancelTicketServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.CancelTicketServiceImplTest@1a48a582</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusListServiceImplTest.testGetBusListWithTravelClass()'><b>testGetBusListWithTravelClass</b><br>Test class: com.avengers.bus.services.test.BusListServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusListServiceImplTest@1221d607</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.UserPassengersServiceImplTest.testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId()'><b>testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId</b><br>Test class: com.avengers.bus.services.test.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.UserPassengersServiceImplTest@3b9a2629</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusListServiceImplTest.testGetBusListWithoutTravelClass()'><b>testGetBusListWithoutTravelClass</b><br>Test class: com.avengers.bus.services.test.BusListServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusListServiceImplTest@1221d607</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusTypeServiceImplTest.testListAll_NullBusTypes()'><b>testListAll_NullBusTypes</b><br>Test class: com.avengers.bus.services.test.BusTypeServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusTypeServiceImplTest@50aa9a91</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetServiceCount()'><b>testGetServiceCount</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.UserPassengersServiceImplTest.testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers()'><b>testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers</b><br>Test class: com.avengers.bus.services.test.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.UserPassengersServiceImplTest@3b9a2629</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchGraphDataImplTest.testGetMonthlyCollection()'><b>testGetMonthlyCollection</b><br>Test class: com.avengers.bus.services.test.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchGraphDataImplTest@1a1e38ab</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.StationServiceImplTest.testListAll()'><b>testListAll</b><br>Test class: com.avengers.bus.services.test.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.StationServiceImplTest@7ef7faa9</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.BusTypeServiceImplTest.testListAll_ReturnsMultipleBusTypes()'><b>testListAll_ReturnsMultipleBusTypes</b><br>Test class: com.avengers.bus.services.test.BusTypeServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.BusTypeServiceImplTest@50aa9a91</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.CheckSeatImplTest.checkAvailability_SeatsNotAvailable_ReturnsFalse()'><b>checkAvailability_SeatsNotAvailable_ReturnsFalse</b><br>Test class: com.avengers.bus.services.test.CheckSeatImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.CheckSeatImplTest@5bfdabf3</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchCountImplTest.testGetCollection()'><b>testGetCollection</b><br>Test class: com.avengers.bus.services.test.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchCountImplTest@58c16efd</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.FetchUserPassengersImplTest.testGetPassengersList()'><b>testGetPassengersList</b><br>Test class: com.avengers.bus.services.test.FetchUserPassengersImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.FetchUserPassengersImplTest@627a890f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.test.UserPassengersServiceImplTest.testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers()'><b>testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers</b><br>Test class: com.avengers.bus.services.test.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.test.UserPassengersServiceImplTest@3b9a2629</td></tr>
 </table><p>
 </body>
 </html>

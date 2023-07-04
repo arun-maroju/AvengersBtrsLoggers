@@ -1,5 +1,7 @@
 package com.avengers.bus.models.viewModels;
 
+import java.util.Objects;
+
 public class AdminCounts {
 	private int userCount;
 	private int busCount;
@@ -93,6 +95,25 @@ public class AdminCounts {
 
 	public void setFutureTicketCollection(int futureTicketCollection) {
 		this.futureTicketCollection = futureTicketCollection;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+		AdminCounts that = (AdminCounts) o;
+		return userCount == that.userCount && busCount == that.busCount && collection == that.collection
+				&& serviceCount == that.serviceCount && routeCount == that.routeCount && tripCount == that.tripCount
+				&& pastTicketCollection == that.pastTicketCollection
+				&& futureTicketCollection == that.futureTicketCollection;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(userCount, busCount, collection, serviceCount, routeCount, tripCount, pastTicketCollection,
+				futureTicketCollection);
 	}
 
 }

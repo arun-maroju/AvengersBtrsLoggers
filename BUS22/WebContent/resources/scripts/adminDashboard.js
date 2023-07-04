@@ -129,6 +129,7 @@ $.ajax({
     
     
     document.getElementById('ticketAmountFilter').addEventListener('change', function() {
+	document.getElementById("spinner").style.display = "flex";
     	  // Function code to be executed when the value of the select changes
     	  var selectedServiceId = this.value;
     	  console.log('Selected Service ID:', selectedServiceId);
@@ -191,14 +192,10 @@ $.ajax({
                     row.appendChild(cell10);
                     tableBody.appendChild(row);
                     
-   					// var actionsCell = document.createElement("td");
-                   // var viewDetailsButton = document.createElement("button");
-                   // viewDetailsButton.textContent = "View Details";
-                   // viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(payment));
-                   // actionsCell.appendChild(viewDetailsButton);
-                   // row.appendChild(actionsCell);
+   					
                     
                 }
+document.getElementById("spinner").style.display = "none";
             },
             error: function(xhr, status, error) {
                 console.error("AJAX request failed: " + status + ", " + error);
@@ -216,6 +213,7 @@ $.ajax({
     
     
     document.getElementById('ticketServiceidFilter').addEventListener('change', function() {
+	document.getElementById("spinner").style.display = "flex";
   	  // Function code to be executed when the value of the select changes
   	  var selectedServiceId = this.value;
   	  console.log('Selected Service ID:', selectedServiceId);
@@ -298,15 +296,11 @@ $.ajax({
                   
                   tableBody.appendChild(row);
                   
-                 // var actionsCell = document.createElement("td");
-                 // var viewDetailsButton = document.createElement("button");
-                 // viewDetailsButton.textContent = "View Passengers";
-                 // viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(ticket));
-                 // actionsCell.appendChild(viewDetailsButton);
-                 // row.appendChild(actionsCell);
+                 
                   
               
               }
+document.getElementById("spinner").style.display = "none";
           },
           error: function(xhr, status, error) {
               console.error("AJAX request failed: " + status + ", " + error);
@@ -324,6 +318,7 @@ $.ajax({
     
     
     document.getElementById('serviceidFilter').addEventListener('change', function() {
+	document.getElementById("spinner").style.display = "flex";
     	  // Function code to be executed when the value of the select changes
     	  var selectedServiceId = this.value;
     	  console.log('Selected Service ID:', selectedServiceId);
@@ -390,7 +385,7 @@ $.ajax({
                       tableBody.appendChild(row);
                       
                     }
-                      
+                     document.getElementById("spinner").style.display = "none"; 
                   }
               },
               error: function(xhr, status, error) {
@@ -424,6 +419,7 @@ $.ajax({
             // ... your code for handling the cancel event
           });
         $('input[name="paymentDatefilter"]').on('apply.daterangepicker', function(ev, picker) {
+	document.getElementById("spinner").style.display = "flex";
           var startDate = picker.startDate;
           var endDate = picker.endDate;
           var dates = [];
@@ -500,7 +496,9 @@ $.ajax({
                       row.appendChild(actionsCell);
                       
                       tableBody.appendChild(row);
+					
                   }
+document.getElementById("spinner").style.display = "none";
               },
               error: function(xhr, status, error) {
                   console.error("AJAX request failed: " + status + ", " + error);
@@ -541,6 +539,7 @@ $.ajax({
         
         
         $('input[name="ticketDatefilter"]').on('apply.daterangepicker', function(ev, picker) {
+			document.getElementById("spinner").style.display = "flex";
           var startDate = picker.startDate;
           var endDate = picker.endDate;
           var dates = [];
@@ -635,6 +634,8 @@ $.ajax({
                       
                       tableBody.appendChild(row);
                   }
+document.getElementById("spinner").style.display = "none";
+
               },
               error: function(xhr, status, error) {
                   console.error("AJAX request failed: " + status + ", " + error);
@@ -674,6 +675,7 @@ $.ajax({
         
         
         $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+			document.getElementById("spinner").style.display = "flex";
           var startDate = picker.startDate;
           var endDate = picker.endDate;
           var dates = [];
@@ -751,6 +753,7 @@ $.ajax({
                     
                       
                   }
+document.getElementById("spinner").style.display = "none";
               },
               error: function(xhr, status, error) {
                   console.error("AJAX request failed: " + status + ", " + error);
@@ -784,6 +787,7 @@ $.ajax({
         }
         
         function showPayments() {
+	document.getElementById("spinner").style.display = "flex";
             $.ajax({
                 url: "adminTicketList", // Replace with the actual URL of your service
                 method: "GET",
@@ -842,7 +846,9 @@ $.ajax({
                         row.appendChild(actionsCell);
                         
                         tableBody.appendChild(row);
+
                     }
+document.getElementById("spinner").style.display = "none";
                 },
                 error: function(xhr, status, error) {
                     console.error("AJAX request failed: " + status + ", " + error);
@@ -859,6 +865,7 @@ $.ajax({
         
         
         function showTickets() {
+	document.getElementById("spinner").style.display = "flex";
             $.ajax({
                 url: "adminTicketList", // Replace with the actual URL of your service
                 method: "GET",
@@ -948,6 +955,7 @@ $.ajax({
                         
                         tableBody.appendChild(row);
                     }
+document.getElementById("spinner").style.display = "none";
                 },
                 error: function(xhr, status, error) {
                     console.error("AJAX request failed: " + status + ", " + error);
@@ -963,6 +971,7 @@ $.ajax({
         }
          function createViewTicketDetailsHandler(routeNumber,source,destination) {
             return function() {
+	document.getElementById("spinner").style.display = "flex";
                 // AJAX call to retrieve route details
                 $.ajax({
                     url: "viewRouteDetails", // Replace with the actual URL of your controller endpoint
@@ -1057,6 +1066,7 @@ $.ajax({
                                 popup.remove();
                                 routePopupContent.style.display = "none";
                             }
+document.getElementById("spinner").style.display = "none";
                         });
                     },
 
@@ -1068,6 +1078,7 @@ $.ajax({
             };
         }
 		   function showRoutes() {
+			document.getElementById("spinner").style.display = "flex";
             $.ajax({
                 url: "routeList", // Replace with the actual URL of your service
                 method: "GET",
@@ -1102,6 +1113,7 @@ $.ajax({
                         
                         tableBody.appendChild(row);
                     }
+document.getElementById("spinner").style.display = "none";
                 },
                 error: function(xhr, status, error) {
                     console.error("AJAX request failed: " + status + ", " + error);
@@ -1118,6 +1130,7 @@ $.ajax({
 
         function createViewRouteDetailsHandler(routeNumber,source,destination) {
             return function() {
+	document.getElementById("spinner").style.display = "flex";
                 // AJAX call to retrieve route details
                 $.ajax({
                     url: "viewRouteDetails", // Replace with the actual URL of your controller endpoint
@@ -1204,7 +1217,7 @@ $.ajax({
                         
                         // Append the popup to the body
                         document.body.appendChild(popup);
-                        
+                        document.getElementById("spinner").style.display = "none";
                         // Close the popup when clicked outside of it
                         
                         popup.addEventListener("click", function(event) {
@@ -1212,6 +1225,7 @@ $.ajax({
                                 popup.remove();
                                 routePopupContent.style.display = "none";
                             }
+
                         });
                     },
 
@@ -1224,7 +1238,7 @@ $.ajax({
         }
  // Assuming you have a date input field with the id "selectedDate"
         var selectedDate = document.getElementById("selectedDate").value;
-
+		
         $.ajax({
           url: "serviceListByDate", // Replace with the actual URL of your controller endpoint
           method: "GET",
@@ -1245,12 +1259,14 @@ $.ajax({
         });
 	
 
-		function pagiNation(){
+		function pagiNation(noServices){
+			
 			showServices(1);
-			var servicesNo=1824;
+			
+			
 			var pageNumbers=document.getElementById("pageNumbers");
 			pageNumbers.innerHTML="";
-			var noOfPages=Math.ceil(servicesNo/100);
+			var noOfPages=Math.ceil(noServices/100);
 			for(i=1;i<=noOfPages;i++)
 			{
 				
@@ -1264,7 +1280,7 @@ $.ajax({
 		}
 
 		function showServices(page) {
-
+			document.getElementById("spinner").style.display = "flex";
             $.ajax({
                 url: "serviceList", // Replace with the actual URL of your service
                 method: "GET",
@@ -1336,6 +1352,7 @@ $.ajax({
                       
                         
                     }
+				document.getElementById("spinner").style.display = "none";
                 },
                 error: function(xhr, status, error) {
                     console.error("AJAX request failed: " + status + ", " + error);
@@ -1348,10 +1365,13 @@ $.ajax({
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "none";
+			
         }
 
         function createpassChartHandler(service){
+	document.getElementById("spinner").style.display = "flex";
         	return function() {
+	
                 $.ajax({
                     url: "viewServicePassengerDetails", // Replace with the actual URL of your controller endpoint
                     method: "GET",
@@ -1367,7 +1387,7 @@ $.ajax({
                         var pass = JSON.parse(response);
                         
                         // Set the values in the popup content
-                        document.getElementById("sid").value = pass[0].serviceId;
+                        document.getElementById("sid").value = service.service_id;
                         var tableBody2 = document.querySelector("#servicePassengerPopupContent table tbody");
                         tableBody2.innerHTML="";
                         
@@ -1375,7 +1395,7 @@ $.ajax({
                         // Iterate over the routes and populate the table
                         for (var i = 0; i < pass.length; i++) {
                             var passenger = pass[i];
-                            document.getElementById("sid").value = passenger.serviceId;
+                           
                             var row = document.createElement("tr");
 
                             var bookingIdCell = document.createElement("td");
@@ -1402,6 +1422,8 @@ $.ajax({
                             
                             tableBody2.appendChild(row);
                         }
+document.getElementById("spinner").style.display = "none";
+
 
                         // Show the popup content
                         popupContent.style.display = "block";
@@ -1437,7 +1459,9 @@ $.ajax({
         
         
         function createViewDetailsHandler(service) {
+	document.getElementById("spinner").style.display = "flex";
             return function() {
+	document.getElementById("spinner").style.display = "flex";
                 $.ajax({
                     url: "viewServiceDetails", // Replace with the actual URL of your controller endpoint
                     method: "GET",
@@ -1481,6 +1505,8 @@ $.ajax({
                         
                         // Append the popup to the body
                         document.body.appendChild(popup);
+
+
                         
                         // Close the popup when clicked outside of it
                         popup.addEventListener("click", function(event) {
@@ -1489,6 +1515,7 @@ $.ajax({
                                 popupContent.style.display = "none";
                             }
                         });
+document.getElementById("spinner").style.display = "none";
                     },
                     error: function(xhr, status, error) {
                         // Handle the error response from the controller
@@ -1504,6 +1531,7 @@ $.ajax({
 
 
         function showBuses() {
+	document.getElementById("spinner").style.display = "flex";
             $.ajax({
                 url: "busList", // Replace with the actual URL of your service
                 method: "GET",
@@ -1544,6 +1572,7 @@ $.ajax({
 
                         tableBody.appendChild(row);
                     }
+document.getElementById("spinner").style.display = "none";
                 },
                 error: function(xhr, status, error) {
                     console.error("AJAX request failed: " + status + ", " + error);

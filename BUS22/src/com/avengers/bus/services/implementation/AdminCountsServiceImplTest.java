@@ -1,4 +1,4 @@
-package com.avengers.bus.services.test;
+package com.avengers.bus.services.implementation;
 
 import static org.mockito.Mockito.when;
 
@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import com.avengers.bus.models.inputModels.SearchBusInput;
 import com.avengers.bus.models.viewModels.AdminCounts;
 import com.avengers.bus.services.contracts.FetchCount;
-import com.avengers.bus.services.implementation.AdminCountsServiceImpl;
 
 public class AdminCountsServiceImplTest {
 

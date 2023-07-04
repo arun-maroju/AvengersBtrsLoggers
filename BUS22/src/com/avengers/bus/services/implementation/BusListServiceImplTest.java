@@ -1,4 +1,4 @@
-package com.avengers.bus.services.test;
+package com.avengers.bus.services.implementation;
 
 import static org.mockito.Mockito.when;
 
@@ -15,7 +15,6 @@ import org.testng.annotations.Test;
 import com.avengers.bus.dao.contracts.BusListDAO;
 import com.avengers.bus.models.dtoModels.BusSearchListDto;
 import com.avengers.bus.models.inputModels.SearchBusInput;
-import com.avengers.bus.services.implementation.BusListServiceImpl;
 
 public class BusListServiceImplTest {
 

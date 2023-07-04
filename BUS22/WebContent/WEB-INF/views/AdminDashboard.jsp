@@ -14,7 +14,7 @@
       <li><h4>AVENGERS BTRS</h4></li>
       <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
       <li><a href="#" onclick="showRoutes()">Routes</a></li>
-      <li><a href="#" onclick="pagiNation()">Services</a></li>
+      <li><a href="#" onclick="pagiNation(${counts.serviceCount})">Services</a></li>
       <li><a href="#" onclick="showBuses()">Buses</a></li>
       <li><a href="#" onclick="showTickets()">Tickets</a></li>
       <li><a href="#" onclick="showPayments()">Payments</a></li>
@@ -33,6 +33,7 @@
   <div>
  <div style="display: flex; justify-content: space-between; align-items: center;">
          </div>
+         
               <div class="dashboard2" id="dashboard2">
                 <h1>Welcome to the Avengers BTRS Admin Dashboard</h1>
                     <h2>Statistics</h2>
@@ -70,6 +71,23 @@
             </div>
         </div>
     </div>
+    <div class="loader-wrapper" id="spinner">
+<div class="truck-wrapper">
+  <div class="truck">
+    <div class="truck-container"></div>
+    <div class="glases"></div>
+    <div class="bonet"></div>
+
+    <div class="base"></div>
+
+    <div class="base-aux"></div>
+    <div class="wheel-back"></div>
+    <div class="wheel-front"></div>
+
+    <div class="smoke"></div>
+  </div>
+</div>
+</div>
      <div id="serviceList">
     <h2>Services</h2>
      <div class="filter-container">
