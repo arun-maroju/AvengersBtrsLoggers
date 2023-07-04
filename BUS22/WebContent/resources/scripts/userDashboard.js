@@ -14,7 +14,7 @@
       document.getElementById("ticketDetails").style.display = "none";
       document.getElementById("passengerDetails").style.display = "none";
       document.getElementById("editFormContainer").style.display = "none";
-            hideBufferingLayer();
+         hideBufferingLayer();
     
   } 
  
@@ -531,6 +531,9 @@
 	         method: "GET",
 	         success: function(response) {
 	             var tickets = JSON.parse(response);
+	              if(tickets==""){
+	             	                  hideBufferingLayer();
+	             }
 	             console.log(tickets);
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
@@ -746,6 +749,9 @@
 	         method: "GET",
 	         success: function(response) {
 	             var tickets = JSON.parse(response);
+	              if(tickets==""){
+	             	                  hideBufferingLayer();
+	             }
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
@@ -947,6 +953,9 @@
 	         method: "GET",
 	         success: function(response) {
 	             var tickets = JSON.parse(response);
+	             if(tickets==""){
+	             	                  hideBufferingLayer();
+	             }
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
@@ -1002,7 +1011,7 @@
 
 	                 
 	                 tableBody.appendChild(row);
-	                       hideBufferingLayer();
+	                  hideBufferingLayer();
 
 	             }
 	         },
@@ -1104,6 +1113,9 @@
 	         method: "GET",
 	         success: function(response) {
 	             var tickets = JSON.parse(response);
+	              if(tickets==""){
+	             	                  hideBufferingLayer();
+	             }
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
@@ -1277,6 +1289,9 @@
 	        method: "GET",
 	        success: function(response) {
 	            var passengers = JSON.parse(response);
+	             if(passengers==""){
+	             	                  hideBufferingLayer();
+	             }
 	            var tableBody = document.querySelector("#passengerDetails table tbody");
 	            tableBody.innerHTML = ""; // Clear existing table rows
 

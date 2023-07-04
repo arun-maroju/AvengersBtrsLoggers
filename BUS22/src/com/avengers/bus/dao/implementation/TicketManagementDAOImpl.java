@@ -22,8 +22,8 @@ public class TicketManagementDAOImpl implements TicketManagementDAO {
 	@Transactional
 	@Override
 	public void saveTicket(Ticket ticket) throws TicketNotPersistedException {
-		throw new TicketNotPersistedException("Ticket Not Booked", ticket);
-		// em.persist(ticket); // Save the ticket entity along with passengers..
+		// throw new TicketNotPersistedException("Ticket Not Booked", ticket);
+		em.persist(ticket); // Save the ticket entity along with passengers..
 
 	}
 
