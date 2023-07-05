@@ -1,0 +1,67 @@
+@charset "ISO-8859-1";
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+input[type="date"],
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.smaller-btn {
+  font-size: 16px;
+  padding: 1px;
+  height: 30px;
+  width: 30px;
+}
+
+#swap-button
+{
+	margin-top: 34px;
+	margin-bottom: 20px;
+}
+
+
+
+
+#homeBody{
+  background-image: url('https://static.abhibus.com/assets/img/bus-seach-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}

@@ -1,0 +1,220 @@
+ body
+  {
+    background-color: white;
+    margin-top: -40px;
+    margin-left: -10px;
+  }
+#navbarLogin {
+  padding-top:20px;
+  margin: 0;
+  width: 100%;
+}
+  
+ #body1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.table-container {
+  flex-grow: 1;
+  max-width: 800px; /* Adjust the max-width to your desired value */
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top:40px;
+  
+}
+
+
+.table-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.table-container table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #333;
+  color: #fff;
+}
+
+.table-container tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-container .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table-container .dropbtn:hover {
+  background-color: #45a049;
+}
+
+.table-container .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.table-container .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.table-container .dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.table-container .dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+.table-container .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.table-container .dropdown:hover .dropbtn {
+  background-color: #45a049;
+}
+
+
+  .container {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right:100px;
+  }
+
+  .h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .passenger-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .passenger-container input,
+  .passenger-container select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+   
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: inline;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    
+  }
+  
+  
+#submitButton {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px; /* Apply border-radius for a rounded shape */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle box shadow */
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: #184a57;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
+
+
+#backButton {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px; /* Apply border-radius for a rounded shape */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle box shadow */
+  cursor: pointer;
+  margin-bottom:50px;
+}
+
+#backButton:hover {
+  background-color: #184a57;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+}
