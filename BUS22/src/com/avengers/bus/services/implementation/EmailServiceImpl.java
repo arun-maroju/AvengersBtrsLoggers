@@ -36,7 +36,7 @@ public class EmailServiceImpl implements EmailService {
 		return OTP;
 	}
 
-	private static void sendEmail(String to, String subject, String body) {
+	public static void sendEmail(String to, String subject, String body) {
 		String host = "smtp.gmail.com";
 		int port = 587;
 		String username = "avengersbtrs@gmail.com";
@@ -72,7 +72,7 @@ public class EmailServiceImpl implements EmailService {
 
 	}
 
-	private static int generateOTP() {
+	public static int generateOTP() {
 		Random random = new Random();
 		int randomNumber = 100000 + random.nextInt(900000);
 		logger.info("Generating randon number for OTP:{}", randomNumber);
