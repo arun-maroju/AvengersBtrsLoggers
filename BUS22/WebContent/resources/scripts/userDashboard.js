@@ -8,7 +8,7 @@
             document.getElementById('buffering-layer').style.display = 'none';
         } 
   
-  function showDashboard() {
+ function showDashboard() {
       document.getElementById("dashboard2").style.display = "grid";
       document.getElementById("userDetails").style.display = "none";
       document.getElementById("ticketDetails").style.display = "none";
@@ -318,6 +318,22 @@
              console.log(tickets);
              var tableBody = document.querySelector("#ticketDetails table tbody");
              tableBody.innerHTML = ""; // Clear existing table rows
+             console.log(tickets.length);
+             
+              if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				 noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+             
              
              // Iterate over the services and populate the table
              for (var i = 0; i < tickets.length; i++) {
@@ -379,12 +395,14 @@
                  hideBufferingLayer();
 
              }
+             }
          },
          error: function(xhr, status, error) {
 			                     hideBufferingLayer();
              console.error("AJAX request failed: " + status + ", " + error);
          }
      });
+   
  	
  	
  	function createPopup(ticket) {
@@ -535,6 +553,23 @@
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
+	             
+	              console.log(tickets.length);
+             
+              if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+   			 
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
 	                 var ticket = tickets[i];
@@ -598,6 +633,7 @@
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -749,6 +785,22 @@
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
+	              console.log(tickets.length);
+             
+              if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
 	                 var ticket = tickets[i];
@@ -799,6 +851,7 @@
 	                 
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -950,6 +1003,22 @@
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
+	              console.log(tickets.length);
+             
+              if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
 	                 var ticket = tickets[i];
@@ -1004,6 +1073,7 @@
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -1107,6 +1177,22 @@
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
 	             
+	              console.log(tickets.length);
+             
+              if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available for rating ";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
 	                 var ticket = tickets[i];
@@ -1156,6 +1242,7 @@
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -1280,6 +1367,22 @@
 	            var tableBody = document.querySelector("#passengerDetails table tbody");
 	            tableBody.innerHTML = ""; // Clear existing table rows
 
+
+             console.log(passengers.length);
+             
+              if (passengers.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No passengers available..";
+        			noTicketsCell.colSpan = 4; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
 	            // Iterate over the passengers and populate the table
 	            for (var i = 0; i < passengers.length; i++) {
 	                var passenger = passengers[i];
@@ -1346,7 +1449,7 @@
 	            var middleIndex = Math.floor(rows.length);
 	            tableBody.insertBefore(addButtonRow, rows[middleIndex]);
 	                  hideBufferingLayer();
-
+}
 	        },
 	        error: function(xhr, status, error) {
 	            console.error("AJAX request failed: " + status + ", " + error);

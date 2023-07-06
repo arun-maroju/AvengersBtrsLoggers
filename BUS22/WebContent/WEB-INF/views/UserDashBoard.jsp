@@ -46,18 +46,29 @@
 </div>
   <div class="content" id="content">
   
-   <!-- Buffering layer -->
-    <div class="overlay" id="buffering-layer">
-        <div class="spinner"></div>
-    </div>
+ <div class="loader-wrapper" id="buffering-layer" >
+<div class="truck-wrapper">
+  <div class="truck">
+    <div class="truck-container"></div>
+    <div class="glases"></div>
+    <div class="bonet"></div>
+
+    <div class="base"> BTRS</div>
+
+    <div class="base-aux"></div>
+    <div class="wheel-back"></div>
+    <div class="wheel-front"></div>
+
+    <div class="smoke"></div>
+  </div>
+</div>
+</div> 
+
     <!-- Your dashboard content goes here -->
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <h1>Welcome to the Avengers BTRS User Dashboard</h1>
     </div>  
-     <!-- Buffering layer -->
-    <div class="overlay" id="buffering-layer">
-        <div class="spinner"></div>
-    </div>
+    
     
 <div class="dashboard2" id="dashboard2">
   <h2>Statistics</h2>

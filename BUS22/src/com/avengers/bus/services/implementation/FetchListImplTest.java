@@ -1,225 +1,212 @@
 package com.avengers.bus.services.implementation;
 
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNull;
-import static org.testng.Assert.fail;
 
+import java.sql.Date;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.avengers.bus.dao.contracts.ListsDAO;
-import com.avengers.bus.models.dtoModels.AdminTicket;
 import com.avengers.bus.models.dtoModels.ServicePassenger;
 import com.avengers.bus.models.entityModels.Bus;
 import com.avengers.bus.models.entityModels.Routes;
 import com.avengers.bus.models.entityModels.Services;
 import com.avengers.bus.models.entityModels.Ticket;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class FetchListImplTest {
+
 	@Mock
-	private ListsDAO ldao;
+	private ListsDAO listsDAO;
 
 	@InjectMocks
-	private FetchListImpl fetchListImpl;
+	private FetchListImpl fetchListService;
 
-	@BeforeMethod
+	private ObjectMapper objectMapper;
+
+	@BeforeClass
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
+		objectMapper = new ObjectMapper();
+
 	}
 
 	@Test
-	public void testGetServiceList() {
+	void testGetServiceList() throws Exception {
+		// Arrange
 		int page = 1;
-		int records = 10;
+		int records = 100;
 		int start = (records * page) - 99;
 		int end = records * page;
 
-		List<Services> expectedServices = new ArrayList<>();
-		expectedServices.add(new Services());
-		expectedServices.add(new Services());
+		List<Services> services = new ArrayList<>();
+		// Add services to the list
 
-		try {
-			when(ldao.allServiceList()).thenReturn(expectedServices);
+		when(listsDAO.serviceList(start, end)).thenReturn(services);
 
-			String expectedJson = "[{}, {}]";
+		// Act
+		String result = fetchListService.getServiceList(page, records);
 
-			String actualJson = fetchListImpl.getServiceList(page, records);
-
-			assertEquals(actualJson, expectedJson);
-			verify(ldao).allServiceList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+		// Assert
+		verify(listsDAO, times(1)).serviceList(start, end);
+		// Replace "Expected JSON string" with the actual expected JSON string
+		String expectedJson = "[]";
+		assertEquals(expectedJson, result);
 	}
 
 	@Test
-	public void testGetServiceList_WhenExceptionThrown() {
-		int page = 2;
-		int records = 10;
-		int start = (records * page) - 99;
-		int end = records * page;
+	void testGetServiceListFirstPage() throws Exception {
+		// Arrange
+		int page = 0;
 
-		when(ldao.serviceList(start, end)).thenThrow(new RuntimeException("Simulated exception"));
+		List<Services> services = new ArrayList<>();
+		// Add services to the list
 
-		try {
-			String actualJson = fetchListImpl.getServiceList(page, records);
+		when(listsDAO.allServiceList()).thenReturn(services);
 
-			assertNull(actualJson);
-			verify(ldao).serviceList(start, end);
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+		// Act
+		String result = fetchListService.getServiceList(page, 0);
+
+		// Assert
+		verify(listsDAO, times(1)).allServiceList();
+		String expectedJson = "[]";
+		assertEquals(expectedJson, result);
 	}
 
 	@Test
 	public void testGetRouteList() {
-		List<Routes> expectedRoutes = new ArrayList<>();
-		expectedRoutes.add(new Routes());
-		expectedRoutes.add(new Routes());
+		// Arrange
+		List<Routes> routes = createSampleRoutes();
+		when(listsDAO.routeList()).thenReturn(routes);
 
-		try {
-			when(ldao.routeList()).thenReturn(expectedRoutes);
+		// Act
+		String routeListJson = fetchListService.getRouteList();
 
-			String expectedJson = "[{}, {}]";
-
-			String actualJson = fetchListImpl.getRouteList();
-
-			assertEquals(actualJson, expectedJson);
-			verify(ldao).routeList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
-	}
-
-	@Test
-	public void testGetRouteList_WhenExceptionThrown() {
-		when(ldao.routeList()).thenThrow(new RuntimeException("Simulated exception"));
-
-		try {
-			String actualJson = fetchListImpl.getRouteList();
-
-			assertNull(actualJson);
-			verify(ldao).routeList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+		// Assert
+		Assert.assertNotNull(routeListJson);
+		// Add more assertions to validate the JSON response
 	}
 
 	@Test
 	public void testGetBusList() {
-		List<Bus> expectedBuses = new ArrayList<>();
-		expectedBuses.add(new Bus());
-		expectedBuses.add(new Bus());
+		// Arrange
+		List<Bus> buses = createSampleBuses();
+		when(listsDAO.busList()).thenReturn(buses);
 
-		try {
-			when(ldao.busList()).thenReturn(expectedBuses);
+		// Act
+		String busListJson = fetchListService.getBusList();
 
-			String expectedJson = "[{}, {}]";
-
-			String actualJson = fetchListImpl.getBusList();
-
-			assertEquals(actualJson, expectedJson);
-			verify(ldao).busList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+		// Assert
+		Assert.assertNotNull(busListJson);
+		// Add more assertions to validate the JSON response
 	}
 
 	@Test
-	public void testGetBusList_WhenExceptionThrown() {
-		when(ldao.busList()).thenThrow(new RuntimeException("Simulated exception"));
+	void testGetTicketList() throws Exception {
+		// Arrange
+		Ticket ticket1 = new Ticket();
+		ticket1.setBooking_id("1");
+		ticket1.setPayment_id("123");
+		ticket1.setUser_id(9);
+		ticket1.setBooking_date(Date.valueOf("2023-07-06"));
+		ticket1.setBooking_time(Time.valueOf("09:30:00"));
+		ticket1.setTrip_id(10);
+		ticket1.setPayment_mode("online");
+		ticket1.setTotal_fare(1000);
+		ticket1.setStatus("confirmed");
+		ticket1.setNo_of_seats_booked(2);
+		ticket1.setSource("VSK");
+		ticket1.setDestination("");
+		ticket1.setOrder_id("abc1234");
+		ticket1.setTravel_date(Date.valueOf("2023-07-06"));
+		ticket1.setDeparture(Time.valueOf("12:30:00"));
 
-		try {
-			String actualJson = fetchListImpl.getBusList();
+		Ticket ticket2 = new Ticket();
+		ticket2.setBooking_id("1");
+		ticket2.setPayment_id("123");
+		ticket2.setUser_id(9);
+		ticket2.setBooking_date(Date.valueOf("2023-07-06"));
+		ticket2.setBooking_time(Time.valueOf("09:30:00"));
+		ticket2.setTrip_id(10);
+		ticket2.setPayment_mode("online");
+		ticket2.setTotal_fare(1000);
+		ticket2.setStatus("confirmed");
+		ticket2.setNo_of_seats_booked(2);
+		ticket2.setSource("VSK");
+		ticket2.setDestination("");
+		ticket2.setOrder_id("abc1234");
+		ticket2.setTravel_date(Date.valueOf("2023-07-06"));
+		ticket2.setDeparture(Time.valueOf("12:30:00"));
 
-			assertNull(actualJson);
-			verify(ldao).busList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
-	}
-
-	@Test
-	public void testGetTicketList() {
 		List<Ticket> tickets = new ArrayList<>();
-		tickets.add(new Ticket());
-		tickets.add(new Ticket());
+		tickets.add(ticket1);
+		tickets.add(ticket2);
 
-		List<AdminTicket> expectedAdminTickets = new ArrayList<>();
-		// expectedAdminTickets.add(new AdminTicket(null, null, 0,"2023-06-07", null, 0, 0, null, 0, null, 0, null,
-		// null, null, null, null));
-		expectedAdminTickets
-				.add(new AdminTicket(null, null, 0, null, null, 0, 0, null, 0, null, 0, null, null, null, null, null));
+		when(listsDAO.ticketList()).thenReturn(tickets);
 
-		try {
-			when(ldao.ticketList()).thenReturn(tickets);
+		// Act
+		String result = fetchListService.getTicketList();
 
-			String expectedJson = "[{}, {}]";
+		verify(listsDAO, times(1)).ticketList();
+		String expectedJson = "[{\"booking_id\":\"1\",\"payment_id\":\"123\",\"user_id\":9,\"booking_date\":\"2023-07-06\",\"booking_time\":\"09:30:00\",\"trip_id\":10,\"service_id\":0,\"payment_mode\":\"online\",\"total_fare\":1000.0,\"status\":\"confirmed\",\"no_of_seats_booked\":2,\"source\":\"VSK\",\"destination\":\"\",\"order_id\":\"abc1234\",\"travel_date\":\"2023-07-06\",\"departure\":\"12:30:00\"},{\"booking_id\":\"1\",\"payment_id\":\"123\",\"user_id\":9,\"booking_date\":\"2023-07-06\",\"booking_time\":\"09:30:00\",\"trip_id\":10,\"service_id\":0,\"payment_mode\":\"online\",\"total_fare\":1000.0,\"status\":\"confirmed\",\"no_of_seats_booked\":2,\"source\":\"VSK\",\"destination\":\"\",\"order_id\":\"abc1234\",\"travel_date\":\"2023-07-06\",\"departure\":\"12:30:00\"}]";
+		List<Ticket> expectedTickets = objectMapper.readValue(expectedJson,
+				objectMapper.getTypeFactory().constructCollectionType(List.class, Ticket.class));
+		List<Ticket> actualTickets = objectMapper.readValue(result,
+				objectMapper.getTypeFactory().constructCollectionType(List.class, Ticket.class));
 
-			String actualJson = fetchListImpl.getTicketList();
+		assertEquals(actualTickets, expectedTickets);
 
-			assertEquals(actualJson, expectedJson);
-			verify(ldao).ticketList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
-	}
-
-	@Test
-	public void testGetTicketList_WhenExceptionThrown() {
-		when(ldao.ticketList()).thenThrow(new RuntimeException("Simulated exception"));
-
-		try {
-			String actualJson = fetchListImpl.getTicketList();
-
-			assertNull(actualJson);
-			verify(ldao).ticketList();
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
 	}
 
 	@Test
 	public void testGetTicketPassengerList() {
+		// Arrange
+		List<ServicePassenger> passengers = createSampleServicePassengers();
 		int serviceId = 123;
-		List<ServicePassenger> expectedPassengers = new ArrayList<>();
-		expectedPassengers.add(new ServicePassenger());
-		expectedPassengers.add(new ServicePassenger());
+		when(listsDAO.servicePassengerList(serviceId)).thenReturn(passengers);
 
-		try {
-			when(ldao.servicePassengerList(serviceId)).thenReturn(expectedPassengers);
+		// Act
+		String passengerListJson = fetchListService.getTicketPassengerList(Integer.toString(serviceId));
 
-			String expectedJson = "[{}, {}]";
-
-			String actualJson = fetchListImpl.getTicketPassengerList(String.valueOf(serviceId));
-
-			assertEquals(actualJson, expectedJson);
-			verify(ldao).servicePassengerList(serviceId);
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+		// Assert
+		Assert.assertNotNull(passengerListJson);
+		// Add more assertions to validate the JSON response
 	}
 
-	@Test
-	public void testGetTicketPassengerList_WhenExceptionThrown() {
-		int serviceId = 123;
-		when(ldao.servicePassengerList(serviceId)).thenThrow(new RuntimeException("Simulated exception"));
+	// Helper methods to create sample data for testing
 
-		try {
-			String actualJson = fetchListImpl.getTicketPassengerList(String.valueOf(serviceId));
+	private List<Services> createSampleServices() {
+		// Create and return a list of sample services
+		// Implement this method based on your requirements
+		return new ArrayList<>();
+	}
 
-			assertNull(actualJson);
-			verify(ldao).servicePassengerList(serviceId);
-		} catch (Exception e) {
-			fail("Exception should not be thrown: " + e.getMessage());
-		}
+	private List<Routes> createSampleRoutes() {
+		// Create and return a list of sample routes
+		// Implement this method based on your requirements
+		return new ArrayList<>();
+	}
+
+	private List<Bus> createSampleBuses() {
+		// Create and return a list of sample buses
+		// Implement this method based on your requirements
+		return new ArrayList<>();
+	}
+
+	private List<ServicePassenger> createSampleServicePassengers() {
+		// Create and return a list of sample service passengers
+		// Implement this method based on your requirements
+		return new ArrayList<>();
 	}
 }

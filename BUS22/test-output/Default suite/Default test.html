@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/10/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>52/9/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 05 15:40:07 IST 2023</td>
+<td>Started on:</td><td>Thu Jul 06 14:57:07 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (727 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2716 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList()'><b>testGetBusList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;bus_id&quot;:0,&quot;regno&quot;:null,&quot;type_id&quot;:0,&quot;bus_no_seats&quot;:0,&quot;bus_status&quot;:null},{&quot;bus_id&quot;:0,&quot;regno&quot;:null,&quot;type_id&quot;:0,&quot;bus_no_seats&quot;:0,&quot;bus_status&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList(FetchListImplTest.java:129)
+<td title='com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers()'><b>testAddeditedPassengers</b><br>Test class: com.avengers.bus.services.implementation.FetchUserPassengersImplTest</td>
+<td><div><pre>Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,93 +117,19 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2125903542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2125903542'><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;bus_id&quot;:0,&quot;regno&quot;:null,&quot;type_id&quot;:0,&quot;bus_no_seats&quot;:0,&quot;bus_status&quot;:null},{&quot;bus_id&quot;:0,&quot;regno&quot;:null,&quot;type_id&quot;:0,&quot;bus_no_seats&quot;:0,&quot;bus_status&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList(FetchListImplTest.java:129)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
-<tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList()'><b>testGetTicketPassengerList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;service_id&quot;:0,&quot;booking_id&quot;:null,&quot;seat_no&quot;:0,&quot;passenger_name&quot;:null,&quot;age&quot;:0,&quot;gender&quot;:null},{&quot;service_id&quot;:0,&quot;booking_id&quot;:null,&quot;seat_no&quot;:0,&quot;passenger_name&quot;:null,&quot;age&quot;:0,&quot;gender&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList(FetchListImplTest.java:204)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace208350681", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace208350681'><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;service_id&quot;:0,&quot;booking_id&quot;:null,&quot;seat_no&quot;:0,&quot;passenger_name&quot;:null,&quot;age&quot;:0,&quot;gender&quot;:null},{&quot;service_id&quot;:0,&quot;booking_id&quot;:null,&quot;seat_no&quot;:0,&quot;passenger_name&quot;:null,&quot;age&quot;:0,&quot;gender&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList(FetchListImplTest.java:204)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1542192971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1542192971'><pre>Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -230,309 +160,265 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
-<tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList_WhenExceptionThrown()'><b>testGetServiceList_WhenExceptionThrown</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList_WhenExceptionThrown(FetchListImplTest.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1462661081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1462661081'><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList_WhenExceptionThrown(FetchListImplTest.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
-<tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList()'><b>testGetRouteList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;route_id&quot;:0,&quot;source&quot;:null,&quot;destination&quot;:null},{&quot;route_id&quot;:0,&quot;source&quot;:null,&quot;destination&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList(FetchListImplTest.java:95)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace537524656", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace537524656'><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[{&quot;route_id&quot;:0,&quot;source&quot;:null,&quot;destination&quot;:null},{&quot;route_id&quot;:0,&quot;source&quot;:null,&quot;destination&quot;:null}]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList(FetchListImplTest.java:95)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
-<tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList()'><b>testGetServiceList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList(FetchListImplTest.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1436944861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1436944861'><pre>java.lang.AssertionError: expected [[{}, {}]] but found [[]]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList(FetchListImplTest.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
-<tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList_WhenExceptionThrown()'><b>testGetRouteList_WhenExceptionThrown</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList_WhenExceptionThrown(FetchListImplTest.java:112)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace555740147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace555740147'><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList_WhenExceptionThrown(FetchListImplTest.java:112)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
+<td>com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4</td></tr>
 <tr>
 <td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList()'><b>testGetTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: expected [[{}, {}]] but found [null]
+<td><div><pre>java.lang.AssertionError: Lists differ at element [0]: Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] != Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] expected [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]] but found [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1644)
+	at org.testng.Assert.assertEquals(Assert.java:1606)
+	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:168)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace790765218", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace790765218'><pre>java.lang.AssertionError: Lists differ at element [0]: Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] != Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] expected [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]] but found [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1644)
+	at org.testng.Assert.assertEquals(Assert.java:1606)
+	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:168)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable()'><b>testCheckPersistability_SeatsAvailable</b><br>Test class: com.avengers.bus.services.implementation.CheckSeatImplTest</td>
+<td><div><pre>org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable(CheckSeatImplTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1367226395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1367226395'><pre>org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable(CheckSeatImplTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket()'><b>testSaveTheTicket</b><br>Test class: com.avengers.bus.services.implementation.SaveTicketServiceImplTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1306)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace413125065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace413125065'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1306)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.SaveTicketServiceImplTest@1d0fc0bc</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList()'><b>testGetUserList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserImplTest</td>
+<td><div><pre>java.lang.AssertionError: expected [[{&quot;userId&quot;:1,&quot;name&quot;:&quot;John&quot;},{&quot;userId&quot;:1,&quot;name&quot;:&quot;Jane&quot;}]] but found [[{&quot;user_id&quot;:1,&quot;email&quot;:null,&quot;password&quot;:null,&quot;full_name&quot;:&quot;Imran Streak&quot;,&quot;age&quot;:0,&quot;gender&quot;:null,&quot;cashback&quot;:0.0,&quot;wallet&quot;:0.0}]]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:169)
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -561,15 +447,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace59382310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace59382310'><pre>java.lang.AssertionError: expected [[{}, {}]] but found [null]
+</pre></div><a href='#' onClick='toggleBox("stack-trace69927299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace69927299'><pre>java.lang.AssertionError: expected [[{&quot;userId&quot;:1,&quot;name&quot;:&quot;John&quot;},{&quot;userId&quot;:1,&quot;name&quot;:&quot;Jane&quot;}]] but found [[{&quot;user_id&quot;:1,&quot;email&quot;:null,&quot;password&quot;:null,&quot;full_name&quot;:&quot;Imran Streak&quot;,&quot;age&quot;:0,&quot;gender&quot;:null,&quot;cashback&quot;:0.0,&quot;wallet&quot;:0.0}]]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:169)
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:55)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -600,12 +486,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
+<td>com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87</td></tr>
 <tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList_WhenExceptionThrown()'><b>testGetTicketList_WhenExceptionThrown</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList_WhenExceptionThrown(FetchListImplTest.java:186)
+<td title='com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers()'><b>testDeleteUserPassengers</b><br>Test class: com.avengers.bus.services.implementation.FetchUserPassengersImplTest</td>
+<td><div><pre>Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -634,10 +529,19 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1145882513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1145882513'><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList_WhenExceptionThrown(FetchListImplTest.java:186)
+</pre></div><a href='#' onClick='toggleBox("stack-trace840190780", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace840190780'><pre>Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -668,12 +572,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
+<td>com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4</td></tr>
 <tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList_WhenExceptionThrown()'><b>testGetTicketPassengerList_WhenExceptionThrown</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
+<td title='com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException()'><b>testGetUserListException</b><br>Test class: com.avengers.bus.services.implementation.FetchUserImplTest</td>
+<td><div><pre>java.lang.AssertionError: expected [null] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList_WhenExceptionThrown(FetchListImplTest.java:222)
+	at org.testng.Assert.failNotSame(Assert.java:1574)
+	at org.testng.Assert.assertNull(Assert.java:1507)
+	at org.testng.Assert.assertNull(Assert.java:1495)
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:73)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -702,10 +609,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1066949254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1066949254'><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
+</pre></div><a href='#' onClick='toggleBox("stack-trace367165934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace367165934'><pre>java.lang.AssertionError: expected [null] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList_WhenExceptionThrown(FetchListImplTest.java:222)
+	at org.testng.Assert.failNotSame(Assert.java:1574)
+	at org.testng.Assert.assertNull(Assert.java:1507)
+	at org.testng.Assert.assertNull(Assert.java:1495)
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:73)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -736,12 +646,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
+<td>com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87</td></tr>
 <tr>
-<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList_WhenExceptionThrown()'><b>testGetBusList_WhenExceptionThrown</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
-<td><div><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList_WhenExceptionThrown(FetchListImplTest.java:146)
+<td title='com.avengers.bus.services.implementation.CancelTicketServiceImplTest.testRefund()'><b>testRefund</b><br>Test class: com.avengers.bus.services.implementation.CancelTicketServiceImplTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.razorpay.PaymentClient.refund(String)&quot; because &quot;razorpay.payments&quot; is null
+	at com.avengers.bus.services.implementation.CancelTicketServiceImplTest.testRefund(CancelTicketServiceImplTest.java:62)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -770,10 +679,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace704894556", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace704894556'><pre>java.lang.AssertionError: Exception should not be thrown: Simulated exception
-	at org.testng.Assert.fail(Assert.java:111)
-	at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList_WhenExceptionThrown(FetchListImplTest.java:146)
+</pre></div><a href='#' onClick='toggleBox("stack-trace327730277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace327730277'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.razorpay.PaymentClient.refund(String)&quot; because &quot;razorpay.payments&quot; is null
+	at com.avengers.bus.services.implementation.CancelTicketServiceImplTest.testRefund(CancelTicketServiceImplTest.java:62)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -804,7 +712,362 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.avengers.bus.services.implementation.FetchListImplTest@56e8b606</td></tr>
+<td>com.avengers.bus.services.implementation.CancelTicketServiceImplTest@3e265811</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable()'><b>testCheckPersistability_SeatsNotAvailable</b><br>Test class: com.avengers.bus.services.implementation.CheckSeatImplTest</td>
+<td><div><pre>org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable(CheckSeatImplTest.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2011457497", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2011457497'><pre>org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable(CheckSeatImplTest.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetTripCount()'><b>testGetTripCount</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchGraphDataImplTest.testGetMonthlyCollection()'><b>testGetMonthlyCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.UserPassengersServiceImplTest.testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers()'><b>testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers</b><br>Test class: com.avengers.bus.services.implementation.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetServiceCount()'><b>testGetServiceCount</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetUserCount()'><b>testGetUserCount</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchDetailsImplTest.testGetRouteDetails()'><b>testGetRouteDetails</b><br>Test class: com.avengers.bus.services.implementation.FetchDetailsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchDetailsImplTest@53b9952f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.UserPassengersServiceImplTest.testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList()'><b>testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList</b><br>Test class: com.avengers.bus.services.implementation.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAllWithEmptyStations()'><b>testListAllWithEmptyStations</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet()'><b>testGetUserWallet</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList()'><b>testGetBusList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts()'><b>testGetUserCounts</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testGetPassengersList()'><b>testGetPassengersList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserPassengersImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.BusTypeServiceImplTest.testListAll()'><b>testListAll</b><br>Test class: com.avengers.bus.services.implementation.BusTypeServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.BusTypeServiceImplTest@7e5c8c80</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetPastTicketList()'><b>testGetPastTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckAvailability_SeatsAvailable()'><b>testCheckAvailability_SeatsAvailable</b><br>Test class: com.avengers.bus.services.implementation.CheckSeatImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetratingTicketList()'><b>testGetratingTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithTravelClass()'><b>testGetBusListWithTravelClass</b><br>Test class: com.avengers.bus.services.implementation.BusListServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.UserPassengersServiceImplTest.testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers()'><b>testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers</b><br>Test class: com.avengers.bus.services.implementation.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername()'><b>testGetUsername</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.UserPassengersServiceImplTest.testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId()'><b>testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId</b><br>Test class: com.avengers.bus.services.implementation.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetBusCount()'><b>testGetBusCount</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceListFirstPage()'><b>testGetServiceListFirstPage</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetRouteCount()'><b>testGetRouteCount</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.TicketDetailsImplTest.testGenerateTicketDetails()'><b>testGenerateTicketDetails</b><br>Test class: com.avengers.bus.services.implementation.TicketDetailsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.TicketDetailsImplTest@1735e1c4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetticketList()'><b>testGetticketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithoutTravelClass()'><b>testGetBusListWithoutTravelClass</b><br>Test class: com.avengers.bus.services.implementation.BusListServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAllWithNoStations()'><b>testListAllWithNoStations</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList()'><b>testGetServiceList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddUserPassengers()'><b>testAddUserPassengers</b><br>Test class: com.avengers.bus.services.implementation.FetchUserPassengersImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchGraphDataImplTest.testGetTripCollection()'><b>testGetTripCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchDetailsImplTest.testGetServiceDetails()'><b>testGetServiceDetails</b><br>Test class: com.avengers.bus.services.implementation.FetchDetailsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchDetailsImplTest@53b9952f</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.UserPassengersServiceImplTest.testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList()'><b>testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList</b><br>Test class: com.avengers.bus.services.implementation.UserPassengersServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetFutureTicketCollection()'><b>testGetFutureTicketCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetPastTicketCollection()'><b>testGetPastTicketCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAllWithLargeNumberOfStations()'><b>testListAllWithLargeNumberOfStations</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount()'><b>testGetUserTravelCount</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.CancelTicketServiceImplTest.testCancelTicket()'><b>testCancelTicket</b><br>Test class: com.avengers.bus.services.implementation.CancelTicketServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.CancelTicketServiceImplTest@3e265811</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.AdminCountsServiceImplTest.getCountsTest()'><b>getCountsTest</b><br>Test class: com.avengers.bus.services.implementation.AdminCountsServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.AdminCountsServiceImplTest@7da9b32c</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetCancelTicketList()'><b>testGetCancelTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount()'><b>testGetUserBookedCount</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount()'><b>testGetUserFutureTravelCount</b><br>Test class: com.avengers.bus.services.implementation.FetchUserCountsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList()'><b>testGetTicketPassengerList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchCountImplTest.testGetCollection()'><b>testGetCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchCountImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchCountImplTest@574e4184</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList()'><b>testGetRouteList</b><br>Test class: com.avengers.bus.services.implementation.FetchListImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchListImplTest@2003edf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAllWithException()'><b>testListAllWithException</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetFutureTicketList()'><b>testGetFutureTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser()'><b>testAddUser</b><br>Test class: com.avengers.bus.services.implementation.FetchUserImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckAvailability_SeatsNotAvailable()'><b>testCheckAvailability_SeatsNotAvailable</b><br>Test class: com.avengers.bus.services.implementation.CheckSeatImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAllWithMultipleStations()'><b>testListAllWithMultipleStations</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testUpdateRatingTicketList()'><b>testUpdateRatingTicketList</b><br>Test class: com.avengers.bus.services.implementation.FetchUserTicketsImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.FetchGraphDataImplTest.testGetRouteCollection()'><b>testGetRouteCollection</b><br>Test class: com.avengers.bus.services.implementation.FetchGraphDataImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68</td></tr>
+<tr>
+<td title='com.avengers.bus.services.implementation.StationServiceImplTest.testListAll()'><b>testListAll</b><br>Test class: com.avengers.bus.services.implementation.StationServiceImplTest</td>
+<td></td>
+<td>0</td>
+<td>com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf</td></tr>
 </table><p>
 </body>
 </html>

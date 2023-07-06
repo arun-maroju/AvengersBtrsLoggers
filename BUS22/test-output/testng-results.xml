@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="0" failed="10" skipped="0">
+<testng-results ignored="0" total="61" passed="52" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-05T15:40:07 IST" name="Default suite" finished-at="2023-07-05T15:40:07 IST" duration-ms="727">
+  <suite started-at="2023-07-06T14:57:07 IST" name="Default suite" finished-at="2023-07-06T14:57:10 IST" duration-ms="2716">
     <groups>
     </groups>
-    <test started-at="2023-07-05T15:40:07 IST" name="Default test" finished-at="2023-07-05T15:40:07 IST" duration-ms="727">
-      <class name="com.avengers.bus.services.implementation.FetchListImplTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="354" status="PASS">
+    <test started-at="2023-07-06T14:57:07 IST" name="Default test" finished-at="2023-07-06T14:57:10 IST" duration-ms="2716">
+      <class name="com.avengers.bus.services.implementation.CancelTicketServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.CancelTicketServiceImplTest@3e265811]" started-at="2023-07-06T14:57:07 IST" name="setUp" finished-at="2023-07-06T14:57:08 IST" duration-ms="746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetBusList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetBusList" finished-at="2023-07-05T15:40:07 IST" duration-ms="267" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="testCancelTicket()[pri:0, instance:com.avengers.bus.services.implementation.CancelTicketServiceImplTest@3e265811]" started-at="2023-07-06T14:57:08 IST" name="testCancelTicket" finished-at="2023-07-06T14:57:08 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCancelTicket -->
+        <test-method signature="testRefund()[pri:0, instance:com.avengers.bus.services.implementation.CancelTicketServiceImplTest@3e265811]" started-at="2023-07-06T14:57:08 IST" name="testRefund" finished-at="2023-07-06T14:57:08 IST" duration-ms="414" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[expected [[{}, {}]] but found [[{"bus_id":0,"regno":null,"type_id":0,"bus_no_seats":0,"bus_status":null},{"bus_id":0,"regno":null,"type_id":0,"bus_no_seats":0,"bus_status":null}]]]]>
+              <![CDATA[Cannot invoke "com.razorpay.PaymentClient.refund(String)" because "razorpay.payments" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{}, {}]] but found [[{"bus_id":0,"regno":null,"type_id":0,"bus_no_seats":0,"bus_status":null},{"bus_id":0,"regno":null,"type_id":0,"bus_no_seats":0,"bus_status":null}]]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList(FetchListImplTest.java:129)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.razorpay.PaymentClient.refund(String)" because "razorpay.payments" is null
+at com.avengers.bus.services.implementation.CancelTicketServiceImplTest.testRefund(CancelTicketServiceImplTest.java:62)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,273 +53,598 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRefund -->
+      </class> <!-- com.avengers.bus.services.implementation.CancelTicketServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.CheckSeatImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588]" started-at="2023-07-06T14:57:08 IST" name="setUp" finished-at="2023-07-06T14:57:08 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCheckAvailability_SeatsAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588]" started-at="2023-07-06T14:57:08 IST" name="testCheckAvailability_SeatsAvailable" finished-at="2023-07-06T14:57:08 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAvailability_SeatsAvailable -->
+        <test-method signature="testCheckAvailability_SeatsNotAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588]" started-at="2023-07-06T14:57:08 IST" name="testCheckAvailability_SeatsNotAvailable" finished-at="2023-07-06T14:57:08 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAvailability_SeatsNotAvailable -->
+        <test-method signature="testCheckPersistability_SeatsAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588]" started-at="2023-07-06T14:57:08 IST" name="testCheckPersistability_SeatsAvailable" finished-at="2023-07-06T14:57:08 IST" duration-ms="49" status="FAIL">
+          <exception class="org.mockito.exceptions.misusing.WrongTypeOfReturnValue">
+            <message>
+              <![CDATA[
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable(CheckSeatImplTest.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.misusing.WrongTypeOfReturnValue -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckPersistability_SeatsAvailable -->
+        <test-method signature="testCheckPersistability_SeatsNotAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@556e4588]" started-at="2023-07-06T14:57:08 IST" name="testCheckPersistability_SeatsNotAvailable" finished-at="2023-07-06T14:57:08 IST" duration-ms="5" status="FAIL">
+          <exception class="org.mockito.exceptions.misusing.WrongTypeOfReturnValue">
+            <message>
+              <![CDATA[
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable(CheckSeatImplTest.java:115)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.misusing.WrongTypeOfReturnValue -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckPersistability_SeatsNotAvailable -->
+      </class> <!-- com.avengers.bus.services.implementation.CheckSeatImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchDetailsImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@53b9952f]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetRouteDetails()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@53b9952f]" started-at="2023-07-06T14:57:09 IST" name="testGetRouteDetails" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRouteDetails -->
+        <test-method signature="testGetServiceDetails()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@53b9952f]" started-at="2023-07-06T14:57:09 IST" name="testGetServiceDetails" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServiceDetails -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchDetailsImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserTicketsImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:08 IST" name="setUp" finished-at="2023-07-06T14:57:08 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetCancelTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:08 IST" name="testGetCancelTicketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCancelTicketList -->
+        <test-method signature="testGetFutureTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:09 IST" name="testGetFutureTicketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFutureTicketList -->
+        <test-method signature="testGetPastTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:09 IST" name="testGetPastTicketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPastTicketList -->
+        <test-method signature="testGetratingTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:09 IST" name="testGetratingTicketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetratingTicketList -->
+        <test-method signature="testGetticketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:09 IST" name="testGetticketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetticketList -->
+        <test-method signature="testUpdateRatingTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@4f5df012]" started-at="2023-07-06T14:57:09 IST" name="testUpdateRatingTicketList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateRatingTicketList -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserTicketsImplTest -->
+      <class name="com.avengers.bus.services.implementation.BusListServiceImplTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf]" started-at="2023-07-06T14:57:09 IST" name="beforeMethod" finished-at="2023-07-06T14:57:09 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testGetBusListWithTravelClass()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf]" started-at="2023-07-06T14:57:09 IST" name="testGetBusListWithTravelClass" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusListWithTravelClass -->
+        <test-method signature="testGetBusListWithoutTravelClass()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf]" started-at="2023-07-06T14:57:09 IST" name="testGetBusListWithoutTravelClass" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusListWithoutTravelClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@1e12fdcf]" started-at="2023-07-06T14:57:09 IST" name="beforeMethod" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- com.avengers.bus.services.implementation.BusListServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserPassengersImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4]" started-at="2023-07-06T14:57:09 IST" name="testAddUserPassengers" finished-at="2023-07-06T14:57:09 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUserPassengers -->
+        <test-method signature="testAddeditedPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4]" started-at="2023-07-06T14:57:09 IST" name="testAddeditedPassengers" finished-at="2023-07-06T14:57:09 IST" duration-ms="20" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.ArgumentsAreDifferent">
+            <message>
+              <![CDATA[
+Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocation has different arguments:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.ArgumentsAreDifferent -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddeditedPassengers -->
+        <test-method signature="testDeleteUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4]" started-at="2023-07-06T14:57:09 IST" name="testDeleteUserPassengers" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.ArgumentsAreDifferent">
+            <message>
+              <![CDATA[
+Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocation has different arguments:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.ArgumentsAreDifferent -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUserPassengers -->
+        <test-method signature="testGetPassengersList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@7bdddfa4]" started-at="2023-07-06T14:57:09 IST" name="testGetPassengersList" finished-at="2023-07-06T14:57:09 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPassengersList -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserPassengersImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchCountImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetBusCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetBusCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusCount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetCollection" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCollection -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetFutureTicketCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetFutureTicketCollection" finished-at="2023-07-06T14:57:09 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFutureTicketCollection -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetPastTicketCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetPastTicketCollection" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPastTicketCollection -->
+        <test-method signature="testGetRouteCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetRouteCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRouteCount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetServiceCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetServiceCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServiceCount -->
+        <test-method signature="testGetTripCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetTripCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTripCount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetUserCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="testGetUserCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserCount -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@574e4184]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchCountImplTest -->
+      <class name="com.avengers.bus.services.implementation.StationServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAll()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAll" finished-at="2023-07-06T14:57:09 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithEmptyStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAllWithEmptyStations" finished-at="2023-07-06T14:57:09 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithEmptyStations -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithException()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAllWithException" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithException -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithLargeNumberOfStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAllWithLargeNumberOfStations" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithLargeNumberOfStations -->
+        <test-method signature="testListAllWithMultipleStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAllWithMultipleStations" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithMultipleStations -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithNoStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@38f3dbbf]" started-at="2023-07-06T14:57:09 IST" name="testListAllWithNoStations" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithNoStations -->
+      </class> <!-- com.avengers.bus.services.implementation.StationServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.SaveTicketServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.SaveTicketServiceImplTest@1d0fc0bc]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSaveTheTicket()[pri:0, instance:com.avengers.bus.services.implementation.SaveTicketServiceImplTest@1d0fc0bc]" started-at="2023-07-06T14:57:09 IST" name="testSaveTheTicket" finished-at="2023-07-06T14:57:09 IST" duration-ms="7" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+at java.base/java.util.TimSort.sort(TimSort.java:220)
+at java.base/java.util.Arrays.sort(Arrays.java:1306)
+at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+at java.base/java.util.Collections.sort(Collections.java:179)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+at com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveTheTicket -->
+      </class> <!-- com.avengers.bus.services.implementation.SaveTicketServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.UserPassengersServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers" finished-at="2023-07-06T14:57:09 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@70ab1ce0]" started-at="2023-07-06T14:57:09 IST" name="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers -->
+      </class> <!-- com.avengers.bus.services.implementation.UserPassengersServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchListImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:09 IST" name="setUp" finished-at="2023-07-06T14:57:09 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetBusList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:09 IST" name="testGetBusList" finished-at="2023-07-06T14:57:09 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetBusList -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetBusList_WhenExceptionThrown()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetBusList_WhenExceptionThrown" finished-at="2023-07-05T15:40:07 IST" duration-ms="3" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Exception should not be thrown: Simulated exception]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Exception should not be thrown: Simulated exception
-at org.testng.Assert.fail(Assert.java:111)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetBusList_WhenExceptionThrown(FetchListImplTest.java:146)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetBusList_WhenExceptionThrown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetRouteList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetRouteList" finished-at="2023-07-05T15:40:07 IST" duration-ms="3" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [[{}, {}]] but found [[{"route_id":0,"source":null,"destination":null},{"route_id":0,"source":null,"destination":null}]]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{}, {}]] but found [[{"route_id":0,"source":null,"destination":null},{"route_id":0,"source":null,"destination":null}]]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList(FetchListImplTest.java:95)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testGetRouteList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:09 IST" name="testGetRouteList" finished-at="2023-07-06T14:57:09 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetRouteList -->
-        <test-method signature="testGetRouteList_WhenExceptionThrown()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetRouteList_WhenExceptionThrown" finished-at="2023-07-05T15:40:07 IST" duration-ms="2" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Exception should not be thrown: Simulated exception]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Exception should not be thrown: Simulated exception
-at org.testng.Assert.fail(Assert.java:111)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetRouteList_WhenExceptionThrown(FetchListImplTest.java:112)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetRouteList_WhenExceptionThrown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetServiceList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetServiceList" finished-at="2023-07-05T15:40:07 IST" duration-ms="4" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [[{}, {}]] but found [[]]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{}, {}]] but found [[]]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList(FetchListImplTest.java:56)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testGetServiceList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:10 IST" name="testGetServiceList" finished-at="2023-07-06T14:57:10 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetServiceList -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
+        <test-method signature="testGetServiceListFirstPage()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:10 IST" name="testGetServiceListFirstPage" finished-at="2023-07-06T14:57:10 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetServiceList_WhenExceptionThrown()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetServiceList_WhenExceptionThrown" finished-at="2023-07-05T15:40:07 IST" duration-ms="3" status="FAIL">
+        </test-method> <!-- testGetServiceListFirstPage -->
+        <test-method signature="testGetTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:10 IST" name="testGetTicketList" finished-at="2023-07-06T14:57:10 IST" duration-ms="121" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Exception should not be thrown: Simulated exception]]>
+              <![CDATA[Lists differ at element [0]: Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] != Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] expected [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]] but found [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Exception should not be thrown: Simulated exception
-at org.testng.Assert.fail(Assert.java:111)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetServiceList_WhenExceptionThrown(FetchListImplTest.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetServiceList_WhenExceptionThrown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetTicketList" finished-at="2023-07-05T15:40:07 IST" duration-ms="9" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [[{}, {}]] but found [null]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{}, {}]] but found [null]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] != Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null] expected [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]] but found [Ticket [booking_id=1, payment_id=123, user_id=9, booking_date=2023-07-06, booking_time=09:30:00, trip_id=10, service_id=0, payment_mode=online, total_fare=1000.0, status=confirmed, no_of_seats_booked=2, source=VSK, destination=, order_id=abc1234, travel_date=2023-07-06, departure=12:30:00, passengerList=null]]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:169)
+at org.testng.Assert.assertEquals(Assert.java:1644)
+at org.testng.Assert.assertEquals(Assert.java:1606)
+at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList(FetchListImplTest.java:168)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -356,71 +679,82 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetTicketList -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="0" status="PASS">
+        <test-method signature="testGetTicketPassengerList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@2003edf]" started-at="2023-07-06T14:57:10 IST" name="testGetTicketPassengerList" finished-at="2023-07-06T14:57:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTicketPassengerList -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchListImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchGraphDataImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68]" started-at="2023-07-06T14:57:10 IST" name="setUp" finished-at="2023-07-06T14:57:10 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetTicketList_WhenExceptionThrown()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetTicketList_WhenExceptionThrown" finished-at="2023-07-05T15:40:07 IST" duration-ms="2" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Exception should not be thrown: Simulated exception]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Exception should not be thrown: Simulated exception
-at org.testng.Assert.fail(Assert.java:111)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketList_WhenExceptionThrown(FetchListImplTest.java:186)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testGetMonthlyCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68]" started-at="2023-07-06T14:57:10 IST" name="testGetMonthlyCollection" finished-at="2023-07-06T14:57:10 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetTicketList_WhenExceptionThrown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- testGetMonthlyCollection -->
+        <test-method signature="testGetRouteCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68]" started-at="2023-07-06T14:57:10 IST" name="testGetRouteCollection" finished-at="2023-07-06T14:57:10 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRouteCollection -->
+        <test-method signature="testGetTripCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1ec09a68]" started-at="2023-07-06T14:57:10 IST" name="testGetTripCollection" finished-at="2023-07-06T14:57:10 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTripCollection -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchGraphDataImplTest -->
+      <class name="com.avengers.bus.services.implementation.TicketDetailsImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.TicketDetailsImplTest@1735e1c4]" started-at="2023-07-06T14:57:10 IST" name="setUp" finished-at="2023-07-06T14:57:10 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetTicketPassengerList()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetTicketPassengerList" finished-at="2023-07-05T15:40:07 IST" duration-ms="3" status="FAIL">
+        <test-method signature="testGenerateTicketDetails()[pri:0, instance:com.avengers.bus.services.implementation.TicketDetailsImplTest@1735e1c4]" started-at="2023-07-06T14:57:10 IST" name="testGenerateTicketDetails" finished-at="2023-07-06T14:57:10 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGenerateTicketDetails -->
+      </class> <!-- com.avengers.bus.services.implementation.TicketDetailsImplTest -->
+      <class name="com.avengers.bus.services.implementation.AdminCountsServiceImplTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.AdminCountsServiceImplTest@7da9b32c]" started-at="2023-07-06T14:57:10 IST" name="beforeMethod" finished-at="2023-07-06T14:57:10 IST" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="getCountsTest()[pri:0, instance:com.avengers.bus.services.implementation.AdminCountsServiceImplTest@7da9b32c]" started-at="2023-07-06T14:57:10 IST" name="getCountsTest" finished-at="2023-07-06T14:57:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCountsTest -->
+      </class> <!-- com.avengers.bus.services.implementation.AdminCountsServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.BusTypeServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@7e5c8c80]" started-at="2023-07-06T14:57:10 IST" name="setUp" finished-at="2023-07-06T14:57:10 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAll()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@7e5c8c80]" started-at="2023-07-06T14:57:10 IST" name="testListAll" finished-at="2023-07-06T14:57:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll -->
+      </class> <!-- com.avengers.bus.services.implementation.BusTypeServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserImplTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddUser()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87]" started-at="2023-07-06T14:57:09 IST" name="testAddUser" finished-at="2023-07-06T14:57:09 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUser -->
+        <test-method signature="testGetUserList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87]" started-at="2023-07-06T14:57:09 IST" name="testGetUserList" finished-at="2023-07-06T14:57:09 IST" duration-ms="141" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [[{}, {}]] but found [[{"service_id":0,"booking_id":null,"seat_no":0,"passenger_name":null,"age":0,"gender":null},{"service_id":0,"booking_id":null,"seat_no":0,"passenger_name":null,"age":0,"gender":null}]]]]>
+              <![CDATA[expected [[{"userId":1,"name":"John"},{"userId":1,"name":"Jane"}]] but found [[{"user_id":1,"email":null,"password":null,"full_name":"Imran Streak","age":0,"gender":null,"cashback":0.0,"wallet":0.0}]]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{}, {}]] but found [[{"service_id":0,"booking_id":null,"seat_no":0,"passenger_name":null,"age":0,"gender":null},{"service_id":0,"booking_id":null,"seat_no":0,"passenger_name":null,"age":0,"gender":null}]]
+              <![CDATA[java.lang.AssertionError: expected [[{"userId":1,"name":"John"},{"userId":1,"name":"Jane"}]] but found [[{"user_id":1,"email":null,"password":null,"full_name":"Imran Streak","age":0,"gender":null,"cashback":0.0,"wallet":0.0}]]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList(FetchListImplTest.java:204)
+at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:55)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -454,20 +788,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetTicketPassengerList -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="setUp" finished-at="2023-07-05T15:40:07 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetTicketPassengerList_WhenExceptionThrown()[pri:0, instance:com.avengers.bus.services.implementation.FetchListImplTest@56e8b606]" started-at="2023-07-05T15:40:07 IST" name="testGetTicketPassengerList_WhenExceptionThrown" finished-at="2023-07-05T15:40:07 IST" duration-ms="2" status="FAIL">
+        </test-method> <!-- testGetUserList -->
+        <test-method signature="testGetUserListException()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@50d6af87]" started-at="2023-07-06T14:57:09 IST" name="testGetUserListException" finished-at="2023-07-06T14:57:09 IST" duration-ms="2" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Exception should not be thrown: Simulated exception]]>
+              <![CDATA[expected [null] but found [null]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Exception should not be thrown: Simulated exception
+              <![CDATA[java.lang.AssertionError: expected [null] but found [null]
 at org.testng.Assert.fail(Assert.java:111)
-at com.avengers.bus.services.implementation.FetchListImplTest.testGetTicketPassengerList_WhenExceptionThrown(FetchListImplTest.java:222)
+at org.testng.Assert.failNotSame(Assert.java:1574)
+at org.testng.Assert.assertNull(Assert.java:1507)
+at org.testng.Assert.assertNull(Assert.java:1495)
+at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:73)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -501,8 +834,58 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetTicketPassengerList_WhenExceptionThrown -->
-      </class> <!-- com.avengers.bus.services.implementation.FetchListImplTest -->
+        </test-method> <!-- testGetUserListException -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserCountsImplTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserBookedCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUserBookedCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserBookedCount -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserCounts()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUserCounts" finished-at="2023-07-06T14:57:09 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserCounts -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserFutureTravelCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUserFutureTravelCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserFutureTravelCount -->
+        <test-method signature="testGetUserTravelCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUserTravelCount" finished-at="2023-07-06T14:57:09 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserTravelCount -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserWallet()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUserWallet" finished-at="2023-07-06T14:57:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserWallet -->
+        <test-method signature="testGetUsername()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="testGetUsername" finished-at="2023-07-06T14:57:09 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsername -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@765eb801]" started-at="2023-07-06T14:57:09 IST" name="setup" finished-at="2023-07-06T14:57:09 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserCountsImplTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
