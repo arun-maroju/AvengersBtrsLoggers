@@ -3,51 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.avengers.bus.services.test.FetchUserTicketsImplTest">
+      <class name="com.avengers.bus.controllers.BusSearchControllerTest">
         <methods>
-          <include name="testGetTicketList"/>
-          <include name="setUp"/>
-          <include name="testGetPastTicketList"/>
-        </methods>
-      </class> <!-- com.avengers.bus.services.test.FetchUserTicketsImplTest -->
-      <class name="com.avengers.bus.services.test.FetchUserImplTest">
-        <methods>
-          <include name="setup"/>
-          <include name="testGetUserList"/>
-          <include name="testAddUser"/>
-          <include name="testGetUserListException"/>
-        </methods>
-      </class> <!-- com.avengers.bus.services.test.FetchUserImplTest -->
-      <class name="com.avengers.bus.services.test.FetchUserCountsImplTest">
-        <methods>
-          <include name="setup"/>
-          <include name="testGetUserTravelCount"/>
-          <include name="testGetUserBookedCount"/>
-          <include name="testGetUsername"/>
-          <include name="testGetUserFutureTravelCount"/>
-          <include name="testGetUserWallet"/>
-          <include name="testGetUserCounts"/>
-        </methods>
-      </class> <!-- com.avengers.bus.services.test.FetchUserCountsImplTest -->
-      <class name="com.avengers.bus.services.test.TicketDetailsImplTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="testGenerateTicketDetails"/>
-        </methods>
-      </class> <!-- com.avengers.bus.services.test.TicketDetailsImplTest -->
-      <class name="com.avengers.bus.services.test.SaveTicketServiceImplTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="testSaveTheTicket"/>
-        </methods>
-      </class> <!-- com.avengers.bus.services.test.SaveTicketServiceImplTest -->
-      <class name="com.avengers.bus.services.test.FetchUserPassengersImplTest">
-        <methods>
-          <include name="testAddeditedPassengers"/>
-          <include name="testDeleteUserPassengers"/>
+          <include name="testGetServicesList"/>
+          <include name="testGetBusLayout"/>
+          <include name="testContact"/>
+          <include name="testAbout"/>
+          <include name="testGetSearchPage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.avengers.bus.services.test.FetchUserPassengersImplTest -->
+      </class> <!-- com.avengers.bus.controllers.BusSearchControllerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
