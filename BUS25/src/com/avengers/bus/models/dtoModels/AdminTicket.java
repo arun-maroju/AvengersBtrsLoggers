@@ -24,10 +24,11 @@ public class AdminTicket {
 	private String order_id;
 	private Date travel_date;
 	private Time departure;
+	private String refund_id;
 
 	public AdminTicket(String booking_id, String payment_id, int user_id, Date booking_date, Time booking_time,
 			int trip_id, int service_id, String payment_mode, double total_fare, String status, int no_of_seats_booked,
-			String source, String destination, String order_id, Date travel_date, Time departure) {
+			String source, String destination, String order_id, Date travel_date, Time departure, String refund_id) {
 		super();
 		this.booking_id = booking_id;
 		this.payment_id = payment_id;
@@ -45,6 +46,7 @@ public class AdminTicket {
 		this.order_id = order_id;
 		this.travel_date = travel_date;
 		this.departure = departure;
+		this.refund_id=refund_id;
 	}
 
 	public String getBooking_id() {
@@ -183,12 +185,26 @@ public class AdminTicket {
 		this.departure = departure;
 	}
 
+	public String getRefund_id() {
+		return refund_id;
+	}
+
+	public void setRefund_id(String refund_id) {
+		this.refund_id = refund_id;
+	}
+
+	public void setTotal_fare(double total_fare) {
+		this.total_fare = total_fare;
+	}
+
 	@Override
 	public String toString() {
-		return "Ticket [booking_id=" + booking_id + ", payment_id=" + payment_id + ", user_id=" + user_id
+		return "AdminTicket [booking_id=" + booking_id + ", payment_id=" + payment_id + ", user_id=" + user_id
 				+ ", booking_date=" + booking_date + ", booking_time=" + booking_time + ", trip_id=" + trip_id
 				+ ", service_id=" + service_id + ", payment_mode=" + payment_mode + ", total_fare=" + total_fare
-				+ ", status=" + status + ", no_of_seats_booked=" + no_of_seats_booked + "]";
+				+ ", status=" + status + ", no_of_seats_booked=" + no_of_seats_booked + ", source=" + source
+				+ ", destination=" + destination + ", order_id=" + order_id + ", travel_date=" + travel_date
+				+ ", departure=" + departure + ", refund_id=" + refund_id + "]";
 	}
 
 }

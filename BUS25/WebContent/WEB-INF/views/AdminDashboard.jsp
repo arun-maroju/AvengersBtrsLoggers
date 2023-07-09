@@ -15,9 +15,9 @@
       <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
       <li><a href="#" onclick="showRoutes()">Routes</a></li>
       <li><a href="#" onclick="pagiNation(${counts.serviceCount})">Services</a></li>
-      <li><a href="#" onclick="showBuses()">Buses</a></li>
       <li><a href="#" onclick="showTickets()">Tickets</a></li>
       <li><a href="#" onclick="showPayments()">Payments</a></li>
+      <li><a href="#" onclick="showRefunds()">Refunds</a></li>
       <li><a href="logout" id="logoutLink">Logout</a></li>
 
 <!-- Modal Dialog -->
@@ -246,6 +246,52 @@
   <thead>
     <tr>
       <th>Ticket ID</th>
+      <th>Payment ID</th>
+      <th>Order ID</th>
+      <th>User Id</th>
+      <th>Payment Date</th>
+      <th>Payment Time</th>
+      <th>Payment Mode</th>
+      <th>Total Fare</th>
+     <!--  <th>          </th> -->
+    </tr>
+  </thead>
+  <tbody> 
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+	</center>
+    </div>
+    <div id="refundList">
+    <h2>Payments</h2>
+     <div class="filter-container">
+  <div class="filter-item">
+    <label for="paymentDatefilter" class="label-date">Select Date:</label>
+<input type="text" name="paymentDatefilter" value="" />
+  </div>
+  <div class="navbar-service">
+    <label for="ticketAmountFilter" class="navbar-service-label">Select Amount:</label>
+    <select id="ticketAmountFilter" class="navbar-service-select">
+      <option value="">Any</option>
+      <option value="500">Upto 500</option>
+      <option value="1000">Upto 1000</option>
+      <option value="1500">Upto 1500</option>
+      <option value="2000">Upto 2000</option>
+      <option value="5000">Upto 5000</option>
+      <option value="10000">Upto 10000</option>
+      <option value="15000">Upto 15000</option>
+      <option value="20000">Upto 20000</option>
+      <option value="25000">Upto 25000</option>
+      <!-- JavaScript code will populate options here -->
+    </select>
+  </div>
+</div>
+<center>
+	<table>
+  <thead>
+    <tr>
+      <th>Ticket ID</th>
+      <th>Refund ID</th>
       <th>Payment ID</th>
       <th>Order ID</th>
       <th>User Id</th>

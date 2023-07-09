@@ -21,12 +21,12 @@ public class CancelTicketServiceImpl implements CancelTicketService {
 	private TicketManagementDAO ticketManagementDAO;
 
 	@Override
-	public boolean cancelTicket(String booking_id) {
+	public boolean cancelTicket(String booking_id, String refund_id) {
 		logger.info("Cancelling Ticket");
 
 		System.out.println("in CancelTicketServiceImpl cancel ticket");
 
-		return ticketManagementDAO.cancelTicket(booking_id);
+		return ticketManagementDAO.cancelTicket(booking_id,refund_id);
 	}
 
 	@Override

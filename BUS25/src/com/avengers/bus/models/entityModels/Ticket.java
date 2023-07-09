@@ -18,6 +18,7 @@ public class Ticket {
 	@Id
 	private String booking_id;
 	private String payment_id;
+	private String refund_id;
 	private int user_id;
 	private Date booking_date;
 	private Time booking_time;
@@ -122,6 +123,14 @@ public class Ticket {
 		this.trip_id = trip_id;
 	}
 
+	public String getRefund_id() {
+		return refund_id;
+	}
+
+	public void setRefund_id(String refund_id) {
+		this.refund_id = refund_id;
+	}
+
 	public int getService_id() {
 		return service_id;
 	}
@@ -212,12 +221,13 @@ public class Ticket {
 
 	@Override
 	public String toString() {
-		return "Ticket [booking_id=" + booking_id + ", payment_id=" + payment_id + ", user_id=" + user_id
-				+ ", booking_date=" + booking_date + ", booking_time=" + booking_time + ", trip_id=" + trip_id
-				+ ", service_id=" + service_id + ", payment_mode=" + payment_mode + ", total_fare=" + total_fare
-				+ ", status=" + status + ", no_of_seats_booked=" + no_of_seats_booked + ", source=" + source
-				+ ", destination=" + destination + ", order_id=" + order_id + ", travel_date=" + travel_date
-				+ ", departure=" + departure + ", passengerList=" + passengerList + "]";
+		return "Ticket [booking_id=" + booking_id + ", payment_id=" + payment_id + ", refund_id=" + refund_id
+				+ ", user_id=" + user_id + ", booking_date=" + booking_date + ", booking_time=" + booking_time
+				+ ", trip_id=" + trip_id + ", service_id=" + service_id + ", payment_mode=" + payment_mode
+				+ ", total_fare=" + total_fare + ", status=" + status + ", no_of_seats_booked=" + no_of_seats_booked
+				+ ", source=" + source + ", destination=" + destination + ", order_id=" + order_id + ", travel_date="
+				+ travel_date + ", departure=" + departure + ", rating=" + rating + ", passengerList=" + passengerList
+				+ "]";
 	}
 
 }

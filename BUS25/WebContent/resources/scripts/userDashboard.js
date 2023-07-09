@@ -1,11 +1,12 @@
    // Show buffering layer
+document.getElementById('spinner').style.display = 'none';
         function showBufferingLayer() {
-            document.getElementById('buffering-layer').style.display = 'flex';
+            document.getElementById('spinner').style.display = 'flex';
         }
 
         // Hide buffering layer
         function hideBufferingLayer() {
-            document.getElementById('buffering-layer').style.display = 'none';
+            document.getElementById('spinner').style.display = 'none';
         } 
   
   function showDashboard() {

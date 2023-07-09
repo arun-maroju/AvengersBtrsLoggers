@@ -208,6 +208,7 @@ document.getElementById("spinner").style.display = "none";
         document.getElementById("routeList").style.display = "none";
         document.getElementById("ticketList").style.display = "none";
         document.getElementById("paymentList").style.display = "block";
+		document.getElementById("refundList").style.display = "none";
         });
     
     
@@ -313,6 +314,7 @@ document.getElementById("spinner").style.display = "none";
       document.getElementById("routeList").style.display = "none";
       document.getElementById("ticketList").style.display = "block";
       document.getElementById("paymentList").style.display = "none";
+	  document.getElementById("refundList").style.display = "none";
   	  
   	 });
     
@@ -399,6 +401,7 @@ document.getElementById("spinner").style.display = "none";
           document.getElementById("routeList").style.display = "none";
           document.getElementById("ticketList").style.display = "none";
           document.getElementById("paymentList").style.display = "none";
+		  document.getElementById("refundList").style.display = "none";
 });
 
     
@@ -511,6 +514,7 @@ document.getElementById("spinner").style.display = "none";
           document.getElementById("routeList").style.display = "none";
           document.getElementById("ticketList").style.display = "none";
           document.getElementById("paymentList").style.display = "block";
+		  document.getElementById("refundList").style.display = "none";
           
            console.log(dates);
         });
@@ -648,6 +652,7 @@ document.getElementById("spinner").style.display = "none";
           document.getElementById("routeList").style.display = "none";
           document.getElementById("ticketList").style.display = "block";
           document.getElementById("paymentList").style.display = "none";
+		  document.getElementById("refundList").style.display = "none";
           console.log(dates);
         });
 
@@ -766,6 +771,7 @@ document.getElementById("spinner").style.display = "none";
           document.getElementById("routeList").style.display = "none";
           document.getElementById("ticketList").style.display = "none";
           document.getElementById("paymentList").style.display = "none";
+		  document.getElementById("refundList").style.display = "none";
  console.log(dates);
         });
 
@@ -782,6 +788,7 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "none";
             
             
         }
@@ -838,12 +845,7 @@ document.getElementById("spinner").style.display = "none";
                         
                         
                         
-                        var actionsCell = document.createElement("td");
-                        var viewDetailsButton = document.createElement("button");
-                        viewDetailsButton.textContent = "View Details";
-                        viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(payment));
-                        actionsCell.appendChild(viewDetailsButton);
-                        row.appendChild(actionsCell);
+                        
                         
                         tableBody.appendChild(row);
 
@@ -861,7 +863,90 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "block";
+			document.getElementById("refundList").style.display = "none";
         }
+
+
+
+function showRefunds() {
+	document.getElementById("spinner").style.display = "flex";
+            $.ajax({
+                url: "adminRefundList", // Replace with the actual URL of your service
+                method: "GET",
+                success: function(response) {
+                    var payments = JSON.parse(response);
+                    var tableBody = document.querySelector("#refundList table tbody");
+                    tableBody.innerHTML = ""; // Clear existing table rows
+                    
+                    // Iterate over the routes and populate the table
+                    for (var i = 0; i < payments.length; i++) {
+                        var payment = payments[i];
+                        var row = document.createElement("tr");
+
+                        var cell1 = document.createElement("td");
+                        cell1.textContent = payment.booking_id;
+                        row.appendChild(cell1);
+                        
+						var refundCell = document.createElement("td");
+                        refundCell.textContent = payment.refund_id;
+                        row.appendChild(refundCell);
+	
+                        var cell2 = document.createElement("td");
+                        cell2.textContent = payment.payment_id;
+                        row.appendChild(cell2);
+                        
+                        var cell11 = document.createElement("td");
+                        cell11.textContent = payment.order_id;
+                        row.appendChild(cell11);
+                        
+                        var cell3 = document.createElement("td");
+                        cell3.textContent = payment.user_id;
+                        row.appendChild(cell3);
+                        
+                        var cell4 = document.createElement("td");
+                        cell4.textContent = payment.booking_date;
+                        row.appendChild(cell4);
+                        
+                        var cell5 = document.createElement("td");
+                        cell5.textContent = payment.booking_time;
+                        row.appendChild(cell5);
+                        
+                        
+                        var cell9 = document.createElement("td");
+                        cell9.textContent = payment.payment_mode;
+                        row.appendChild(cell9);
+                        
+                        var cell10 = document.createElement("td");
+                        cell10.textContent = payment.total_fare;
+                        row.appendChild(cell10);
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        tableBody.appendChild(row);
+
+                    }
+document.getElementById("spinner").style.display = "none";
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX request failed: " + status + ", " + error);
+                }
+            });
+
+            document.getElementById("dashboard2").style.display = "none";
+            document.getElementById("serviceList").style.display = "none";
+            document.getElementById("busList").style.display = "none";
+            document.getElementById("routeList").style.display = "none";
+            document.getElementById("ticketList").style.display = "none";
+            document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "block";
+        }
+
+
+
         
         
         function showTickets() {
@@ -968,6 +1053,7 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "block";
             document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "none";
         }
          function createViewTicketDetailsHandler(routeNumber,source,destination) {
             return function() {
@@ -1126,6 +1212,7 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "block";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "none";
         }
 
         function createViewRouteDetailsHandler(routeNumber,source,destination) {
@@ -1365,6 +1452,7 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "none";
 			
         }
 
@@ -1584,6 +1672,7 @@ document.getElementById("spinner").style.display = "none";
             document.getElementById("routeList").style.display = "none";
             document.getElementById("ticketList").style.display = "none";
             document.getElementById("paymentList").style.display = "none";
+			document.getElementById("refundList").style.display = "none";
         }
 
         $(document).ready(function() {

@@ -16,4 +16,6 @@ public interface FetchList {
 	// returns ticket passengers list data
 	public String getTicketPassengerList(String service_id);
 
+	public String getRefundsList();
+
 }

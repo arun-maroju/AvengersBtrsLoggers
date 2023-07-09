@@ -80,6 +80,15 @@ public class AdminController {
 		return routesJson;
 	}
 
+	// Handles GET requests to "/adminRefundList"
+		@RequestMapping(value = "/adminRefundList", method = RequestMethod.GET)
+		@ResponseBody
+		public String getRefundsList() {
+			// Retrieves a list of tickets in JSON format using fetchList
+			String routesJson = fetchList.getRefundsList();
+			return routesJson;
+		}
+	
 	// Handles GET requests to "/viewServicePassengerDetails"
 	@RequestMapping(value = "/viewServicePassengerDetails", method = RequestMethod.GET)
 	@ResponseBody

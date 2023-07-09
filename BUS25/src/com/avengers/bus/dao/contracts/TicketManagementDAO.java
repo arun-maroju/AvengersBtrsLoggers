@@ -9,7 +9,7 @@ public interface TicketManagementDAO {
 	public void saveTicket(Ticket ticket) throws TicketNotPersistedException;
 
 	// cancel the ticket
-	public boolean cancelTicket(String bookingId);
+	public boolean cancelTicket(String bookingId, String refund_id);
 
 	// it will fetch the number of seats for one service
 	public int getBookedSeatsCount(int service_no, int seat[]);

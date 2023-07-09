@@ -40,7 +40,7 @@ public class TicketManagementDAOImpl implements TicketManagementDAO {
 	// It will cancel the ticket upon user request
 	@Override
 	@Transactional
-	public boolean cancelTicket(String bookingId) {
+	public boolean cancelTicket(String bookingId, String refund_id) {
 		logger.info("Attempting to cancel ticket with bookingId: {}", bookingId);
 
 		try {
@@ -52,9 +52,11 @@ public class TicketManagementDAOImpl implements TicketManagementDAO {
 
 				// Update the desired column value
 				ticket.setStatus("cancelled");
+				ticket.setRefund_id(refund_id);
 
 				// Merge the changes into the entity manager
 				em.merge(ticket);
+				
 
 				logger.info("Ticket cancelled successfully");
 				return true; // Return true if the update was successful

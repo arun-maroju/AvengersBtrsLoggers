@@ -169,7 +169,7 @@ public class UserProfileController {
 		String refund_id = null;
 		try {
 			refund_id = cancelTicketService.refund(booking_id, payment_id, fare);
-			cancelTicketService.cancelTicket(booking_id);
+			cancelTicketService.cancelTicket(booking_id,refund_id);
 			return "Your Refund has been processed.\n" + refund_id + "\ncancelTicketSuccess";
 		} catch (RazorpayException e1) {
 			// TODO Auto-generated catch block

@@ -26,4 +26,6 @@ public interface ListsDAO {
 
 	public List<Services> allServiceList();
 
+	public List<Ticket> refundList();
+
 }

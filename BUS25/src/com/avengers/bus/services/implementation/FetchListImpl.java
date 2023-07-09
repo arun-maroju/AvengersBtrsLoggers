@@ -103,7 +103,7 @@ public class FetchListImpl implements FetchList {
 			AdminTicket at = new AdminTicket(t.getBooking_id(), t.getPayment_id(), t.getUser_id(), t.getBooking_date(),
 					t.getBooking_time(), t.getTrip_id(), t.getService_id(), t.getPayment_mode(), t.getTotal_fare(),
 					t.getStatus(), t.getNo_of_seats_booked(), t.getSource(), t.getDestination(), t.getOrder_id(),
-					t.getTravel_date(), t.getDeparture());
+					t.getTravel_date(), t.getDeparture(),t.getRefund_id());
 			adl.add(at);
 
 		}
@@ -144,6 +144,40 @@ public class FetchListImpl implements FetchList {
 			return null;
 		}
 
+	}
+
+	@Override
+	public String getRefundsList() {
+		LOGGER.info("Fetching ticket list");
+		List<Ticket> tickets = ldao.refundList();
+
+		List<AdminTicket> adl = new ArrayList<>();
+
+		for (Ticket t : tickets) {
+			AdminTicket at = new AdminTicket(t.getBooking_id(), t.getPayment_id(), t.getUser_id(), t.getBooking_date(),
+					t.getBooking_time(), t.getTrip_id(), t.getService_id(), t.getPayment_mode(), t.getTotal_fare(),
+					t.getStatus(), t.getNo_of_seats_booked(), t.getSource(), t.getDestination(), t.getOrder_id(),
+					t.getTravel_date(), t.getDeparture(),t.getRefund_id());
+			adl.add(at);
+			System.out.println(at);
+
+		}
+
+		LOGGER.debug("Tickets: {}", tickets);
+		LOGGER.debug("AdminTickets: {}", adl);
+
+		ObjectMapper om = new ObjectMapper();
+
+		try {
+			// Convert the list to JSON
+			String json = om.writeValueAsString(adl);
+			LOGGER.debug(json);
+			return json;
+		} catch (Exception e) {
+			LOGGER.error("Error fetching ticket list: {}", e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

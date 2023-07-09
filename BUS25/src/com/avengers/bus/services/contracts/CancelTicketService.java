@@ -5,7 +5,7 @@ import com.razorpay.RazorpayException;
 
 public interface CancelTicketService {
 	// cancel the ticket change its status to 'cancelled'
-	public boolean cancelTicket(String booking_id);
+	public boolean cancelTicket(String booking_id, String refund_id);
 
 	// refund amount when user want to cancel the booking
 	public String refund(String booking_id, String payment_id, int fare) throws RazorpayException;

@@ -56,9 +56,9 @@ public class ListsDAOImpl implements ListsDAO {
 	public List<ServicePassenger> servicePassengerList(int service_id) {
 		String queryString = "SELECT t1.booking_id, t2.seat_no, t2.passenger_name, t2.age, t2.gender "
 				+ "FROM Ticket t1, TicketPassenger t2 " + "WHERE t1.service_id = :serviceId "
-				+ "AND t1.booking_id = t2.booking_id " + "ORDER BY t2.seat_no";
+				+ "AND t1.booking_id = t2.booking_id and t1.status =:ticket_status " + "ORDER BY t2.seat_no";
 
-		List<Object[]> results = em.createQuery(queryString).setParameter("serviceId", service_id).getResultList();
+		List<Object[]> results = em.createQuery(queryString).setParameter("serviceId", service_id).setParameter("ticket_status", "confirmed").getResultList();
 
 		List<ServicePassenger> passengers = new ArrayList<>();
 		for (Object[] row : results) {
@@ -78,6 +78,15 @@ public class ListsDAOImpl implements ListsDAO {
 	public List<Services> allServiceList() {
 		return em.createQuery("SELECT s FROM Services s", Services.class).getResultList();
 
+	}
+
+	@Override
+	public List<Ticket> refundList() {
+		List<Ticket> tickets= em.createQuery("SELECT t FROM Ticket t where t.status=:ticket_status", Ticket.class).setParameter("ticket_status","cancelled").getResultList();
+		for(Ticket t:tickets) {
+			System.out.println(t);
+		}
+		return tickets;
 	}
 
 }
