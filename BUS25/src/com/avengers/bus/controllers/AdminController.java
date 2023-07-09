@@ -1,5 +1,7 @@
 package com.avengers.bus.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,131 +18,144 @@ import com.avengers.bus.services.contracts.FetchList;
 
 @Controller
 public class AdminController {
-	private AdminCountsService adminCountsService;
-	private FetchDetails fetchDetails;
-	private FetchList fetchList;
-	private FetchGraphData fetchGraphData;
-	private ServiceGenerationDAO serviceGenerationDAO;
+    private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 
-	// constructor autowiring
-	@Autowired
-	public AdminController(ServiceGenerationDAO serviceGenerationDAO, FetchGraphData fetchGraphData,
-			AdminCountsService adminCountsService, FetchDetails fetchDetails, FetchList fetchList) {
-		this.fetchList = fetchList;
-		this.adminCountsService = adminCountsService;
-		this.fetchDetails = fetchDetails;
-		this.fetchGraphData = fetchGraphData;
-		this.serviceGenerationDAO = serviceGenerationDAO;
-		this.serviceGenerationDAO.callAutoGenerateServicesProcedure();
-	}
+    private AdminCountsService adminCountsService;
+    private FetchDetails fetchDetails;
+    private FetchList fetchList;
+    private FetchGraphData fetchGraphData;
+    private ServiceGenerationDAO serviceGenerationDAO;
 
-	// Handles GET requests to "/admin"
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public ModelAndView admin(Model model) {
-		// Constructs a ModelAndView object with the view name "AdminDashboard"
-		ModelAndView mv = new ModelAndView("AdminDashboard");
-		// Adds the counts obtained from adminCountsService to the ModelAndView object
-		mv.addObject("counts", adminCountsService.getCounts());
-		return mv;
-	}
+    // constructor autowiring
+    @Autowired
+    public AdminController(ServiceGenerationDAO serviceGenerationDAO, FetchGraphData fetchGraphData,
+            AdminCountsService adminCountsService, FetchDetails fetchDetails, FetchList fetchList) {
+        this.fetchList = fetchList;
+        this.adminCountsService = adminCountsService;
+        this.fetchDetails = fetchDetails;
+        this.fetchGraphData = fetchGraphData;
+        this.serviceGenerationDAO = serviceGenerationDAO;
+        this.serviceGenerationDAO.callAutoGenerateServicesProcedure();
+    }
 
-	// Handles GET requests to "/serviceList"
-	@RequestMapping(value = "/serviceList", method = RequestMethod.GET)
-	@ResponseBody
-	public String getServiceList(int page, int records) {
-		// Retrieves a list of services in JSON format using fetchList
-		String servicesJson = fetchList.getServiceList(page, records);
-		return servicesJson;
-	}
+    // Handles GET requests to "/admin"
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public ModelAndView admin(Model model) {
+        logger.info("Admin dashboard accessed.");
+        // Constructs a ModelAndView object with the view name "AdminDashboard"
+        ModelAndView mv = new ModelAndView("AdminDashboard");
+        // Adds the counts obtained from adminCountsService to the ModelAndView object
+        mv.addObject("counts", adminCountsService.getCounts());
+        return mv;
+    }
 
-	// Handles GET requests to "/routeList"
-	@RequestMapping(value = "/routeList", method = RequestMethod.GET)
-	@ResponseBody
-	public String getRoutesList() {
-		// Retrieves a list of routes in JSON format using fetchList
-		String routesJson = fetchList.getRouteList();
-		return routesJson;
-	}
+    // Handles GET requests to "/serviceList"
+    @RequestMapping(value = "/serviceList", method = RequestMethod.GET)
+    @ResponseBody
+    public String getServiceList(int page, int records) {
+        logger.info("Fetching service list. Page: {}, Records: {}", page, records);
+        // Retrieves a list of services in JSON format using fetchList
+        String servicesJson = fetchList.getServiceList(page, records);
+        return servicesJson;
+    }
 
-	// Handles GET requests to "/busList"
-	@RequestMapping(value = "/busList", method = RequestMethod.GET)
-	@ResponseBody
-	public String getBusesList() {
-		// Retrieves a list of buses in JSON format using fetchList
-		String busesJson = fetchList.getBusList();
-		return busesJson;
-	}
+    // Handles GET requests to "/routeList"
+    @RequestMapping(value = "/routeList", method = RequestMethod.GET)
+    @ResponseBody
+    public String getRoutesList() {
+        logger.info("Fetching route list.");
+        // Retrieves a list of routes in JSON format using fetchList
+        String routesJson = fetchList.getRouteList();
+        return routesJson;
+    }
 
-	// Handles GET requests to "/adminTicketList"
-	@RequestMapping(value = "/adminTicketList", method = RequestMethod.GET)
-	@ResponseBody
-	public String getTicketsList() {
-		// Retrieves a list of tickets in JSON format using fetchList
-		String routesJson = fetchList.getTicketList();
-		return routesJson;
-	}
+    // Handles GET requests to "/busList"
+    @RequestMapping(value = "/busList", method = RequestMethod.GET)
+    @ResponseBody
+    public String getBusesList() {
+        logger.info("Fetching bus list.");
+        // Retrieves a list of buses in JSON format using fetchList
+        String busesJson = fetchList.getBusList();
+        return busesJson;
+    }
 
-	// Handles GET requests to "/adminRefundList"
-		@RequestMapping(value = "/adminRefundList", method = RequestMethod.GET)
-		@ResponseBody
-		public String getRefundsList() {
-			// Retrieves a list of tickets in JSON format using fetchList
-			String routesJson = fetchList.getRefundsList();
-			return routesJson;
-		}
-	
-	// Handles GET requests to "/viewServicePassengerDetails"
-	@RequestMapping(value = "/viewServicePassengerDetails", method = RequestMethod.GET)
-	@ResponseBody
-	public String getTicketPassengerList(String serviceId) {
-		// Retrieves a list of passengers for a specific service in JSON format using fetchList
-		String routesJson = fetchList.getTicketPassengerList(serviceId);
-		return routesJson;
-	}
+    // Handles GET requests to "/adminTicketList"
+    @RequestMapping(value = "/adminTicketList", method = RequestMethod.GET)
+    @ResponseBody
+    public String getTicketsList() {
+        logger.info("Fetching ticket list.");
+        // Retrieves a list of tickets in JSON format using fetchList
+        String routesJson = fetchList.getTicketList();
+        return routesJson;
+    }
 
-	// Handles GET requests to "/viewServiceDetails"
-	@RequestMapping(value = "/viewServiceDetails", method = RequestMethod.GET)
-	@ResponseBody
-	public String getServiceDetails(String serviceId) {
-		// Retrieves details of a specific service in JSON format using fetchDetails
-		String sdJson = fetchDetails.getServiceDetails(serviceId);
-		return sdJson;
-	}
+    // Handles GET requests to "/adminRefundList"
+    @RequestMapping(value = "/adminRefundList", method = RequestMethod.GET)
+    @ResponseBody
+    public String getRefundsList() {
+        logger.info("Fetching refund list.");
+        // Retrieves a list of refunds in JSON format using fetchList
+        String routesJson = fetchList.getRefundsList();
+        return routesJson;
+    }
 
-	// Handles GET requests to "/viewRouteDetails"
-	@RequestMapping(value = "/viewRouteDetails", method = RequestMethod.GET)
-	@ResponseBody
-	public String getRouteDetails(String routeNumber) {
-		// Retrieves details of a specific route in JSON format using fetchDetails
-		String rdJson = fetchDetails.getRouteDetails(routeNumber);
-		return rdJson;
-	}
+    // Handles GET requests to "/viewServicePassengerDetails"
+    @RequestMapping(value = "/viewServicePassengerDetails", method = RequestMethod.GET)
+    @ResponseBody
+    public String getTicketPassengerList(String serviceId) {
+        logger.info("Fetching passenger list for service ID: {}", serviceId);
+        // Retrieves a list of passengers for a specific service in JSON format using fetchList
+        String routesJson = fetchList.getTicketPassengerList(serviceId);
+        return routesJson;
+    }
 
-	// Handles GET requests to "/routeCollection"
-	@RequestMapping(value = "/routeCollection", method = RequestMethod.GET)
-	@ResponseBody
-	public String getRoute() {
-		// Retrieves route collection data in JSON format using fetchGraphData
-		String rcJson = fetchGraphData.getRouteCollection();
-		return rcJson;
-	}
+    // Handles GET requests to "/viewServiceDetails"
+    @RequestMapping(value = "/viewServiceDetails", method = RequestMethod.GET)
+    @ResponseBody
+    public String getServiceDetails(String serviceId) {
+        logger.info("Fetching details for service ID: {}", serviceId);
+        // Retrieves details of a specific service in JSON format using fetchDetails
+        String sdJson = fetchDetails.getServiceDetails(serviceId);
+        return sdJson;
+    }
 
-	// Handles GET requests to "/tripCollection"
-	@RequestMapping(value = "/tripCollection", method = RequestMethod.GET)
-	@ResponseBody
-	public String getTrip() {
-		// Retrieves trip collection data in JSON format using fetchGraphData
-		String tcJson = fetchGraphData.getTripCollection();
-		return tcJson;
-	}
+    // Handles GET requests to "/viewRouteDetails"
+    @RequestMapping(value = "/viewRouteDetails", method = RequestMethod.GET)
+    @ResponseBody
+    public String getRouteDetails(String routeNumber) {
+        logger.info("Fetching details for route number: {}", routeNumber);
+        // Retrieves details of a specific route in JSON format using fetchDetails
+        String rdJson = fetchDetails.getRouteDetails(routeNumber);
+        return rdJson;
+    }
 
-	// Handles GET requests to "/monthlyCollection"
-	@RequestMapping(value = "/monthlyCollection", method = RequestMethod.GET)
-	@ResponseBody
-	public String getMonthlycollection() {
-		// Retrieves monthly collection data in JSON format using fetchGraphData
-		String mcJson = fetchGraphData.getMonthlyCollection();
-		return mcJson;
-	}
+    // Handles GET requests to "/routeCollection"
+    @RequestMapping(value = "/routeCollection", method = RequestMethod.GET)
+    @ResponseBody
+    public String getRoute() {
+        logger.info("Fetching route collection data.");
+        // Retrieves route collection data in JSON format using fetchGraphData
+        String rcJson = fetchGraphData.getRouteCollection();
+        return rcJson;
+    }
 
+    // Handles GET requests to "/tripCollection"
+    @RequestMapping(value = "/tripCollection", method = RequestMethod.GET)
+    @ResponseBody
+    public String getTrip() {
+        logger.info("Fetching trip collection data.");
+        // Retrieves trip collection data in JSON format using fetchGraphData
+        String tcJson = fetchGraphData.getTripCollection();
+        return tcJson;
+    }
+
+    // Handles GET requests to "/monthlyCollection"
+    @RequestMapping(value = "/monthlyCollection", method = RequestMethod.GET)
+    @ResponseBody
+    public String getMonthlycollection() {
+        logger.info("Fetching monthly collection data.");
+        // Retrieves monthly collection data in JSON format using fetchGraphData
+        String mcJson = fetchGraphData.getMonthlyCollection();
+        return mcJson;
+    }
 }

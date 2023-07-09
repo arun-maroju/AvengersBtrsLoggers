@@ -1031,12 +1031,12 @@ document.getElementById("spinner").style.display = "none";
                         
                         
                         
-                        var actionsCell = document.createElement("td");
-                        var viewDetailsButton = document.createElement("button");
-                        viewDetailsButton.textContent = "View Passengers";
-                        viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(ticket));
-                        actionsCell.appendChild(viewDetailsButton);
-                        row.appendChild(actionsCell);
+                        //var actionsCell = document.createElement("td");
+                        //var viewDetailsButton = document.createElement("button");
+                        //viewDetailsButton.textContent = "View Passengers";
+                        //viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(ticket));
+                        //actionsCell.appendChild(viewDetailsButton);
+                        //row.appendChild(actionsCell);
                         
                         tableBody.appendChild(row);
                     }
