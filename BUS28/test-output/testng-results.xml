@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-09T12:49:25 GST" name="Default suite" finished-at="2023-07-09T12:49:25 GST" duration-ms="442">
+    <groups>
+    </groups>
+    <test started-at="2023-07-09T12:49:25 GST" name="Default test" finished-at="2023-07-09T12:49:25 GST" duration-ms="442">
+      <class name="com.avengers.bus.controllers.BusSearchControllerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="307" status="FAIL">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAbout()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testAbout" finished-at="2023-07-09T12:49:25 GST" duration-ms="1" status="SKIP">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAbout -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testContact()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testContact" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContact -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetBusLayout()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetBusLayout" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusLayout -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetSearchPage()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetSearchPage" finished-at="2023-07-09T12:49:25 GST" duration-ms="1" status="SKIP">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetSearchPage -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetServicesList()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetServicesList" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+          <exception class="org.mockito.exceptions.base.MockitoException">
+            <message>
+              <![CDATA[
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 20
+JVM vendor name    : Eclipse Adoptium
+JVM vendor version : 20.0.1+9
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 20.0.1+9
+JVM info           : mixed mode
+OS name            : Windows 8.1
+OS version         : 6.3
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type
+at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Could not create type
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
+at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
+at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
+at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
+at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
+at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
+at org.mockito.Mockito.mock(Mockito.java:1908)
+at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
+at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
+at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
+at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
+at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
+... 31 more
+Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
+at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
+at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
+at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServicesList -->
+      </class> <!-- com.avengers.bus.controllers.BusSearchControllerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
