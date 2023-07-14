@@ -1,0 +1,2811 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 24 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\vamsi.m\AppData\Local\Temp\testng-eclipse--1277299442\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">58 methods, 24 failed,   34 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserImplTest" class="method navigator-link" hash-for-method="testAddUser">testAddUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserPassengersImplTest" class="method navigator-link" hash-for-method="testAddeditedPassengers">testAddeditedPassengers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.CheckSeatImplTest" class="method navigator-link" hash-for-method="testCheckPersistability_SeatsAvailable">testCheckPersistability_SeatsAvailable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.CheckSeatImplTest" class="method navigator-link" hash-for-method="testCheckPersistability_SeatsNotAvailable">testCheckPersistability_SeatsNotAvailable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserPassengersImplTest" class="method navigator-link" hash-for-method="testDeleteUserPassengers">testDeleteUserPassengers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.AdminDAOImplTest" class="method navigator-link" hash-for-method="testFindByUserId_WithNonExistingUser">testFindByUserId_WithNonExistingUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.TicketDetailsImplTest" class="method navigator-link" hash-for-method="testGenerateTicketDetails">testGenerateTicketDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.BusSearchDaoImplTest" class="method navigator-link" hash-for-method="testGetAllBusTypes">testGetAllBusTypes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.BusSearchDaoImplTest" class="method navigator-link" hash-for-method="testGetAllStations">testGetAllStations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.BusSearchDaoImplTest" class="method navigator-link" hash-for-method="testGetBookedSeats">testGetBookedSeats</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusListServiceImplTest" class="method navigator-link" hash-for-method="testGetBusListWithTravelClass">testGetBusListWithTravelClass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusListServiceImplTest" class="method navigator-link" hash-for-method="testGetBusListWithoutTravelClass">testGetBusListWithoutTravelClass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserTicketsImplTest" class="method navigator-link" hash-for-method="testGetPastTicketList">testGetPastTicketList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.BusSearchDaoImplTest" class="method navigator-link" hash-for-method="testGetStation">testGetStation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserTicketsImplTest" class="method navigator-link" hash-for-method="testGetTicketList">testGetTicketList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUserBookedCount">testGetUserBookedCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUserCounts">testGetUserCounts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUserFutureTravelCount">testGetUserFutureTravelCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserImplTest" class="method navigator-link" hash-for-method="testGetUserList">testGetUserList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserImplTest" class="method navigator-link" hash-for-method="testGetUserListException">testGetUserListException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUserTravelCount">testGetUserTravelCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUserWallet">testGetUserWallet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserCountsImplTest" class="method navigator-link" hash-for-method="testGetUsername">testGetUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.SaveTicketServiceImplTest" class="method navigator-link" hash-for-method="testSaveTheTicket">testSaveTheTicket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.AdminCountsServiceImplTest" class="method navigator-link" hash-for-method="getCountsTest">getCountsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserPassengersImplTest" class="method navigator-link" hash-for-method="testAddUserPassengers">testAddUserPassengers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.CheckSeatImplTest" class="method navigator-link" hash-for-method="testCheckAvailability_SeatsAvailable">testCheckAvailability_SeatsAvailable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.CheckSeatImplTest" class="method navigator-link" hash-for-method="testCheckAvailability_SeatsNotAvailable">testCheckAvailability_SeatsNotAvailable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.dao.implementation.AdminDAOImplTest" class="method navigator-link" hash-for-method="testFindByUserId_WithExistingUser">testFindByUserId_WithExistingUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.UserPassengersServiceImplTest" class="method navigator-link" hash-for-method="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList">testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.UserPassengersServiceImplTest" class="method navigator-link" hash-for-method="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId">testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.UserPassengersServiceImplTest" class="method navigator-link" hash-for-method="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList">testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.UserPassengersServiceImplTest" class="method navigator-link" hash-for-method="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers">testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.UserPassengersServiceImplTest" class="method navigator-link" hash-for-method="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers">testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetBusCount">testGetBusCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetCollection">testGetCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetFutureTicketCollection">testGetFutureTicketCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchGraphDataImplTest" class="method navigator-link" hash-for-method="testGetMonthlyCollection">testGetMonthlyCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchUserPassengersImplTest" class="method navigator-link" hash-for-method="testGetPassengersList">testGetPassengersList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetPastTicketCollection">testGetPastTicketCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchGraphDataImplTest" class="method navigator-link" hash-for-method="testGetRouteCollection">testGetRouteCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetRouteCount">testGetRouteCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchDetailsImplTest" class="method navigator-link" hash-for-method="testGetRouteDetails">testGetRouteDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetServiceCount">testGetServiceCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchDetailsImplTest" class="method navigator-link" hash-for-method="testGetServiceDetails">testGetServiceDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchGraphDataImplTest" class="method navigator-link" hash-for-method="testGetTripCollection">testGetTripCollection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetTripCount">testGetTripCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.FetchCountImplTest" class="method navigator-link" hash-for-method="testGetUserCount">testGetUserCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAll">testListAll</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusTypeServiceImplTest" class="method navigator-link" hash-for-method="testListAll">testListAll</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAllWithEmptyStations">testListAllWithEmptyStations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAllWithException">testListAllWithException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAllWithLargeNumberOfStations">testListAllWithLargeNumberOfStations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAllWithMultipleStations">testListAllWithMultipleStations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.StationServiceImplTest" class="method navigator-link" hash-for-method="testListAllWithNoStations">testListAllWithNoStations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusTypeServiceImplTest" class="method navigator-link" hash-for-method="testListAll_NoBusTypes">testListAll_NoBusTypes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusTypeServiceImplTest" class="method navigator-link" hash-for-method="testListAll_NullBusTypes">testListAll_NullBusTypes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.avengers.bus.services.implementation.BusTypeServiceImplTest" class="method navigator-link" hash-for-method="testListAll_ReturnsMultipleBusTypes">testListAll_ReturnsMultipleBusTypes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchUserCountsImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserBookedCount">
+                  </a> <!-- testGetUserBookedCount -->
+                  <span class="method-name">testGetUserBookedCount</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Booked Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserCounts">
+                  </a> <!-- testGetUserCounts -->
+                  <span class="method-name">testGetUserCounts</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Counts for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserFutureTravelCount">
+                  </a> <!-- testGetUserFutureTravelCount -->
+                  <span class="method-name">testGetUserFutureTravelCount</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Future Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserTravelCount">
+                  </a> <!-- testGetUserTravelCount -->
+                  <span class="method-name">testGetUserTravelCount</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Travel Count for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserWallet">
+                  </a> <!-- testGetUserWallet -->
+                  <span class="method-name">testGetUserWallet</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching User Wallet for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUsername">
+                  </a> <!-- testGetUsername -->
+                  <span class="method-name">testGetUsername</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching Username for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.SaveTicketServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSaveTheTicket">
+                  </a> <!-- testSaveTheTicket -->
+                  <span class="method-name">testSaveTheTicket</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1306)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+	at java.base/java.util.Collections.sort(Collections.java:179)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+	at com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.TicketDetailsImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGenerateTicketDetails">
+                  </a> <!-- testGenerateTicketDetails -->
+                  <span class="method-name">testGenerateTicketDetails</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.avengers.bus.models.dtoModels.BusSearchListDto.setTrip_date(BusSearchListDto.java:85)
+	at com.avengers.bus.services.implementation.TicketDetailsImplTest.testGenerateTicketDetails(TicketDetailsImplTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.dao.implementation.BusSearchDaoImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllBusTypes">
+                  </a> <!-- testGetAllBusTypes -->
+                  <span class="method-name">testGetAllBusTypes</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;javax.persistence.Query.getResultList()&quot; because the return value of &quot;javax.persistence.EntityManager.createQuery(String)&quot; is null
+	at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getAllBusTypes(BusSearchDaoImpl.java:33)
+	at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetAllBusTypes(BusSearchDaoImplTest.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllStations">
+                  </a> <!-- testGetAllStations -->
+                  <span class="method-name">testGetAllStations</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;javax.persistence.Query.getResultList()&quot; because the return value of &quot;javax.persistence.EntityManager.createQuery(String)&quot; is null
+	at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getAllStations(BusSearchDaoImpl.java:39)
+	at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetAllStations(BusSearchDaoImplTest.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBookedSeats">
+                  </a> <!-- testGetBookedSeats -->
+                  <span class="method-name">testGetBookedSeats</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;javax.persistence.Query.getResultList()&quot; because the return value of &quot;javax.persistence.EntityManager.createQuery(String)&quot; is null
+	at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getBookedSeats(BusSearchDaoImpl.java:27)
+	at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetBookedSeats(BusSearchDaoImplTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetStation">
+                  </a> <!-- testGetStation -->
+                  <span class="method-name">testGetStation</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;javax.persistence.Query.setParameter(String, Object)&quot; because the return value of &quot;javax.persistence.EntityManager.createQuery(String)&quot; is null
+	at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getStation(BusSearchDaoImpl.java:48)
+	at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetStation(BusSearchDaoImplTest.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchUserImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddUser">
+                  </a> <!-- testAddUser -->
+                  <span class="method-name">testAddUser</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Adding or updating user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserList">
+                  </a> <!-- testGetUserList -->
+                  <span class="method-name">testGetUserList</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserListException">
+                  </a> <!-- testGetUserListException -->
+                  <span class="method-name">testGetUserListException</span>
+                  <div class="stack-trace">Wanted but not invoked:
+logger.info(
+    &quot;Fetching user details for user with ID: {}&quot;,
+    1
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+Actually, there were zero interactions with this mock.
+
+	at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.BusListServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBusListWithTravelClass">
+                  </a> <!-- testGetBusListWithTravelClass -->
+                  <span class="method-name">testGetBusListWithTravelClass</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)&quot; because &quot;this.busSearchDAO&quot; is null
+	at com.avengers.bus.services.implementation.BusListServiceImpl.getBusList(BusListServiceImpl.java:31)
+	at com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithTravelClass(BusListServiceImplTest.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBusListWithoutTravelClass">
+                  </a> <!-- testGetBusListWithoutTravelClass -->
+                  <span class="method-name">testGetBusListWithoutTravelClass</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)&quot; because &quot;this.busSearchDAO&quot; is null
+	at com.avengers.bus.services.implementation.BusListServiceImpl.getBusList(BusListServiceImpl.java:31)
+	at com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithoutTravelClass(BusListServiceImplTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchUserPassengersImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddeditedPassengers">
+                  </a> <!-- testAddeditedPassengers -->
+                  <span class="method-name">testAddeditedPassengers</span>
+                  <div class="stack-trace">Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteUserPassengers">
+                  </a> <!-- testDeleteUserPassengers -->
+                  <span class="method-name">testDeleteUserPassengers</span>
+                  <div class="stack-trace">Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-&gt; at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+	at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchUserTicketsImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPastTicketList">
+                  </a> <!-- testGetPastTicketList -->
+                  <span class="method-name">testGetPastTicketList</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
+	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
+	at com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetTicketList">
+                  </a> <!-- testGetTicketList -->
+                  <span class="method-name">testGetTicketList</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because the return value of &quot;com.avengers.bus.models.entityModels.Ticket.getPassengerList()&quot; is null
+	at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getticketList(FetchUserTicketsImpl.java:37)
+	at com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetTicketList(FetchUserTicketsImplTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.dao.implementation.AdminDAOImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFindByUserId_WithNonExistingUser">
+                  </a> <!-- testFindByUserId_WithNonExistingUser -->
+                  <span class="method-name">testFindByUserId_WithNonExistingUser</span>
+                  <div class="stack-trace">org.mockito.exceptions.verification.TooManyActualInvocations: 
+entityManager.createQuery(
+    &lt;any string&gt;,
+    class com.avengers.bus.models.entityModels.Admin
+);
+Wanted 1 time:
+-&gt; at com.avengers.bus.dao.implementation.AdminDAOImplTest.testFindByUserId_WithNonExistingUser(AdminDAOImplTest.java:82)
+But was 2 times:
+-&gt; at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
+-&gt; at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
+
+
+	at com.avengers.bus.dao.implementation.AdminDAOImplTest.testFindByUserId_WithNonExistingUser(AdminDAOImplTest.java:82)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.CheckSeatImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckPersistability_SeatsAvailable">
+                  </a> <!-- testCheckPersistability_SeatsAvailable -->
+                  <span class="method-name">testCheckPersistability_SeatsAvailable</span>
+                  <div class="stack-trace">org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable(CheckSeatImplTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckPersistability_SeatsNotAvailable">
+                  </a> <!-- testCheckPersistability_SeatsNotAvailable -->
+                  <span class="method-name">testCheckPersistability_SeatsNotAvailable</span>
+                  <div class="stack-trace">org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you&apos;re unsure why you&apos;re getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable(CheckSeatImplTest.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchDetailsImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetRouteDetails">
+                  </a> <!-- testGetRouteDetails -->
+                  <span class="method-name">testGetRouteDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServiceDetails">
+                  </a> <!-- testGetServiceDetails -->
+                  <span class="method-name">testGetServiceDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.BusTypeServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAll">
+                  </a> <!-- testListAll -->
+                  <span class="method-name">testListAll</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAll_NoBusTypes">
+                  </a> <!-- testListAll_NoBusTypes -->
+                  <span class="method-name">testListAll_NoBusTypes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAll_NullBusTypes">
+                  </a> <!-- testListAll_NullBusTypes -->
+                  <span class="method-name">testListAll_NullBusTypes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAll_ReturnsMultipleBusTypes">
+                  </a> <!-- testListAll_ReturnsMultipleBusTypes -->
+                  <span class="method-name">testListAll_ReturnsMultipleBusTypes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchCountImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBusCount">
+                  </a> <!-- testGetBusCount -->
+                  <span class="method-name">testGetBusCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetCollection">
+                  </a> <!-- testGetCollection -->
+                  <span class="method-name">testGetCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetFutureTicketCollection">
+                  </a> <!-- testGetFutureTicketCollection -->
+                  <span class="method-name">testGetFutureTicketCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPastTicketCollection">
+                  </a> <!-- testGetPastTicketCollection -->
+                  <span class="method-name">testGetPastTicketCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetRouteCount">
+                  </a> <!-- testGetRouteCount -->
+                  <span class="method-name">testGetRouteCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetServiceCount">
+                  </a> <!-- testGetServiceCount -->
+                  <span class="method-name">testGetServiceCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetTripCount">
+                  </a> <!-- testGetTripCount -->
+                  <span class="method-name">testGetTripCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserCount">
+                  </a> <!-- testGetUserCount -->
+                  <span class="method-name">testGetUserCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchGraphDataImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetMonthlyCollection">
+                  </a> <!-- testGetMonthlyCollection -->
+                  <span class="method-name">testGetMonthlyCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetRouteCollection">
+                  </a> <!-- testGetRouteCollection -->
+                  <span class="method-name">testGetRouteCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetTripCollection">
+                  </a> <!-- testGetTripCollection -->
+                  <span class="method-name">testGetTripCollection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.FetchUserPassengersImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddUserPassengers">
+                  </a> <!-- testAddUserPassengers -->
+                  <span class="method-name">testAddUserPassengers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetPassengersList">
+                  </a> <!-- testGetPassengersList -->
+                  <span class="method-name">testGetPassengersList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.AdminCountsServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getCountsTest">
+                  </a> <!-- getCountsTest -->
+                  <span class="method-name">getCountsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.UserPassengersServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList">
+                  </a> <!-- testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList -->
+                  <span class="method-name">testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId">
+                  </a> <!-- testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId -->
+                  <span class="method-name">testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList">
+                  </a> <!-- testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList -->
+                  <span class="method-name">testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers">
+                  </a> <!-- testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers -->
+                  <span class="method-name">testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers">
+                  </a> <!-- testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers -->
+                  <span class="method-name">testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.dao.implementation.AdminDAOImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFindByUserId_WithExistingUser">
+                  </a> <!-- testFindByUserId_WithExistingUser -->
+                  <span class="method-name">testFindByUserId_WithExistingUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.CheckSeatImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckAvailability_SeatsAvailable">
+                  </a> <!-- testCheckAvailability_SeatsAvailable -->
+                  <span class="method-name">testCheckAvailability_SeatsAvailable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckAvailability_SeatsNotAvailable">
+                  </a> <!-- testCheckAvailability_SeatsNotAvailable -->
+                  <span class="method-name">testCheckAvailability_SeatsNotAvailable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.avengers.bus.services.implementation.StationServiceImplTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAll">
+                  </a> <!-- testListAll -->
+                  <span class="method-name">testListAll</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAllWithEmptyStations">
+                  </a> <!-- testListAllWithEmptyStations -->
+                  <span class="method-name">testListAllWithEmptyStations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAllWithException">
+                  </a> <!-- testListAllWithException -->
+                  <span class="method-name">testListAllWithException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAllWithLargeNumberOfStations">
+                  </a> <!-- testListAllWithLargeNumberOfStations -->
+                  <span class="method-name">testListAllWithLargeNumberOfStations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAllWithMultipleStations">
+                  </a> <!-- testListAllWithMultipleStations -->
+                  <span class="method-name">testListAllWithMultipleStations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testListAllWithNoStations">
+                  </a> <!-- testListAllWithNoStations -->
+                  <span class="method-name">testListAllWithNoStations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\vamsi.m\AppData\Local\Temp\testng-eclipse--1277299442\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.avengers.bus.security.PasswordEncryptor&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.SeatsBookedForOneService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.BusSearchDaoImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.TripCollection&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.ListsDAOImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.UserService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.TripStops&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.OrderGeneratorImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.viewModels.Passenger&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.StationServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchUser&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.UserListDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.ServiceDetailsMapper&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.AdminCountsServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.Userlist&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.EmailServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.BusSearchController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.Passengers&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.EmailController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.UserPassengersService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.UserTickets&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.CountsDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.ServicePassengerMapper&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Ticket&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.BusListRowMapper&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.BusListServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.BusSearchListDto&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.MonthlyCollection&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchGraphDataImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.AdminDAOImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Bus&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.UserDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.AuthenticationController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.UserPasswordChange&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchList&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.RouteCollection&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.UserPassengersDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.CheckSeatImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.utilities.exceptions.SeatsAlreadyFilled&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.TicketManagementDAOImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.AdminController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.UserTicketsDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.UserServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchCountImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.UserPassengersServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchUserTickets&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.ServiceGenerationDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.UserPassengersServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.PaymentController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.BusListDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.SeatsBookedId&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchListImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchCount&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchDetailsImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.CancelTicketServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Route&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.SelectedSeatsDetails&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Stations&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.AdminCountsService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.UserPassengersDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.ServiceDetails&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchDetailsImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.ListsDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.GraphDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.AdminDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Admin&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.UserPassengersId&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.SaveTicketServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.OrderGenerator&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.UserCountsDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.StopMapper&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.BusTypes&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchGraphDataImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.PassengerList&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Routes&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.BusTypeServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.BusSearchDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.BusListService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.Passenger&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.DetailsDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.Ticket&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.BusSearchDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.PaymentDetails&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Stop&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.BusListDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserPassengersImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.ServicePassenger&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.UserDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.UserTicketsDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.BusTypeService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchUserCounts&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.StationService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.utilities.exceptions.TicketNotPersistedException&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Services&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.filters.AdminFilter&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Trip&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.TicketMail&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.AdminTicket&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.BusTypeServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.SaveTicketService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.AdminCountsServiceImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.UserCountsDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.Ticket&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.StationServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.GraphDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.viewModels.UserCounts&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.CheckSeatImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchCountImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserTicketsImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.DetailsDAOImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.dtoModels.Email&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.CancelTicketService&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.SaveTicketServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.User&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchGraphData&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserTicketsImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.filters.AuthenticationFilter&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.TicketDetailsImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserCountsImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.CountsDAOImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchDetails&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.BusListServiceImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.TicketManagementDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.TicketPassenger&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.TicketDetails&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Trips&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.AdminDAOImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.implementation.UserListDaoImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.viewModels.AdminCounts&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.inputModels.SearchBusInput&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.UserProfileController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserPassengersImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.FetchUserPassengers&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.UserPassengers&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.CheckSeat&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.TicketDetailsImplTest&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.controllers.BookingController&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.implementation.FetchUserCountsImpl&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.models.entityModels.Service&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.dao.contracts.ServiceGenerationDAO&quot;/&gt;
+      &lt;class name=&quot;com.avengers.bus.services.contracts.EmailService&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (143 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(58);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testGetRouteDetails')
+data.setCell(0, 2, 'com.avengers.bus.services.implementation.FetchDetailsImplTest')
+data.setCell(0, 3, 529);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testGetServiceDetails')
+data.setCell(1, 2, 'com.avengers.bus.services.implementation.FetchDetailsImplTest')
+data.setCell(1, 3, 130);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testGetAllBusTypes')
+data.setCell(2, 2, 'com.avengers.bus.dao.implementation.BusSearchDaoImplTest')
+data.setCell(2, 3, 79);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testAddUser')
+data.setCell(3, 2, 'com.avengers.bus.services.implementation.FetchUserImplTest')
+data.setCell(3, 3, 33);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList')
+data.setCell(4, 2, 'com.avengers.bus.services.implementation.UserPassengersServiceImplTest')
+data.setCell(4, 3, 26);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testListAll')
+data.setCell(5, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(5, 3, 16);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testGetUserList')
+data.setCell(6, 2, 'com.avengers.bus.services.implementation.FetchUserImplTest')
+data.setCell(6, 3, 16);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testSaveTheTicket')
+data.setCell(7, 2, 'com.avengers.bus.services.implementation.SaveTicketServiceImplTest')
+data.setCell(7, 3, 13);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testAddeditedPassengers')
+data.setCell(8, 2, 'com.avengers.bus.services.implementation.FetchUserPassengersImplTest')
+data.setCell(8, 3, 6);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'getCountsTest')
+data.setCell(9, 2, 'com.avengers.bus.services.implementation.AdminCountsServiceImplTest')
+data.setCell(9, 3, 4);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testGetPassengersList')
+data.setCell(10, 2, 'com.avengers.bus.services.implementation.FetchUserPassengersImplTest')
+data.setCell(10, 3, 4);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCheckAvailability_SeatsAvailable')
+data.setCell(11, 2, 'com.avengers.bus.services.implementation.CheckSeatImplTest')
+data.setCell(11, 3, 3);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testListAllWithException')
+data.setCell(12, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(12, 3, 3);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testGetStation')
+data.setCell(13, 2, 'com.avengers.bus.dao.implementation.BusSearchDaoImplTest')
+data.setCell(13, 3, 3);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testGetPastTicketList')
+data.setCell(14, 2, 'com.avengers.bus.services.implementation.FetchUserTicketsImplTest')
+data.setCell(14, 3, 3);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testGetUserCounts')
+data.setCell(15, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(15, 3, 3);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testCheckPersistability_SeatsAvailable')
+data.setCell(16, 2, 'com.avengers.bus.services.implementation.CheckSeatImplTest')
+data.setCell(16, 3, 3);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testGetAllStations')
+data.setCell(17, 2, 'com.avengers.bus.dao.implementation.BusSearchDaoImplTest')
+data.setCell(17, 3, 3);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testGetBusCount')
+data.setCell(18, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(18, 3, 2);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers')
+data.setCell(19, 2, 'com.avengers.bus.services.implementation.UserPassengersServiceImplTest')
+data.setCell(19, 3, 2);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId')
+data.setCell(20, 2, 'com.avengers.bus.services.implementation.UserPassengersServiceImplTest')
+data.setCell(20, 3, 2);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testGetRouteCollection')
+data.setCell(21, 2, 'com.avengers.bus.services.implementation.FetchGraphDataImplTest')
+data.setCell(21, 3, 2);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testListAll_NoBusTypes')
+data.setCell(22, 2, 'com.avengers.bus.services.implementation.BusTypeServiceImplTest')
+data.setCell(22, 3, 2);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testGetMonthlyCollection')
+data.setCell(23, 2, 'com.avengers.bus.services.implementation.FetchGraphDataImplTest')
+data.setCell(23, 3, 2);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testGetUserCount')
+data.setCell(24, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(24, 3, 2);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testGetCollection')
+data.setCell(25, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(25, 3, 2);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testListAll_NullBusTypes')
+data.setCell(26, 2, 'com.avengers.bus.services.implementation.BusTypeServiceImplTest')
+data.setCell(26, 3, 2);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testListAllWithEmptyStations')
+data.setCell(27, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(27, 3, 2);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testFindByUserId_WithExistingUser')
+data.setCell(28, 2, 'com.avengers.bus.dao.implementation.AdminDAOImplTest')
+data.setCell(28, 3, 2);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testGetTripCount')
+data.setCell(29, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(29, 3, 2);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testListAll_ReturnsMultipleBusTypes')
+data.setCell(30, 2, 'com.avengers.bus.services.implementation.BusTypeServiceImplTest')
+data.setCell(30, 3, 2);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testListAll')
+data.setCell(31, 2, 'com.avengers.bus.services.implementation.BusTypeServiceImplTest')
+data.setCell(31, 3, 2);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testGetRouteCount')
+data.setCell(32, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(32, 3, 2);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testGetBusListWithoutTravelClass')
+data.setCell(33, 2, 'com.avengers.bus.services.implementation.BusListServiceImplTest')
+data.setCell(33, 3, 2);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testGetBookedSeats')
+data.setCell(34, 2, 'com.avengers.bus.dao.implementation.BusSearchDaoImplTest')
+data.setCell(34, 3, 2);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testGetUserFutureTravelCount')
+data.setCell(35, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(35, 3, 2);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testGetTicketList')
+data.setCell(36, 2, 'com.avengers.bus.services.implementation.FetchUserTicketsImplTest')
+data.setCell(36, 3, 2);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testFindByUserId_WithNonExistingUser')
+data.setCell(37, 2, 'com.avengers.bus.dao.implementation.AdminDAOImplTest')
+data.setCell(37, 3, 2);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testDeleteUserPassengers')
+data.setCell(38, 2, 'com.avengers.bus.services.implementation.FetchUserPassengersImplTest')
+data.setCell(38, 3, 2);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testGetUserWallet')
+data.setCell(39, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(39, 3, 2);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testGetUserListException')
+data.setCell(40, 2, 'com.avengers.bus.services.implementation.FetchUserImplTest')
+data.setCell(40, 3, 2);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testListAllWithMultipleStations')
+data.setCell(41, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(41, 3, 1);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testGetServiceCount')
+data.setCell(42, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(42, 3, 1);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testGetFutureTicketCollection')
+data.setCell(43, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(43, 3, 1);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testGetPastTicketCollection')
+data.setCell(44, 2, 'com.avengers.bus.services.implementation.FetchCountImplTest')
+data.setCell(44, 3, 1);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'testCheckAvailability_SeatsNotAvailable')
+data.setCell(45, 2, 'com.avengers.bus.services.implementation.CheckSeatImplTest')
+data.setCell(45, 3, 1);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList')
+data.setCell(46, 2, 'com.avengers.bus.services.implementation.UserPassengersServiceImplTest')
+data.setCell(46, 3, 1);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'testListAllWithNoStations')
+data.setCell(47, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(47, 3, 1);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers')
+data.setCell(48, 2, 'com.avengers.bus.services.implementation.UserPassengersServiceImplTest')
+data.setCell(48, 3, 1);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'testGetTripCollection')
+data.setCell(49, 2, 'com.avengers.bus.services.implementation.FetchGraphDataImplTest')
+data.setCell(49, 3, 1);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'testAddUserPassengers')
+data.setCell(50, 2, 'com.avengers.bus.services.implementation.FetchUserPassengersImplTest')
+data.setCell(50, 3, 1);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'testListAllWithLargeNumberOfStations')
+data.setCell(51, 2, 'com.avengers.bus.services.implementation.StationServiceImplTest')
+data.setCell(51, 3, 1);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'testGetBusListWithTravelClass')
+data.setCell(52, 2, 'com.avengers.bus.services.implementation.BusListServiceImplTest')
+data.setCell(52, 3, 1);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'testGetUserTravelCount')
+data.setCell(53, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(53, 3, 1);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'testGetUserBookedCount')
+data.setCell(54, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(54, 3, 1);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'testCheckPersistability_SeatsNotAvailable')
+data.setCell(55, 2, 'com.avengers.bus.services.implementation.CheckSeatImplTest')
+data.setCell(55, 3, 1);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'testGenerateTicketDetails')
+data.setCell(56, 2, 'com.avengers.bus.services.implementation.TicketDetailsImplTest')
+data.setCell(56, 3, 1);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'testGetUsername')
+data.setCell(57, 2, 'com.avengers.bus.services.implementation.FetchUserCountsImplTest')
+data.setCell(57, 3, 1);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 940 ms</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.dao.implementation.BusSearchDaoImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetAllBusTypes</span>
+                <span class="method-start">867 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetAllStations</span>
+                <span class="method-start">951 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetBookedSeats</span>
+                <span class="method-start">956 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetStation</span>
+                <span class="method-start">959 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.StationServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">966 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAll</span>
+                <span class="method-start">978 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">997 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAllWithEmptyStations</span>
+                <span class="method-start">997 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testListAllWithException</span>
+                <span class="method-start">1000 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1000 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1006 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAllWithLargeNumberOfStations</span>
+                <span class="method-start">1007 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1009 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAllWithMultipleStations</span>
+                <span class="method-start">1010 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1012 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAllWithNoStations</span>
+                <span class="method-start">1013 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.BusListServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">1016 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetBusListWithTravelClass</span>
+                <span class="method-start">1028 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetBusListWithoutTravelClass</span>
+                <span class="method-start">1032 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">1032 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchCountImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1035 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetBusCount</span>
+                <span class="method-start">1048 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetCollection</span>
+                <span class="method-start">1051 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetFutureTicketCollection</span>
+                <span class="method-start">1054 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetPastTicketCollection</span>
+                <span class="method-start">1056 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetRouteCount</span>
+                <span class="method-start">1058 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServiceCount</span>
+                <span class="method-start">1061 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetTripCount</span>
+                <span class="method-start">1063 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetUserCount</span>
+                <span class="method-start">1066 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.UserPassengersServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1069 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList</span>
+                <span class="method-start">1080 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1107 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId</span>
+                <span class="method-start">1107 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1110 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList</span>
+                <span class="method-start">1111 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1114 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers</span>
+                <span class="method-start">1114 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1117 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers</span>
+                <span class="method-start">1118 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchDetailsImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1120 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetRouteDetails</span>
+                <span class="method-start">1132 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetServiceDetails</span>
+                <span class="method-start">1663 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.SaveTicketServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1794 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSaveTheTicket</span>
+                <span class="method-start">1806 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchGraphDataImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1820 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGetMonthlyCollection</span>
+                <span class="method-start">1830 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetRouteCollection</span>
+                <span class="method-start">1833 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetTripCollection</span>
+                <span class="method-start">1836 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.BusTypeServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1840 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAll</span>
+                <span class="method-start">1841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1845 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAll_NoBusTypes</span>
+                <span class="method-start">1845 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1847 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testListAll_NullBusTypes</span>
+                <span class="method-start">1848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testListAll_ReturnsMultipleBusTypes</span>
+                <span class="method-start">1851 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1851 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchUserImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1855 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddUser</span>
+                <span class="method-start">1906 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserList</span>
+                <span class="method-start">1954 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserListException</span>
+                <span class="method-start">1972 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.AdminCountsServiceImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">1975 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getCountsTest</span>
+                <span class="method-start">2009 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.CheckSeatImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2016 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckAvailability_SeatsAvailable</span>
+                <span class="method-start">2025 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCheckAvailability_SeatsNotAvailable</span>
+                <span class="method-start">2030 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCheckPersistability_SeatsAvailable</span>
+                <span class="method-start">2033 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCheckPersistability_SeatsNotAvailable</span>
+                <span class="method-start">2037 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchUserTicketsImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2039 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetPastTicketList</span>
+                <span class="method-start">2073 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetTicketList</span>
+                <span class="method-start">2077 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2077 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchUserCountsImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2080 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserBookedCount</span>
+                <span class="method-start">2090 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserCounts</span>
+                <span class="method-start">2092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserFutureTravelCount</span>
+                <span class="method-start">2096 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserTravelCount</span>
+                <span class="method-start">2099 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserWallet</span>
+                <span class="method-start">2101 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUsername</span>
+                <span class="method-start">2104 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.dao.implementation.AdminDAOImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2106 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFindByUserId_WithExistingUser</span>
+                <span class="method-start">2107 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testFindByUserId_WithNonExistingUser</span>
+                <span class="method-start">2110 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.FetchUserPassengersImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2113 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testAddUserPassengers</span>
+                <span class="method-start">2138 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAddeditedPassengers</span>
+                <span class="method-start">2140 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDeleteUserPassengers</span>
+                <span class="method-start">2147 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetPassengersList</span>
+                <span class="method-start">2150 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.avengers.bus.services.implementation.TicketDetailsImplTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2155 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGenerateTicketDetails</span>
+                <span class="method-start">2155 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
