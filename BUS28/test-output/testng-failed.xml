@@ -3,16 +3,80 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.avengers.bus.controllers.BusSearchControllerTest">
+      <class name="com.avengers.bus.services.implementation.FetchUserCountsImplTest">
         <methods>
-          <include name="testGetServicesList"/>
-          <include name="testGetBusLayout"/>
-          <include name="testContact"/>
-          <include name="testAbout"/>
-          <include name="testGetSearchPage"/>
+          <include name="testGetUserCounts"/>
+          <include name="testGetUserWallet"/>
+          <include name="testGetUsername"/>
+          <include name="testGetUserFutureTravelCount"/>
+          <include name="testGetUserBookedCount"/>
+          <include name="setup"/>
+          <include name="testGetUserTravelCount"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserCountsImplTest -->
+      <class name="com.avengers.bus.services.implementation.TicketDetailsImplTest">
+        <methods>
+          <include name="testGenerateTicketDetails"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.avengers.bus.controllers.BusSearchControllerTest -->
+      </class> <!-- com.avengers.bus.services.implementation.TicketDetailsImplTest -->
+      <class name="com.avengers.bus.services.implementation.SaveTicketServiceImplTest">
+        <methods>
+          <include name="testSaveTheTicket"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.SaveTicketServiceImplTest -->
+      <class name="com.avengers.bus.dao.implementation.BusSearchDaoImplTest">
+        <methods>
+          <include name="testGetAllStations"/>
+          <include name="testGetBookedSeats"/>
+          <include name="testGetStation"/>
+          <include name="setUp"/>
+          <include name="testGetAllBusTypes"/>
+        </methods>
+      </class> <!-- com.avengers.bus.dao.implementation.BusSearchDaoImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserImplTest">
+        <methods>
+          <include name="testGetUserListException"/>
+          <include name="testGetUserList"/>
+          <include name="testAddUser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserImplTest -->
+      <class name="com.avengers.bus.services.implementation.BusListServiceImplTest">
+        <methods>
+          <include name="testGetBusListWithTravelClass"/>
+          <include name="beforeMethod"/>
+          <include name="testGetBusListWithoutTravelClass"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.BusListServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserPassengersImplTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testDeleteUserPassengers"/>
+          <include name="testAddeditedPassengers"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserPassengersImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserTicketsImplTest">
+        <methods>
+          <include name="testGetTicketList"/>
+          <include name="testGetPastTicketList"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserTicketsImplTest -->
+      <class name="com.avengers.bus.services.implementation.CheckSeatImplTest">
+        <methods>
+          <include name="testCheckPersistability_SeatsAvailable"/>
+          <include name="setUp"/>
+          <include name="testCheckPersistability_SeatsNotAvailable"/>
+        </methods>
+      </class> <!-- com.avengers.bus.services.implementation.CheckSeatImplTest -->
+      <class name="com.avengers.bus.dao.implementation.AdminDAOImplTest">
+        <methods>
+          <include name="testFindByUserId_WithNonExistingUser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.avengers.bus.dao.implementation.AdminDAOImplTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

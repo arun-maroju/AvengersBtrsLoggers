@@ -1,174 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
+<testng-results ignored="0" total="58" passed="34" failed="24" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-09T12:49:25 GST" name="Default suite" finished-at="2023-07-09T12:49:25 GST" duration-ms="442">
+  <suite started-at="2023-07-14T16:07:22 IST" name="Default suite" finished-at="2023-07-14T16:07:24 IST" duration-ms="2185">
     <groups>
     </groups>
-    <test started-at="2023-07-09T12:49:25 GST" name="Default test" finished-at="2023-07-09T12:49:25 GST" duration-ms="442">
-      <class name="com.avengers.bus.controllers.BusSearchControllerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="307" status="FAIL">
-          <exception class="org.mockito.exceptions.base.MockitoException">
-            <message>
-              <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+    <test started-at="2023-07-14T16:07:22 IST" name="Default test" finished-at="2023-07-14T16:07:24 IST" duration-ms="2185">
+      <class name="com.avengers.bus.dao.implementation.BusSearchDaoImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.dao.implementation.BusSearchDaoImplTest@61c644fe]" started-at="2023-07-14T16:07:22 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAbout()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testAbout" finished-at="2023-07-09T12:49:25 GST" duration-ms="1" status="SKIP">
-          <exception class="org.mockito.exceptions.base.MockitoException">
+        <test-method signature="testGetAllBusTypes()[pri:0, instance:com.avengers.bus.dao.implementation.BusSearchDaoImplTest@61c644fe]" started-at="2023-07-14T16:07:23 IST" name="testGetAllBusTypes" finished-at="2023-07-14T16:07:23 IST" duration-ms="79" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+              <![CDATA[Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null
+at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getAllBusTypes(BusSearchDaoImpl.java:33)
+at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetAllBusTypes(BusSearchDaoImplTest.java:72)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -184,100 +48,194 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAbout -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+        </test-method> <!-- testGetAllBusTypes -->
+        <test-method signature="testGetAllStations()[pri:0, instance:com.avengers.bus.dao.implementation.BusSearchDaoImplTest@61c644fe]" started-at="2023-07-14T16:07:23 IST" name="testGetAllStations" finished-at="2023-07-14T16:07:23 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null
+at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getAllStations(BusSearchDaoImpl.java:39)
+at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetAllStations(BusSearchDaoImplTest.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllStations -->
+        <test-method signature="testGetBookedSeats()[pri:0, instance:com.avengers.bus.dao.implementation.BusSearchDaoImplTest@61c644fe]" started-at="2023-07-14T16:07:23 IST" name="testGetBookedSeats" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "javax.persistence.Query.getResultList()" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null
+at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getBookedSeats(BusSearchDaoImpl.java:27)
+at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetBookedSeats(BusSearchDaoImplTest.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBookedSeats -->
+        <test-method signature="testGetStation()[pri:0, instance:com.avengers.bus.dao.implementation.BusSearchDaoImplTest@61c644fe]" started-at="2023-07-14T16:07:23 IST" name="testGetStation" finished-at="2023-07-14T16:07:23 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "javax.persistence.Query.setParameter(String, Object)" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "javax.persistence.Query.setParameter(String, Object)" because the return value of "javax.persistence.EntityManager.createQuery(String)" is null
+at com.avengers.bus.dao.implementation.BusSearchDaoImpl.getStation(BusSearchDaoImpl.java:48)
+at com.avengers.bus.dao.implementation.BusSearchDaoImplTest.testGetStation(BusSearchDaoImplTest.java:117)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetStation -->
+      </class> <!-- com.avengers.bus.dao.implementation.BusSearchDaoImplTest -->
+      <class name="com.avengers.bus.dao.implementation.AdminDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.dao.implementation.AdminDAOImplTest@5b5d6f9c]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testContact()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testContact" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
-          <exception class="org.mockito.exceptions.base.MockitoException">
+        <test-method signature="testFindByUserId_WithExistingUser()[pri:0, instance:com.avengers.bus.dao.implementation.AdminDAOImplTest@5b5d6f9c]" started-at="2023-07-14T16:07:24 IST" name="testFindByUserId_WithExistingUser" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByUserId_WithExistingUser -->
+        <test-method signature="testFindByUserId_WithNonExistingUser()[pri:0, instance:com.avengers.bus.dao.implementation.AdminDAOImplTest@5b5d6f9c]" started-at="2023-07-14T16:07:24 IST" name="testFindByUserId_WithNonExistingUser" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.TooManyActualInvocations">
             <message>
               <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+entityManager.createQuery(
+    <any string>,
+    class com.avengers.bus.models.entityModels.Admin
+);
+Wanted 1 time:
+-> at com.avengers.bus.dao.implementation.AdminDAOImplTest.testFindByUserId_WithNonExistingUser(AdminDAOImplTest.java:82)
+But was 2 times:
+-> at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
+-> at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
 
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
+              <![CDATA[org.mockito.exceptions.verification.TooManyActualInvocations: 
+entityManager.createQuery(
+    <any string>,
+    class com.avengers.bus.models.entityModels.Admin
+);
+Wanted 1 time:
+-> at com.avengers.bus.dao.implementation.AdminDAOImplTest.testFindByUserId_WithNonExistingUser(AdminDAOImplTest.java:82)
+But was 2 times:
+-> at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
+-> at com.avengers.bus.dao.implementation.AdminDAOImpl.findByUserId(AdminDAOImpl.java:24)
 
 
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at com.avengers.bus.dao.implementation.AdminDAOImplTest.testFindByUserId_WithNonExistingUser(AdminDAOImplTest.java:82)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -293,100 +251,67 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          </exception> <!-- org.mockito.exceptions.verification.TooManyActualInvocations -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContact -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+        </test-method> <!-- testFindByUserId_WithNonExistingUser -->
+      </class> <!-- com.avengers.bus.dao.implementation.AdminDAOImplTest -->
+      <class name="com.avengers.bus.services.implementation.CheckSeatImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@6fc03cf6]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetBusLayout()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetBusLayout" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
-          <exception class="org.mockito.exceptions.base.MockitoException">
+        <test-method signature="testCheckAvailability_SeatsAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@6fc03cf6]" started-at="2023-07-14T16:07:24 IST" name="testCheckAvailability_SeatsAvailable" finished-at="2023-07-14T16:07:24 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAvailability_SeatsAvailable -->
+        <test-method signature="testCheckAvailability_SeatsNotAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@6fc03cf6]" started-at="2023-07-14T16:07:24 IST" name="testCheckAvailability_SeatsNotAvailable" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckAvailability_SeatsNotAvailable -->
+        <test-method signature="testCheckPersistability_SeatsAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@6fc03cf6]" started-at="2023-07-14T16:07:24 IST" name="testCheckPersistability_SeatsAvailable" finished-at="2023-07-14T16:07:24 IST" duration-ms="3" status="FAIL">
+          <exception class="org.mockito.exceptions.misusing.WrongTypeOfReturnValue">
             <message>
               <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
+              <![CDATA[org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
 
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsAvailable(CheckSeatImplTest.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -402,209 +327,116 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          </exception> <!-- org.mockito.exceptions.misusing.WrongTypeOfReturnValue -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetBusLayout -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+        </test-method> <!-- testCheckPersistability_SeatsAvailable -->
+        <test-method signature="testCheckPersistability_SeatsNotAvailable()[pri:0, instance:com.avengers.bus.services.implementation.CheckSeatImplTest@6fc03cf6]" started-at="2023-07-14T16:07:24 IST" name="testCheckPersistability_SeatsNotAvailable" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="FAIL">
+          <exception class="org.mockito.exceptions.misusing.WrongTypeOfReturnValue">
+            <message>
+              <![CDATA[
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+Boolean cannot be returned by getBookedSeatsCount()
+getBookedSeatsCount() should return int
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+at com.avengers.bus.services.implementation.CheckSeatImplTest.testCheckPersistability_SeatsNotAvailable(CheckSeatImplTest.java:115)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.misusing.WrongTypeOfReturnValue -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckPersistability_SeatsNotAvailable -->
+      </class> <!-- com.avengers.bus.services.implementation.CheckSeatImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchDetailsImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@6db2a260]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetSearchPage()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetSearchPage" finished-at="2023-07-09T12:49:25 GST" duration-ms="1" status="SKIP">
-          <exception class="org.mockito.exceptions.base.MockitoException">
-            <message>
-              <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+        <test-method signature="testGetRouteDetails()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@6db2a260]" started-at="2023-07-14T16:07:23 IST" name="testGetRouteDetails" finished-at="2023-07-14T16:07:24 IST" duration-ms="529" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetSearchPage -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="setUp" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
+        </test-method> <!-- testGetRouteDetails -->
+        <test-method signature="testGetServiceDetails()[pri:0, instance:com.avengers.bus.services.implementation.FetchDetailsImplTest@6db2a260]" started-at="2023-07-14T16:07:24 IST" name="testGetServiceDetails" finished-at="2023-07-14T16:07:24 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServiceDetails -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchDetailsImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserTicketsImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@6e70861]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetServicesList()[pri:0, instance:com.avengers.bus.controllers.BusSearchControllerTest@c9413d8]" started-at="2023-07-09T12:49:25 GST" name="testGetServicesList" finished-at="2023-07-09T12:49:25 GST" duration-ms="0" status="SKIP">
-          <exception class="org.mockito.exceptions.base.MockitoException">
+        <test-method signature="testGetPastTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@6e70861]" started-at="2023-07-14T16:07:24 IST" name="testGetPastTicketList" finished-at="2023-07-14T16:07:24 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type]]>
+              <![CDATA[Cannot invoke "java.util.List.iterator()" because the return value of "com.avengers.bus.models.entityModels.Ticket.getPassengerList()" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.mockito.exceptions.base.MockitoException: 
-Mockito cannot mock this class: interface com.avengers.bus.services.contracts.StationService.
-
-Mockito can only mock non-private & non-final classes.
-If you're not sure why you're getting this error, please report to the mailing list.
-
-
-Java               : 20
-JVM vendor name    : Eclipse Adoptium
-JVM vendor version : 20.0.1+9
-JVM name           : OpenJDK 64-Bit Server VM
-JVM version        : 20.0.1+9
-JVM info           : mixed mode
-OS name            : Windows 8.1
-OS version         : 6.3
-
-
-Underlying exception : java.lang.IllegalArgumentException: Could not create type
-at com.avengers.bus.controllers.BusSearchControllerTest.setUp(BusSearchControllerTest.java:46)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "com.avengers.bus.models.entityModels.Ticket.getPassengerList()" is null
+at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getPastTicketList(FetchUserTicketsImpl.java:73)
+at com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetPastTicketList(FetchUserTicketsImplTest.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -620,40 +452,1139 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: Could not create type
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:139)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:344)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:159)
-at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:353)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:32)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMockType(SubclassByteBuddyMockMaker.java:71)
-at org.mockito.internal.creation.bytebuddy.SubclassByteBuddyMockMaker.createMock(SubclassByteBuddyMockMaker.java:42)
-at org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker.createMock(ByteBuddyMockMaker.java:25)
-at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:35)
-at org.mockito.internal.MockitoCore.mock(MockitoCore.java:63)
-at org.mockito.Mockito.mock(Mockito.java:1908)
-at org.mockito.internal.configuration.MockAnnotationProcessor.processAnnotationForMock(MockAnnotationProcessor.java:44)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:19)
-at org.mockito.internal.configuration.MockAnnotationProcessor.process(MockAnnotationProcessor.java:16)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.createMockFor(IndependentAnnotationEngine.java:38)
-at org.mockito.internal.configuration.IndependentAnnotationEngine.process(IndependentAnnotationEngine.java:62)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.processIndependentAnnotations(InjectingAnnotationEngine.java:49)
-at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:41)
-at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:69)
-... 31 more
-Caused by: java.lang.NoSuchMethodError: 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder net.bytebuddy.dynamic.loading.MultipleParentClassLoader$Builder.appendMostSpecific(java.util.Collection)'
-at org.mockito.internal.creation.bytebuddy.SubclassBytecodeGenerator.mockClass(SubclassBytecodeGenerator.java:83)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:37)
-at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator$1.call(TypeCachingBytecodeGenerator.java:34)
-at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:137)
-... 49 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.mockito.exceptions.base.MockitoException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetServicesList -->
-      </class> <!-- com.avengers.bus.controllers.BusSearchControllerTest -->
+        </test-method> <!-- testGetPastTicketList -->
+        <test-method signature="testGetTicketList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@6e70861]" started-at="2023-07-14T16:07:24 IST" name="testGetTicketList" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.util.List.iterator()" because the return value of "com.avengers.bus.models.entityModels.Ticket.getPassengerList()" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "com.avengers.bus.models.entityModels.Ticket.getPassengerList()" is null
+at com.avengers.bus.services.implementation.FetchUserTicketsImpl.getticketList(FetchUserTicketsImpl.java:37)
+at com.avengers.bus.services.implementation.FetchUserTicketsImplTest.testGetTicketList(FetchUserTicketsImplTest.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTicketList -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserTicketsImplTest@6e70861]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserTicketsImplTest -->
+      <class name="com.avengers.bus.services.implementation.BusListServiceImplTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@738153d8]" started-at="2023-07-14T16:07:23 IST" name="beforeMethod" finished-at="2023-07-14T16:07:23 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testGetBusListWithTravelClass()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@738153d8]" started-at="2023-07-14T16:07:23 IST" name="testGetBusListWithTravelClass" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)" because "this.busSearchDAO" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)" because "this.busSearchDAO" is null
+at com.avengers.bus.services.implementation.BusListServiceImpl.getBusList(BusListServiceImpl.java:31)
+at com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithTravelClass(BusListServiceImplTest.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusListWithTravelClass -->
+        <test-method signature="testGetBusListWithoutTravelClass()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@738153d8]" started-at="2023-07-14T16:07:23 IST" name="testGetBusListWithoutTravelClass" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)" because "this.busSearchDAO" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.avengers.bus.dao.contracts.BusSearchDAO.getStation(String)" because "this.busSearchDAO" is null
+at com.avengers.bus.services.implementation.BusListServiceImpl.getBusList(BusListServiceImpl.java:31)
+at com.avengers.bus.services.implementation.BusListServiceImplTest.testGetBusListWithoutTravelClass(BusListServiceImplTest.java:64)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusListWithoutTravelClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.BusListServiceImplTest@738153d8]" started-at="2023-07-14T16:07:23 IST" name="beforeMethod" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- com.avengers.bus.services.implementation.BusListServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserPassengersImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@3514df8d]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@3514df8d]" started-at="2023-07-14T16:07:24 IST" name="testAddUserPassengers" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUserPassengers -->
+        <test-method signature="testAddeditedPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@3514df8d]" started-at="2023-07-14T16:07:24 IST" name="testAddeditedPassengers" finished-at="2023-07-14T16:07:24 IST" duration-ms="6" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.ArgumentsAreDifferent">
+            <message>
+              <![CDATA[
+Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Argument(s) are different! Wanted:
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+
+at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testAddeditedPassengers(FetchUserPassengersImplTest.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.ArgumentsAreDifferent -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddeditedPassengers -->
+        <test-method signature="testDeleteUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@3514df8d]" started-at="2023-07-14T16:07:24 IST" name="testDeleteUserPassengers" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.ArgumentsAreDifferent">
+            <message>
+              <![CDATA[
+Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Argument(s) are different! Wanted:
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+Actual invocations have different arguments:
+userPassengersDAO.persist(
+    UserPassengers [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addUserpassengers(FetchUserPassengersImpl.java:82)
+userPassengersDAO.updateUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.addeditedpassengers(FetchUserPassengersImpl.java:56)
+userPassengersDAO.deleteUserPassengers(
+    UserPassengersId [user_id=0, passenger_name=null, age=0, gender=null]
+);
+-> at com.avengers.bus.services.implementation.FetchUserPassengersImpl.deleteUserpassengers(FetchUserPassengersImpl.java:72)
+
+at com.avengers.bus.services.implementation.FetchUserPassengersImplTest.testDeleteUserPassengers(FetchUserPassengersImplTest.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.ArgumentsAreDifferent -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUserPassengers -->
+        <test-method signature="testGetPassengersList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserPassengersImplTest@3514df8d]" started-at="2023-07-14T16:07:24 IST" name="testGetPassengersList" finished-at="2023-07-14T16:07:24 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPassengersList -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserPassengersImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchCountImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetBusCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetBusCount" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBusCount -->
+        <test-method signature="testGetCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetCollection" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCollection -->
+        <test-method signature="testGetFutureTicketCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetFutureTicketCollection" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFutureTicketCollection -->
+        <test-method signature="testGetPastTicketCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetPastTicketCollection" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPastTicketCollection -->
+        <test-method signature="testGetRouteCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetRouteCount" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRouteCount -->
+        <test-method signature="testGetServiceCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetServiceCount" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetServiceCount -->
+        <test-method signature="testGetTripCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetTripCount" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTripCount -->
+        <test-method signature="testGetUserCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchCountImplTest@1a3272e0]" started-at="2023-07-14T16:07:23 IST" name="testGetUserCount" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserCount -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchCountImplTest -->
+      <class name="com.avengers.bus.services.implementation.StationServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAll()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAll" finished-at="2023-07-14T16:07:23 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll -->
+        <test-method signature="testListAllWithEmptyStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAllWithEmptyStations" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithEmptyStations -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithException()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAllWithException" finished-at="2023-07-14T16:07:23 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithException -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithLargeNumberOfStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAllWithLargeNumberOfStations" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithLargeNumberOfStations -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithMultipleStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAllWithMultipleStations" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithMultipleStations -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllWithNoStations()[pri:0, instance:com.avengers.bus.services.implementation.StationServiceImplTest@689fcf08]" started-at="2023-07-14T16:07:23 IST" name="testListAllWithNoStations" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllWithNoStations -->
+      </class> <!-- com.avengers.bus.services.implementation.StationServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.SaveTicketServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.SaveTicketServiceImplTest@1454339d]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSaveTheTicket()[pri:0, instance:com.avengers.bus.services.implementation.SaveTicketServiceImplTest@1454339d]" started-at="2023-07-14T16:07:24 IST" name="testSaveTheTicket" finished-at="2023-07-14T16:07:24 IST" duration-ms="13" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+at java.base/java.util.ImmutableCollections$AbstractImmutableList.indexOf(ImmutableCollections.java:166)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:66)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl$1.compare(SaveTicketServiceImpl.java:1)
+at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+at java.base/java.util.TimSort.sort(TimSort.java:220)
+at java.base/java.util.Arrays.sort(Arrays.java:1306)
+at java.base/java.util.ArrayList.sort(ArrayList.java:1720)
+at java.base/java.util.Collections.sort(Collections.java:179)
+at com.avengers.bus.services.implementation.SaveTicketServiceImpl.saveTheTicket(SaveTicketServiceImpl.java:72)
+at com.avengers.bus.services.implementation.SaveTicketServiceImplTest.testSaveTheTicket(SaveTicketServiceImplTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveTheTicket -->
+      </class> <!-- com.avengers.bus.services.implementation.SaveTicketServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.UserPassengersServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList" finished-at="2023-07-14T16:07:23 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_InvalidUserId_ReturnsEmptyList -->
+        <test-method signature="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_MultipleUsers_ReturnsCorrectPassengersForUserId -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_UserIdWithNoPassengers_ReturnsEmptyList -->
+        <test-method signature="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers" finished-at="2023-07-14T16:07:23 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_ValidUserId_ReturnsCorrectNumberOfPassengers -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="setUp" finished-at="2023-07-14T16:07:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers()[pri:0, instance:com.avengers.bus.services.implementation.UserPassengersServiceImplTest@7bc3c59f]" started-at="2023-07-14T16:07:23 IST" name="testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers" finished-at="2023-07-14T16:07:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllUserPassengers_ValidUserId_ReturnsListOfUserPassengers -->
+      </class> <!-- com.avengers.bus.services.implementation.UserPassengersServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.TicketDetailsImplTest">
+        <test-method signature="testGenerateTicketDetails()[pri:0, instance:com.avengers.bus.services.implementation.TicketDetailsImplTest@b0e6d4e]" started-at="2023-07-14T16:07:24 IST" name="testGenerateTicketDetails" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException
+at java.sql/java.sql.Date.valueOf(Date.java:141)
+at com.avengers.bus.models.dtoModels.BusSearchListDto.setTrip_date(BusSearchListDto.java:85)
+at com.avengers.bus.services.implementation.TicketDetailsImplTest.testGenerateTicketDetails(TicketDetailsImplTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGenerateTicketDetails -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.TicketDetailsImplTest@b0e6d4e]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- com.avengers.bus.services.implementation.TicketDetailsImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchGraphDataImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1df8e685]" started-at="2023-07-14T16:07:24 IST" name="setUp" finished-at="2023-07-14T16:07:24 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetMonthlyCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1df8e685]" started-at="2023-07-14T16:07:24 IST" name="testGetMonthlyCollection" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMonthlyCollection -->
+        <test-method signature="testGetRouteCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1df8e685]" started-at="2023-07-14T16:07:24 IST" name="testGetRouteCollection" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRouteCollection -->
+        <test-method signature="testGetTripCollection()[pri:0, instance:com.avengers.bus.services.implementation.FetchGraphDataImplTest@1df8e685]" started-at="2023-07-14T16:07:24 IST" name="testGetTripCollection" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTripCollection -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchGraphDataImplTest -->
+      <class name="com.avengers.bus.services.implementation.AdminCountsServiceImplTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.avengers.bus.services.implementation.AdminCountsServiceImplTest@35d62807]" started-at="2023-07-14T16:07:24 IST" name="beforeMethod" finished-at="2023-07-14T16:07:24 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="getCountsTest()[pri:0, instance:com.avengers.bus.services.implementation.AdminCountsServiceImplTest@35d62807]" started-at="2023-07-14T16:07:24 IST" name="getCountsTest" finished-at="2023-07-14T16:07:24 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCountsTest -->
+      </class> <!-- com.avengers.bus.services.implementation.AdminCountsServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserImplTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@ab3b54]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddUser()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@ab3b54]" started-at="2023-07-14T16:07:24 IST" name="testAddUser" finished-at="2023-07-14T16:07:24 IST" duration-ms="33" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Adding or updating user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Adding or updating user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserImplTest.testAddUser(FetchUserImplTest.java:91)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUser -->
+        <test-method signature="testGetUserList()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@ab3b54]" started-at="2023-07-14T16:07:24 IST" name="testGetUserList" finished-at="2023-07-14T16:07:24 IST" duration-ms="16" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching user details for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching user details for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserList(FetchUserImplTest.java:61)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserList -->
+        <test-method signature="testGetUserListException()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserImplTest@ab3b54]" started-at="2023-07-14T16:07:24 IST" name="testGetUserListException" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching user details for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching user details for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserImplTest.testGetUserListException(FetchUserImplTest.java:75)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserListException -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserImplTest -->
+      <class name="com.avengers.bus.services.implementation.BusTypeServiceImplTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testListAll()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="testListAll" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll -->
+        <test-method signature="testListAll_NoBusTypes()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="testListAll_NoBusTypes" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll_NoBusTypes -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testListAll_NullBusTypes()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="testListAll_NullBusTypes" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll_NullBusTypes -->
+        <test-method signature="testListAll_ReturnsMultipleBusTypes()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="testListAll_ReturnsMultipleBusTypes" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAll_ReturnsMultipleBusTypes -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.BusTypeServiceImplTest@78723798]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- com.avengers.bus.services.implementation.BusTypeServiceImplTest -->
+      <class name="com.avengers.bus.services.implementation.FetchUserCountsImplTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="setup" finished-at="2023-07-14T16:07:24 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetUserBookedCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUserBookedCount" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching User Booked Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching User Booked Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserBookedCount(FetchUserCountsImplTest.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserBookedCount -->
+        <test-method signature="testGetUserCounts()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUserCounts" finished-at="2023-07-14T16:07:24 IST" duration-ms="3" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching User Counts for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching User Counts for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserCounts(FetchUserCountsImplTest.java:111)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserCounts -->
+        <test-method signature="testGetUserFutureTravelCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUserFutureTravelCount" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching User Future Travel Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching User Future Travel Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserFutureTravelCount(FetchUserCountsImplTest.java:134)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserFutureTravelCount -->
+        <test-method signature="testGetUserTravelCount()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUserTravelCount" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching User Travel Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching User Travel Count for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserTravelCount(FetchUserCountsImplTest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserTravelCount -->
+        <test-method signature="testGetUserWallet()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUserWallet" finished-at="2023-07-14T16:07:24 IST" duration-ms="2" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching User Wallet for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching User Wallet for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUserWallet(FetchUserCountsImplTest.java:73)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserWallet -->
+        <test-method signature="testGetUsername()[pri:0, instance:com.avengers.bus.services.implementation.FetchUserCountsImplTest@5fcff272]" started-at="2023-07-14T16:07:24 IST" name="testGetUsername" finished-at="2023-07-14T16:07:24 IST" duration-ms="1" status="FAIL">
+          <exception class="org.mockito.exceptions.verification.WantedButNotInvoked">
+            <message>
+              <![CDATA[
+Wanted but not invoked:
+logger.info(
+    "Fetching Username for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+Actually, there were zero interactions with this mock.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Wanted but not invoked:
+logger.info(
+    "Fetching Username for user with ID: {}",
+    1
+);
+-> at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+Actually, there were zero interactions with this mock.
+
+at com.avengers.bus.services.implementation.FetchUserCountsImplTest.testGetUsername(FetchUserCountsImplTest.java:88)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.mockito.exceptions.verification.WantedButNotInvoked -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsername -->
+      </class> <!-- com.avengers.bus.services.implementation.FetchUserCountsImplTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
