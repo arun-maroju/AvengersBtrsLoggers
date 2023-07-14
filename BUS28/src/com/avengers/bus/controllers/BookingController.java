@@ -75,7 +75,7 @@ public class BookingController {
 	}
 
 	// Handler method for generating the ticket preview
-	@RequestMapping(value = "passengerPreview", method = RequestMethod.POST)
+	@RequestMapping(value = "ticketPreview", method = RequestMethod.POST)
 	public ModelAndView getPreview(@Validated PassengerList passengers, BusSearchListDto bus) {
 		logger.info("Received POST request to generate ticket preview.");
 		Ticket ticket = ticketDetails.generateTicketDetails(passengers, bus);
@@ -110,6 +110,7 @@ public class BookingController {
 		} catch (TicketNotPersistedException e1) {
 			e1.getMessage();
 			System.out.println(e1.getTicket());
+			cancelTicketService.refundAmount(ticket);
 			return "bookingFailed";
 		}
 		try {

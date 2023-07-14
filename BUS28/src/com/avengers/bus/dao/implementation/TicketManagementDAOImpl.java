@@ -30,9 +30,18 @@ public class TicketManagementDAOImpl implements TicketManagementDAO {
 
 		try {
 			em.persist(ticket); // Save the ticket entity along with passengers..
-
+			if (!em.contains(ticket)) {
+				logger.info(
+						"------------------------------Ticket Not saved successfully---------------------------------------------");
+				throw new TicketNotPersistedException("Failed to save ticket ", ticket);
+			}
+			logger.info(
+					"------------------------------Ticket saved successfully---------------------------------------------");
 		} catch (Exception e) {
 			logger.error("Error occurred while saving ticket: {}", e.getMessage());
+			logger.info(
+					"------------------------------Ticket saving failed ---------------------------------------------");
+
 			throw new TicketNotPersistedException("Ticket Not Booked", ticket);
 		}
 	}
@@ -56,7 +65,6 @@ public class TicketManagementDAOImpl implements TicketManagementDAO {
 
 				// Merge the changes into the entity manager
 				em.merge(ticket);
-				
 
 				logger.info("Ticket cancelled successfully");
 				return true; // Return true if the update was successful

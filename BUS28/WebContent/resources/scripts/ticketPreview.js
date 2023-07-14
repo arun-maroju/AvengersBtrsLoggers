@@ -85,6 +85,8 @@ var ticketNum;
                     conole.log('In error block');
                     console.log("hello in error function");
                     //console.log(xhr.responseText);
+                       alert("Failed");
+					window.location.href = "home";  
                 }
             });
         });

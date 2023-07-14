@@ -54,7 +54,7 @@ document.getElementById('spinner').style.display = 'none';
 	        input.style.width = "200px";
 	        inputCell.appendChild(input);
 	        row.appendChild(inputCell);
-	        table.appendChild(row);
+	        //table.appendChild(row);
 
 	        // Create rows and cells for other fields
 
@@ -94,7 +94,7 @@ document.getElementById('spinner').style.display = 'none';
 	        input.style.width = "200px";
 	        inputCell.appendChild(input);
 	        row.appendChild(inputCell);
-	        table.appendChild(row);
+	       // table.appendChild(row);
 
 	        // Full Name
 	        row = document.createElement("tr");
@@ -170,7 +170,7 @@ document.getElementById('spinner').style.display = 'none';
 	        input.style.width = "200px";
 	        inputCell.appendChild(input);
 	        row.appendChild(inputCell);
-	        table.appendChild(row);
+	        //table.appendChild(row);
 
 	        // Wallet
 	        row = document.createElement("tr");
@@ -591,7 +591,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 cancelButton.id = "cancel-button"; // Add an ID to the button
 	                 cancelButton.addEventListener("click", cancelTicket.bind(null, ticket.booking_id,ticket.payment_id,ticket.total_fare));
 
-	                 cancelButton.style.backgroundColor = "#ffcccc"; // Apply green color
+	                 cancelButton.style.backgroundColor = "#b51212"; // Apply green color
 	                 cancelButton.style.color = "white";
 	                 var cancelButtonCell = document.createElement("td");
 	                 cancelButtonCell.appendChild(cancelButton);

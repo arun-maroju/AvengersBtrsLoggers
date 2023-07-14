@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.avengers.bus.controllers.BusSearchControllerTest">
+      <class name="com.avengers.bus.services.implementation.CheckSeatImplTest">
         <methods>
-          <include name="testGetServicesList"/>
-          <include name="testGetBusLayout"/>
-          <include name="testContact"/>
-          <include name="testAbout"/>
-          <include name="testGetSearchPage"/>
+          <include name="testCheckPersistability_SeatsAvailable"/>
+          <include name="testCheckAvailability_SeatsAvailable"/>
+          <include name="testCheckPersistability_SeatsNotAvailable"/>
           <include name="setUp"/>
+          <include name="testCheckAvailability_SeatsNotAvailable"/>
         </methods>
-      </class> <!-- com.avengers.bus.controllers.BusSearchControllerTest -->
+      </class> <!-- com.avengers.bus.services.implementation.CheckSeatImplTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -113,5 +113,8 @@ var datePicker = document.getElementById('datePicker');
 datePicker.min = today.toISOString().split('T')[0];
 datePicker.max = nextMonth.toISOString().split('T')[0];
 </script>
+
+
+
 </body>
 </html>

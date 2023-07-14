@@ -33,7 +33,7 @@
 <div class="grid-container">
 <div class="container">
     <h1 class="h1" >Passengers Details</h1>
-    <form action="passengerPreview" method="POST">
+    <form action="ticketPreview" method="POST">
         <div id="passenger-list">
             <% for (Map.Entry<String, String> entry : selectedSeatsData.entrySet()) {
                     String seatNumber = entry.getKey();
