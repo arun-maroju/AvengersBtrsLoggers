@@ -1,20 +1,28 @@
 package com.avengers.bus.controllers;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.avengers.bus.dao.contracts.ServiceGenerationDAO;
+import com.avengers.bus.models.inputModels.ActivateData;
+import com.avengers.bus.models.inputModels.InterStop;
+import com.avengers.bus.models.inputModels.Route;
+import com.avengers.bus.models.inputModels.Trip;
 import com.avengers.bus.services.contracts.AdminCountsService;
 import com.avengers.bus.services.contracts.FetchDetails;
 import com.avengers.bus.services.contracts.FetchGraphData;
 import com.avengers.bus.services.contracts.FetchList;
+import com.avengers.bus.services.contracts.RouteModifier;
 
 @Controller
 public class AdminController {
@@ -25,10 +33,11 @@ public class AdminController {
     private FetchList fetchList;
     private FetchGraphData fetchGraphData;
     private ServiceGenerationDAO serviceGenerationDAO;
+    private RouteModifier routeModifier;
 
     // constructor autowiring
     @Autowired
-    public AdminController(ServiceGenerationDAO serviceGenerationDAO, FetchGraphData fetchGraphData,
+    public AdminController(RouteModifier routeModifier, ServiceGenerationDAO serviceGenerationDAO, FetchGraphData fetchGraphData,
             AdminCountsService adminCountsService, FetchDetails fetchDetails, FetchList fetchList) {
         this.fetchList = fetchList;
         this.adminCountsService = adminCountsService;
@@ -36,6 +45,7 @@ public class AdminController {
         this.fetchGraphData = fetchGraphData;
         this.serviceGenerationDAO = serviceGenerationDAO;
         this.serviceGenerationDAO.callAutoGenerateServicesProcedure();
+        this.routeModifier=routeModifier;
     }
 
     // Handles GET requests to "/admin"
@@ -158,4 +168,49 @@ public class AdminController {
         String mcJson = fetchGraphData.getMonthlyCollection();
         return mcJson;
     }
+    
+    @RequestMapping(value = "/addRoute", method = RequestMethod.POST)
+    @ResponseBody
+    public String addNewRoute(int routeNumber, String routeSource, String routeDestination) {
+        boolean persisted=routeModifier.generateRoute(routeNumber, routeSource, routeDestination);
+        if(persisted)
+        	return "Success";
+        else
+        	return "Failed";
+    }
+    
+    @RequestMapping(value = "/deactivateRoute", method = RequestMethod.POST)
+    @ResponseBody
+    public String deactivateRoute(int routeNumber, String routeSource, String routeDestination) {
+        boolean deactivated=routeModifier.deactivateRoute(routeNumber, routeSource, routeDestination);
+        if(deactivated)
+        	return "Success";
+        else
+        	return "Failed";
+    }
+    
+    @RequestMapping(value = "/activateRoute", method = RequestMethod.POST)
+    @ResponseBody
+    public String activateRoute(int routeNumber, String routeSource, String routeDestination) {
+        boolean deactivated=routeModifier.activateRoute(routeNumber, routeSource, routeDestination);
+        if(deactivated)
+        	return "Success";
+        else
+        	return "Failed";
+    }
+    
+    @RequestMapping(value = "/activateNewRoute", method = RequestMethod.POST)
+    @ResponseBody
+    public String activateNewRoute(@RequestBody ActivateData data) {
+    	
+    	boolean activated=routeModifier.activateNewRoute(data);
+        if(activated)
+        	return "Success";
+        else
+        	return "Failed";
+    	
+    	
+    
 }
+    
+}  

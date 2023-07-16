@@ -1189,6 +1189,16 @@ document.getElementById("spinner").style.display = "none";
                         var destinationCell = document.createElement("td");
                         destinationCell.textContent = route.destination;
                         row.appendChild(destinationCell);
+
+						var activeCell = document.createElement("td");
+						if(route.active=='1'){
+                        activeCell.textContent = "Active";
+						}
+						else{
+							activeCell.textContent = "Not Active";
+						}
+                        row.appendChild(activeCell);
+						
                         
                         var actionsCell = document.createElement("td");
                         var viewDetailsButton = document.createElement("button");
@@ -1196,6 +1206,32 @@ document.getElementById("spinner").style.display = "none";
                         viewDetailsButton.addEventListener("click", createViewRouteDetailsHandler(route.route_id,route.source,route.destination));
                         actionsCell.appendChild(viewDetailsButton);
                         row.appendChild(actionsCell);
+
+						var deactivateCell=document.createElement("td");
+						if(route.active=='1'){
+						var deactivateButton=document.createElement("button");
+						deactivateButton.textContent="Deactivate Route";
+						deactivateButton.addEventListener("click", deactivateRoute.bind(null, route.route_id, route.source, route.destination, route.active));
+
+						deactivateCell.appendChild(deactivateButton);
+						}
+						row.appendChild(deactivateCell);
+						
+						var activateCell=document.createElement("td");
+						if(route.active=='0'){
+						var activateButton=document.createElement("button");
+						activateButton.textContent="Activate Route";
+						if(route.status=='old'){
+						activateButton.addEventListener("click", activateRoute.bind(null, route.route_id, route.source, route.destination, route.active,route.status));
+						}
+						else{
+						activateButton.addEventListener("click", activateNewRoute.bind(null, route.route_id, route.source, route.destination, route.active,route.status));	
+						}
+						activateCell.appendChild(activateButton);
+						}
+						row.appendChild(activateCell);
+
+
                         
                         tableBody.appendChild(row);
                     }
@@ -1699,3 +1735,292 @@ document.getElementById("spinner").style.display = "none";
                 }
             });
         });
+
+
+function addRoute()
+{
+	document.getElementById("addRoutePopup").style.display = "block";
+	var overlay = document.querySelector(".overlay2");
+	overlay.style.display = "block";
+}
+
+
+function persistRoute(){
+	document.getElementById("spinner").style.display = "block";
+	var routeNumber = $("#routeNumberInput").val();
+        var routeSource = $("#routeSourceInput").val();
+        var routeDestination = $("#routeDestinationInput").val();
+
+        // Create the data object
+        var data = {
+          routeNumber: routeNumber,
+          routeSource: routeSource,
+          routeDestination: routeDestination
+        };
+
+		$.ajax({
+          url: "addRoute",
+          method: "POST",
+          data: data,
+          success: function(response) {
+            // Handle the response from the server
+            console.log('Success');
+            // You can perform further actions here based on the response
+
+
+			document.getElementById("addRoutePopup").style.display = "none";
+			var overlay = document.querySelector(".overlay2");
+			alert("Success");
+			overlay.style.display = "none";
+			showRoutes();
+          },
+          error: function(xhr, status, error) {
+            // Handle the error if the request fails
+            console.log("AJAX request failed: " + error);
+			document.getElementById("addRoutePopup").style.display = "none";
+			var overlay = document.querySelector(".overlay2");
+			alert("Failed");
+			overlay.style.display = "none";
+			showRoutes();
+          }
+        });
+}
+
+function cancelAddRoute()
+{
+	document.getElementById("addRoutePopup").style.display = "none";
+	var overlay = document.querySelector(".overlay2");
+	overlay.style.display = "none";
+}
+
+function deactivateRoute(route_id,source,destination,active)
+{
+	document.getElementById("spinner").style.display = "block";
+
+        // Create the data object
+        var data = {
+          routeNumber: route_id,
+          routeSource: source,
+          routeDestination: destination
+        };
+
+		$.ajax({
+          url: "deactivateRoute",
+          method: "POST",
+          data: data,
+          success: function(response) {
+            // Handle the response from the server
+            console.log('Success');
+            // You can perform further actions here based on the response
+			alert("Route Deactivated");
+			showRoutes();
+          },
+          error: function(xhr, status, error) {
+            // Handle the error if the request fails
+            console.log("AJAX request failed: " + error);
+			alert("Route Deactivation Failed");
+			showRoutes();
+          }
+        });
+}
+
+
+function activateRoute(route_id,source,destination,active,status)
+{
+	document.getElementById("spinner").style.display = "block";
+
+        // Create the data object
+        var data = {
+          routeNumber: route_id,
+          routeSource: source,
+          routeDestination: destination
+        };
+		if(status=='old'){
+		$.ajax({
+          url: "activateRoute",
+          method: "POST",
+          data: data,
+          success: function(response) {
+            // Handle the response from the server
+            console.log('Success');
+            // You can perform further actions here based on the response
+			alert("Route Activated");
+			showRoutes();
+          },
+          error: function(xhr, status, error) {
+            // Handle the error if the request fails
+            console.log("AJAX request failed: " + error);
+			alert("Route Activation Failed");
+			showRoutes();
+          }
+        });
+}
+}
+
+
+function activateNewRoute(route_id, source, destination, active,status)
+{
+	document.getElementById("popRouteId").value=route_id;
+	document.getElementById("popSource").value=source;
+	document.getElementById("popDestination").value=destination;
+	
+	document.getElementById("activateNewRoute").style.display = "block";
+	var overlay = document.querySelector(".overlay2");
+	overlay.style.display = "block";
+	document.getElementById("tableRoute_id").value=route_id;
+	document.getElementById("source1").value=source;
+	document.getElementById("destination1").value=destination;
+}
+
+function addRow() {
+
+
+console.log('clicked');
+
+  var routeTableBody = document.getElementById("routeTableBody");
+  var rowCount = routeTableBody.rows.length;
+
+  var newRow = routeTableBody.insertRow(rowCount);
+		var currentRow=rowCount + 1;
+      var newCell0 = newRow.insertCell(0);
+      newCell0.innerHTML = rowCount + 1;
+
+      var newCell1 = newRow.insertCell(1);
+	var source=document.getElementById("popSource").value
+      newCell1.innerHTML = "<input type='text' id='source" + currentRow + "' disabled style='width: 80px;' value='"+source+"'>";
+
+	var destination=document.getElementById("popDestination").value
+      var newCell2 = newRow.insertCell(2);
+      newCell2.innerHTML = "<input type='text' id='destination" + currentRow + "' disabled style='width: 80px;' value='"+destination+"'>";
+
+      var newCell3 = newRow.insertCell(3);
+      newCell3.innerHTML = "<input type='text' id='departure" + currentRow + "' style='width: 80px;'>";
+
+      var newCell4 = newRow.insertCell(4);
+      newCell4.innerHTML = "<input type='text' id='arrival" + currentRow + "' style='width: 80px;'>";
+
+      var newCell5 = newRow.insertCell(5);
+      newCell5.innerHTML = "<input type='text' id='bus_type" + currentRow + "' style='width: 80px;'>";
+
+      var newCell6 = newRow.insertCell(6);
+      newCell6.innerHTML = "<input type='number' id='inter_stops" + currentRow + "' style='width: 80px;'>";
+	
+	var route=document.getElementById('popRouteId').value;
+	
+      var newCell7 = newRow.insertCell(7);
+      newCell7.innerHTML = "<input type='number' id='tableRoute_id' disabled style='width: 80px;' value='"+route+"'>";
+
+console.log("new row")
+console.log(route)
+
+		document.getElementById('tableRoute_id').value=route;
+      document.getElementById("removeTrip").disabled = false;
+    }
+
+function removeRow() {
+      var routeTableBody = document.getElementById("routeTableBody");
+      var rowCount = routeTableBody.rows.length;
+
+      if (rowCount > 1) {
+        routeTableBody.deleteRow(rowCount - 1);
+        document.getElementById("removeTrip").disabled = rowCount === 2;
+      }
+    }
+
+function addInterStops() {
+    var routeTableBody = document.getElementById("routeTableBody");
+    var rowCount = routeTableBody.rows.length;
+
+    var interStopTableBody = document.getElementById("interStopTableBody");
+    interStopTableBody.innerHTML = ""; // Clear previous inter stop rows
+
+    for (var i = 0; i < rowCount; i++) {
+	console.log(document.getElementById("inter_stops" + (i + 1)).value);
+      var interStopsCount = parseInt(document.getElementById("inter_stops" + (i + 1)).value);
+
+      for (var j = 0; j < interStopsCount; j++) {
+        var newRow = interStopTableBody.insertRow();
+		var index=j+1;
+        newRow.innerHTML = `
+          <td>${i + 1}</td>
+          <td><input type='text' id='stop_${i + 1}_${j + 1}' style='width: 80px;'></td>
+          <td><input type='number' id='stop_index_${i + 1}_${j + 1}' disabled style='width: 80px;' value='${j + 1}'></td>
+          <td><input type='text' id='stop_time_${i + 1}_${j + 1}' style='width: 80px;'></td>
+        `;
+      }
+    }
+
+    document.getElementById("interStops").style.display = "block";
+  }
+
+
+
+
+function confirmTrips() {
+  var routeTableBody = document.getElementById("routeTableBody");
+  var rowCount = routeTableBody.rows.length;
+
+  var trips = [];
+  var interStops = [];
+
+  for (var i = 0; i < rowCount; i++) {
+    var trip = {
+      tripNo: i + 1,
+      source: document.getElementById("source" + (i + 1)).value,
+      destination: document.getElementById("destination" + (i + 1)).value,
+      departure: document.getElementById("departure" + (i + 1)).value,
+      arrival: document.getElementById("arrival" + (i + 1)).value,
+      busType: document.getElementById("bus_type" + (i + 1)).value,
+      interStopsCount: parseInt(document.getElementById("inter_stops" + (i + 1)).value),
+      routeId: document.getElementById("tableRoute_id").value
+    };
+
+    trips.push(trip);
+
+    for (var j = 0; j < trip.interStopsCount; j++) {
+      var interStop = {
+        tripNo: trip.tripNo,
+        stop: document.getElementById("stop_" + trip.tripNo + "_" + (j + 1)).value,
+        stopIndex: document.getElementById("stop_index_" + trip.tripNo + "_" + (j + 1)).value,
+        stopTime: document.getElementById("stop_time_" + trip.tripNo + "_" + (j + 1)).value
+      };
+
+      interStops.push(interStop);
+    }
+  }
+
+  var data = {
+    trips: trips,
+    interStops: interStops
+  };
+
+  // Make AJAX request to the Spring controller
+  $.ajax({
+    url: "activateNewRoute",
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(data),
+    success: function(response) {
+      // Handle success response
+		if(response=='Success'){
+      console.log("Route Activated Successfully");
+route_id=document.getElementById("popRouteId").value;
+	source=document.getElementById("popSource").value;
+	destination=document.getElementById("popDestination").value;
+		activateRoute(route_id,source,destination,1,'old');
+}
+else{
+	console.log("Route Activation failed");
+	alert("Route Activation failed");
+}
+    },
+    error: function(xhr, status, error) {
+      // Handle error response
+      console.error("AJAX request failed: " + error);
+console.log("Route Activation failed");
+	alert("Route Activation failed");
+    }
+  });
+}
+
+

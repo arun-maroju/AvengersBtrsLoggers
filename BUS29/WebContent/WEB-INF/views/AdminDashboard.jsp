@@ -148,11 +148,20 @@
     </div>
     <div id="routeList">
     <h2>Routes</h2>
+    <div class="add">
+  <div class="addRouteButton">
+    
+<input type="button" id="addRoute" value="Add New Route" onclick='addRoute()'/>
+
+  </div>
+  
+</div>
+<br>
 	<center>
 	<table>
   <thead>
     <tr>
-      <th>Route ID</th><th>Source</th> <th>Destination</th> <th>     </th>    
+      <th>Route ID</th><th>Source</th> <th>Destination</th> <th>Status</th> <th></th> <th></th><th></th>   
     </tr>
   </thead>
   <tbody>
@@ -377,6 +386,9 @@
   </tbody>
 </table>   
 </div>
+
+
+
 <div id="routePopupContent" style="display: none;">
     <table>
         <tr>
@@ -393,10 +405,112 @@
         </tr>      
     </table>
 </div>
-<div id="routePopupContent" style="display: none;">
-    <!-- Content for the popup -->
-    Route Number: <span id="routeNumber"></span>
+
+<div class="overlay2"></div>
+<div id="addRoutePopup" style="display: none;" class='popup2'>
+<h2>Add Route</h2>
+<form id="routeForm">
+    <table>
+        <tr>
+            <td>Route ID:</td>
+            <td><input type='textbox' id="routeNumberInput"></td>
+        </tr>
+        <tr>
+            <td>Source:</td>
+            <td><input type='textbox' id="routeSourceInput"></td>
+        </tr>
+        <tr>
+            <td>Destination:</td>
+            <td><input type='textbox' id="routeDestinationInput"></td>
+        </tr>      
+    </table>
+    </form>
+    <br>
+    <center>
+    <button id="addRouteAjax" onclick='persistRoute()'>Add</button>
+    <button id="cancelAddRoute" onclick='cancelAddRoute()'>Cancel</button>
+    </center>
 </div>
+
+
+
+
+
+<div id="activateNewRoute" style="display: none;" class='popup3'>
+    <h2>Activate New Route</h2>
+    <table>
+    <tr>
+    <td><label>Route Id</label></td>
+    <td><input id='popRouteId' disabled></td>
+    </tr>
+    <tr>
+    <td><label>Source</label></td>
+    <td><input id='popSource' disabled></td>
+    </tr><tr>
+    <td><label>Destination</label></td>
+    <td><input id='popDestination' disabled></td>
+    </tr>
+    </table>
+    <form id="routeForm">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Bus Type</th>
+            <th>Inter Stops</th>
+            <th>Route_id</th>
+          </tr>
+        </thead>
+        <tbody id="routeTableBody">
+          <tr>
+            <td>1</td>
+            <td><input type='text' id='source1' disabled style='width: 80px;'></td>
+            <td><input type='text' id='destination1' disabled style='width: 80px;'></td>
+            <td><input type='text' id='departure1' style='width: 80px;'></td>
+            <td><input type='text' id='arrival1' style='width: 80px;'></td>
+            <td><input type='text' id='bus_type1' style='width: 80px;'></td>
+            <td><input type='number' id='inter_stops1' style='width: 80px;'></td>
+            <td><input type='number' id='tableRoute_id' disabled style='width: 80px;'></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <br>
+    <center>
+      <button id='addTrip' onclick='addRow()'>Add Trip</button>
+      <button id='removeTrip' disabled onclick='removeRow()'>Remove Trip</button>
+      <br>
+      <button id='addInterStops' onclick='addInterStops()'>Add Intermediate Stops</button>
+    </center>
+  </div>
+
+<div id="interStops" style="display: none;" class='popup4'>
+  <h2>Activate New Route</h2>
+  <form id="interStopForm">
+    <table>
+      <thead>
+        <tr>
+          <th>Trip No</th>
+          <th>Stop</th>
+          <th>Stop Index</th>
+          <th>Stop Time</th>
+        </tr>
+      </thead>
+      <tbody id="interStopTableBody"></tbody>
+    </table>
+  </form>
+  <br>
+  <center>
+    <button id='confirmTrips' onclick='confirmTrips()'>Activate Route</button>
+  </center>
+</div>
+
+
+
 <div>
 <footer class="footer">
   <p>

@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Login From</title>
+    <title>Admin Login</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,7 +18,7 @@
     <div class="login_form_container">   
     <form action="adminLogin" method="POST">    
     	      <div class="login_form">
-        <h2>Login</h2>
+        <h2>Admin Login</h2>
         <div class="input_group">
           <i class="fa fa-user"></i>
           <input

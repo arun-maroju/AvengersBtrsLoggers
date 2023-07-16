@@ -16,6 +16,8 @@ public class Route {
 	private int route_id;
 	private String source;
 	private String destination;
+	private int active;
+	private String status;
 
 	@OneToMany(mappedBy = "route", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Trip> trips;
@@ -51,10 +53,29 @@ public class Route {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
+	
+	
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	@Override
 	public String toString() {
-		return "Routes [route_id=" + route_id + ", source=" + source + ", destination=" + destination + "]";
+		return "Route [route_id=" + route_id + ", source=" + source + ", destination=" + destination + ", active="
+				+ active + ", status=" + status + ", trips=" + trips + "]";
 	}
 
 }
