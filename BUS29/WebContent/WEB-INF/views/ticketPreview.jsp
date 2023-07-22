@@ -9,6 +9,26 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
 	<script src="<c:url value="/resources/scripts/ticketPreview.js" />"></script> 
+	<style type="text/css">
+	
+#spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 </head>
 <body id="preview-body">
 <div id="navbarLogin"><jsp:include page="navbarAfterLogin.jsp"><jsp:param name="currentPage" value="home" /></jsp:include></div>
@@ -31,7 +51,9 @@
                     <h2>Number of Passengers&nbsp;: ${ticket.numberOfPassengers}</h2>
                 </div>
             </div>
-        </div>      
+        </div>     
+         <div id="spinner"></div>
+          
         <div class="passenger-details">
             <h2>Passenger Details:</h2>
             <table>
@@ -56,11 +78,17 @@
                 
                 
                     <input type="submit" value="Make Payment" class="payment-button">
+                    <input type="button" value="Go Back" class="payment-button" onclick="gobackfunction()">
                 </form>
             </div>
         </div>
     </div>
     <%int userid=(Integer)session.getAttribute("userId");%>
     <input type='hidden' id='uid' value=<%=userid %>>
+    <script>
+    function gobackfunction() {
+    	  window.history.back();
+    	}
+    </script>
 </body>
 </html>

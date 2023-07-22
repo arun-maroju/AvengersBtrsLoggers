@@ -82,6 +82,7 @@ document.getElementById('spinner').style.display = 'none';
 	        labelCell = document.createElement("td");
 	        labelCell.textContent = "Password:";
 	        labelCell.style.fontWeight = "bold";
+	        labelCell.style.display = "none";
 	        row.appendChild(labelCell);
 
 	        inputCell = document.createElement("td");
@@ -93,6 +94,7 @@ document.getElementById('spinner').style.display = 'none';
 	        input.id = "password";
 	        input.style.width = "200px";
 	        inputCell.appendChild(input);
+	        inputCell.style.display = "none";
 	        row.appendChild(inputCell);
 	        table.appendChild(row);
 
@@ -176,6 +178,7 @@ document.getElementById('spinner').style.display = 'none';
 	        row = document.createElement("tr");
 	        labelCell = document.createElement("td");
 	        labelCell.textContent = "Wallet:";
+	        labelCell.style.display = "none";
 	        labelCell.style.fontWeight = "bold";
 	        row.appendChild(labelCell);
 
@@ -188,6 +191,7 @@ document.getElementById('spinner').style.display = 'none';
 	        input.id = "wallet";
 	        input.style.width = "200px";
 	        inputCell.appendChild(input);
+	        inputCell.style.display = "none";
 	        row.appendChild(inputCell);
 	        table.appendChild(row);
 
@@ -591,7 +595,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 cancelButton.id = "cancel-button"; // Add an ID to the button
 	                 cancelButton.addEventListener("click", cancelTicket.bind(null, ticket.booking_id,ticket.payment_id,ticket.total_fare));
 
-	                 cancelButton.style.backgroundColor = "#ffcccc"; // Apply green color
+	                 cancelButton.style.backgroundColor = "#b51212"; // Apply green color
 	                 cancelButton.style.color = "white";
 	                 var cancelButtonCell = document.createElement("td");
 	                 cancelButtonCell.appendChild(cancelButton);
@@ -1155,7 +1159,8 @@ document.getElementById('spinner').style.display = 'none';
 
 	                 
 	                 tableBody.appendChild(row);
-	                       hideBufferingLayer();
+	                 document.getElementById('spinner').style.display = 'none';
+	                 hideBufferingLayer();
 
 	             }
 	         },
@@ -1195,9 +1200,19 @@ document.getElementById('spinner').style.display = 'none';
 	 	    submitButton.addEventListener("click", function() {
 	 	        handleSubmit(ticket);
 	 	    });
-
+	 	    
+			const cancelButton = document.createElement("button");
+			cancelButton.setAttribute("class", "cancel-button");
+			cancelButton.textContent = "Cancel";
+			cancelButton.addEventListener("click", function() {
+			const ratingPopup = document.querySelector(".rating-popup");
+	 	    ratingPopup.remove();
+			});
+			
+			
 	 	    popup.appendChild(ratingOptions);
 	 	    popup.appendChild(submitButton);
+	 	    popup.appendChild(cancelButton);
 	 	    document.body.appendChild(popup);
 	 	}
 
@@ -1467,11 +1482,12 @@ document.getElementById('spinner').style.display = 'none';
 	
 	
 	function cancelTicket(booking_id,payment_id,total_fare) {
-	    // Display the confirmation dialog
-	    	  showBufferingLayer(); // Show the spinner before form submission
+	   
 
 	    var confirmCancel = window.confirm("Are you sure you want to cancel this ticket?");
 	    if (confirmCancel) {
+			 // Display the confirmation dialog
+	    	  showBufferingLayer(); // Show the spinner before form submission
 	        $.ajax({
 	            url: "cancelTicket", // Replace with the actual URL of your service
 	            method: "POST",
@@ -1492,4 +1508,7 @@ document.getElementById('spinner').style.display = 'none';
 	            }
 	        });
 	    }
+	    else{
+			document.getElementById('spinner').style.display = 'none';
+		}
 	}

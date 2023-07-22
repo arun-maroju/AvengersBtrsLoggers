@@ -121,3 +121,15 @@
         .payment-button:hover {
             background-color: #2288bb;
         }
+        
+        
+          /* Style for the transparent overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for the desired transparency level */
+    z-index: 9999; /* Set a high z-index to make sure the overlay is on top of other elements */
+  }

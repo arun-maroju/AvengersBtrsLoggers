@@ -394,7 +394,7 @@
 
 #preview-button:hover
 {
- background-color: red;
+ background-color: rgb(0, 128, 255);
 }
 #cancel-button:hover {
   background-color: darkgreen; /* Change to darkblue for the preview button if desired */
@@ -474,6 +474,20 @@
   transition: background-color 0.3s ease;
 }
 
+/* Styles for the cancel button */
+  .cancel-button {
+    display: block;
+    margin: 0 auto; /* Optional margin between buttons */
+    margin-top:3px;
+    padding: 10px 20px 10px 20px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
 .submit-button:hover {
   background-color: #23527c;
 }
@@ -521,23 +535,22 @@ color:black;
 #cancelBtn {
   margin-top: 10px;
 }
-
 .loader-wrapper{
   position:fixed;
   z-index:1090;
   height:100vh;
   width:100vw;
-  background-color:rgba(0, 0, 0, 0.5);
-  display:none;
+   display: none;
+  background-color:rgba(0,0,0,0.5);
 }
 
 .truck-wrapper{
   height: 200px;
   width: 200px;
-  border: 5px solid blue;
+  border: 5px solid black;
   position:absolute;
   top:50%;
-  left:50%;
+  left:35%;
   transform:translateX(-50%) translateY(-50%) scale(0.8);
 background:white;
   animation:bg 0.5s linear infinite;
@@ -548,17 +561,17 @@ background:white;
 }
 
 .truck-wrapper:after{
-  content:'Avengers';
+  content:'Loading...';
   font-size:20px;
   position:absolute;
   bottom:0px;
   text-align:center;
   width:100%;
-  border-top:1px solid blue;
+  border-top:1px solid black;
 background: rgb(30,252,200);
 background: -moz-linear-gradient(left, rgba(30,252,200,1) 0%, rgba(29,211,214,1) 100%);
 background: -webkit-linear-gradient(left, rgba(30,252,200,1) 0%,rgba(29,211,214,1) 100%);
-background: linear-gradient(to right, blue 0%,#61c664 100%);
+background: linear-gradient(to right, black 0%,black 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1efcc8', endColorstr='#1dd3d6',GradientType=1 );
   color:white;
   padding-top:8px;
@@ -576,7 +589,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1efcc8', end
   transform: translateX(-50%);
   
 }
-
 
 /* .truck > .truck-container {
   background: rgb(175,189,195);
@@ -749,7 +761,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afbdc3', end
 }
 
 @keyframes spin {
-  50%{
+  0%{
     top:76px;
   }
     100% {
@@ -759,7 +771,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afbdc3', end
 
 @keyframes container {
   
-  30%{
+  100%{
     transform:rotate(1deg);
   }
   50%{

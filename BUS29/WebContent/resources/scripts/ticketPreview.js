@@ -2,6 +2,8 @@ var ticketNum;
     var payment_id;
     //var userid=document.getElementById("uid");
     $(document).ready(function() {
+		document.getElementById('spinner').style.display = 'none';
+
     	var userid=$("#uid").val().toString();
 
     	console.log("Hello");
@@ -49,7 +51,23 @@ var ticketNum;
                                 // Clear the input fields
                                 $('#amount').val('');
                                 $('#ticketNumber').val('');
-                                window.location.href = "confirm?payment_id="+payment_id+"&order_id="+order_id+"&user_id="+userid;
+                                
+                                
+                                
+          var spinner = document.getElementById('spinner');
+                               
+          setTimeout(function() {
+          spinner.classList.add('hidden'); // Hide the spinner
+          window.location.href = "confirm?payment_id="+payment_id+"&order_id="+order_id+"&user_id="+userid;
+        	const overlay = document.createElement("div");
+				overlay.classList.add("overlay");
+				document.body.appendChild(overlay);
+        	document.getElementById('spinner').style.display = 'block';
+
+        }, 3000);
+
+                                
+                                
                             },
                             "prefill": {
                                 "name": "",
