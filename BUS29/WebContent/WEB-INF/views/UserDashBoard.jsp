@@ -44,10 +44,9 @@
 </div>    
   </ul>
 </div>
-  <div class="content" id="content">
   
    <!-- Buffering layer -->
-    <div class="loader-wrapper" id="spinner">
+<div class="loader-wrapper" id="spinner" >
 <div class="truck-wrapper">
   <div class="truck">
     <div class="truck-container"></div>
@@ -64,8 +63,10 @@
   </div>
 </div>
 </div>
+  <div class="content" id="content">
+
     <!-- Your dashboard content goes here -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div id="dashboardHeader" style="display: flex; justify-content: space-between; align-items: center;">
       <h1>Welcome to the Avengers BTRS User Dashboard</h1>
     </div>  
      <!-- Buffering layer -->

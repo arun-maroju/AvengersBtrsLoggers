@@ -10,6 +10,8 @@ document.getElementById('spinner').style.display = 'none';
         } 
   
   function showDashboard() {
+        var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Welcome to the Avengers BTRS User Dashboard";
       document.getElementById("dashboard2").style.display = "grid";
       document.getElementById("userDetails").style.display = "none";
       document.getElementById("ticketDetails").style.display = "none";
@@ -304,6 +306,7 @@ document.getElementById('spinner').style.display = 'none';
 	    error: function(xhr, status, error) {
 	    	alert("Failed to update user");
 	      console.error("AJAX request failed: " + status + ", " + error);
+	                  hideBufferingLayer();
 	    }
 	  });
      });
@@ -314,7 +317,9 @@ document.getElementById('spinner').style.display = 'none';
 
   
  function showBooking(){
-	             showBufferingLayer();
+	          showBufferingLayer();
+	         var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Welcome To Ticket Details";
  	$.ajax({
          url: "ticketList", // Replace with the actual URL of your service
          method: "GET",
@@ -531,6 +536,8 @@ document.getElementById('spinner').style.display = 'none';
  
  function showfutureBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
+	 	   var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Welcome To Future Ticket Details";
 	 	$.ajax({
 	         url: "futureticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -746,6 +753,8 @@ document.getElementById('spinner').style.display = 'none';
  function showPastBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
 
+ 			var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Welcome To Past Ticket Details";
 	 	$.ajax({
 	         url: "pastticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -946,7 +955,8 @@ document.getElementById('spinner').style.display = 'none';
  
  function showcancelledBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+  			var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Cancelled Ticket Details";
 	 	$.ajax({
 	         url: "cancelticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -1103,7 +1113,8 @@ document.getElementById('spinner').style.display = 'none';
 	
  function rating(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+ 			var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Welcome To Service Rating";
 	 	$.ajax({
 	         url: "ratingList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -1287,11 +1298,13 @@ document.getElementById('spinner').style.display = 'none';
 	 
  function showPassengers() {
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+          var dashboardHeader = document.querySelector("#dashboardHeader h1");
+                dashboardHeader.textContent = " Passengers Details";
 	    $.ajax({
 	        url: "passengersList", // Replace with the actual URL of your service
 	        method: "GET",
 	        success: function(response) {
+	            
 	            var passengers = JSON.parse(response);
 	            var tableBody = document.querySelector("#passengerDetails table tbody");
 	            tableBody.innerHTML = ""; // Clear existing table rows
@@ -1329,8 +1342,14 @@ document.getElementById('spinner').style.display = 'none';
 	                	    var age = selectedRow.cells[2].textContent;
 	                	    var gender = selectedRow.cells[3].textContent;
 
+						 var isConfirmed = confirm("Are you sure you want to delete this passenger?");
+
+    					if (isConfirmed) {
+      						  // Call the controller method to delete the passenger
+       							 deletePassenger(userId, name, age, gender);
+    						}
 	                    // Call the controller method to delete the passenger
-	                    deletePassenger(userId,name,age,gender);
+	                    //deletePassenger(userId,name,age,gender);
 	                });
 	                actionCell2.appendChild(deleteButton);
  
