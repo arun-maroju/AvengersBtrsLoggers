@@ -46,7 +46,7 @@ var ticketNum;
                                 console.log(response.razorpay_payment_id);
                                 console.log(response.razorpay_order_id);
                                 console.log(response.razorpay_signature);
-                                alert("Success");
+                             //   alert("Success");
 
                                 // Clear the input fields
                                 $('#amount').val('');
