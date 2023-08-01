@@ -1,3 +1,5 @@
+document.getElementById("refundList").style.display = "none";
+
 //Get the logout link and modal dialog
 const logoutLink = document.getElementById('logoutLink');
 const logoutModal = document.getElementById('logoutModal');
@@ -128,7 +130,8 @@ $.ajax({
 	});
     
     
-    document.getElementById('ticketAmountFilter').addEventListener('change', function() {
+	document.getElementById('ticketAmountFilter').addEventListener('change', filterTicketAmount.bind(null));
+function filterTicketAmount() {
 	document.getElementById("spinner").style.display = "flex";
     	  // Function code to be executed when the value of the select changes
     	  var selectedServiceId = this.value;
@@ -209,7 +212,7 @@ document.getElementById("spinner").style.display = "none";
         document.getElementById("ticketList").style.display = "none";
         document.getElementById("paymentList").style.display = "block";
 		document.getElementById("refundList").style.display = "none";
-        });
+        }
     
     
     
@@ -2021,6 +2024,17 @@ console.log("Route Activation failed");
 	alert("Route Activation failed");
     }
   });
+}
+
+function cancelInterStops(){
+	document.getElementById("activateNewRoute").style.display='none';
+	var overlay = document.querySelector(".overlay2");
+	overlay.style.display = "none";
+}
+
+function cancelConfirmTrips(){
+	document.getElementById("interStops").style.display='none';
+	
 }
 
 

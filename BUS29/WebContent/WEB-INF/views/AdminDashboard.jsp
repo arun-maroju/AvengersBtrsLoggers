@@ -89,7 +89,7 @@
 </div>
 </div>
      <div id="serviceList">
-    <h2>Services</h2>
+    <center><h2>Services</h2></center>
      <div class="filter-container">
   <div class="filter-item">
     <label for="datefilter" class="label-date">Select Date:</label>
@@ -147,7 +147,7 @@
 	</center>
     </div>
     <div id="routeList">
-    <h2>Routes</h2>
+    <center><h2>Routes</h2></center>
     <div class="add">
   <div class="addRouteButton">
     
@@ -161,7 +161,7 @@
 	<table>
   <thead>
     <tr>
-      <th>Route ID</th><th>Source</th> <th>Destination</th> <th>Status</th> <th></th> <th></th><th></th>   
+      <th>Route ID</th><th>Source</th> <th>Destination</th> <th>Status</th> <th>Details</th> <th>Deactivate</th><th>Activate</th>   
     </tr>
   </thead>
   <tbody>
@@ -185,7 +185,7 @@
 	</center>
     </div> 
     <div id="ticketList">
-      <h2>Ticket List</h2>   
+     <center><h2>Ticket List</h2></center>
           <div class="filter-container">
   <div class="filter-item">
     <label for="ticketDatefilter" class="label-date">Select Date:</label>
@@ -227,7 +227,7 @@
 	</center>
     </div>
     <div id="paymentList">
-    <h2>Payments</h2>
+    <center><h2>Payments</h2></center>
      <div class="filter-container">
   <div class="filter-item">
     <label for="paymentDatefilter" class="label-date">Select Date:</label>
@@ -272,7 +272,7 @@
 	</center>
     </div>
     <div id="refundList">
-    <h2>Payments</h2>
+    <center><h2>Refunds</h2></center>
      <div class="filter-container">
   <div class="filter-item">
     <label for="paymentDatefilter" class="label-date">Select Date:</label>
@@ -485,6 +485,8 @@
       <button id='removeTrip' disabled onclick='removeRow()'>Remove Trip</button>
       <br>
       <button id='addInterStops' onclick='addInterStops()'>Add Intermediate Stops</button>
+      <br>
+      <button id='cancelInterStops' onclick='cancelInterStops()'>Cancel</button>
     </center>
   </div>
 
@@ -506,6 +508,9 @@
   <br>
   <center>
     <button id='confirmTrips' onclick='confirmTrips()'>Activate Route</button>
+    <br>
+    <br>
+    <button id='cancelConfirmTrips' onclick='cancelConfirmTrips()'>Cancel</button>
   </center>
 </div>
 

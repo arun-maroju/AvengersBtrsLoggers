@@ -380,7 +380,7 @@ margin-bottom:70px;
 .truck-wrapper{
   height: 200px;
   width: 200px;
-  border: 5px solid blue;
+  border: 5px solid black;
   position:absolute;
   top:50%;
   left:50%;
@@ -400,11 +400,11 @@ background:white;
   bottom:0px;
   text-align:center;
   width:100%;
-  border-top:1px solid blue;
+  border-top:1px solid black;
 background: rgb(30,252,200);
 background: -moz-linear-gradient(left, rgba(30,252,200,1) 0%, rgba(29,211,214,1) 100%);
 background: -webkit-linear-gradient(left, rgba(30,252,200,1) 0%,rgba(29,211,214,1) 100%);
-background: linear-gradient(to right, blue 0%,#61c664 100%);
+background: linear-gradient(to right, black 0%,black 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1efcc8', endColorstr='#1dd3d6',GradientType=1 );
   color:white;
   padding-top:8px;
@@ -755,3 +755,55 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afbdc3', end
       max-height: 80%; /* Set a maximum height for the pop-up */
       overflow-y: auto; /* Add a vertical scroll bar if needed */
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #333; /* Darken the background slightly on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+        }
+        
+        
+#addRoute {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        /* Hover effect */
+        #addRoute:hover {
+            background-color: #333; /* Darken the background slightly on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+        }
