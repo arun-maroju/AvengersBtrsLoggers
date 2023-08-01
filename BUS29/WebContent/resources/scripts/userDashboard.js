@@ -315,6 +315,8 @@ document.getElementById('spinner').style.display = 'none';
   
  function showBooking(){
 	             showBufferingLayer();
+	             var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Ticket Details";
  	$.ajax({
          url: "ticketList", // Replace with the actual URL of your service
          method: "GET",
@@ -323,6 +325,21 @@ document.getElementById('spinner').style.display = 'none';
              console.log(tickets);
              var tableBody = document.querySelector("#ticketDetails table tbody");
              tableBody.innerHTML = ""; // Clear existing table rows
+             
+             if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				 noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+             
              
              // Iterate over the services and populate the table
              for (var i = 0; i < tickets.length; i++) {
@@ -383,6 +400,7 @@ document.getElementById('spinner').style.display = 'none';
                  tableBody.appendChild(row);
                  hideBufferingLayer();
 
+             }
              }
          },
          error: function(xhr, status, error) {
@@ -531,6 +549,8 @@ document.getElementById('spinner').style.display = 'none';
  
  function showfutureBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
+	 	  var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Future Ticket Details";
 	 	$.ajax({
 	         url: "futureticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -539,6 +559,22 @@ document.getElementById('spinner').style.display = 'none';
 	             console.log(tickets);
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
+	             
+	             
+	               if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+   			 
 	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
@@ -603,6 +639,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -745,7 +782,8 @@ document.getElementById('spinner').style.display = 'none';
 	   
  function showPastBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+      var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Past Ticket Details";
 	 	$.ajax({
 	         url: "pastticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -753,6 +791,20 @@ document.getElementById('spinner').style.display = 'none';
 	             var tickets = JSON.parse(response);
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
+	             
+	               if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
 	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
@@ -804,6 +856,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -946,7 +999,8 @@ document.getElementById('spinner').style.display = 'none';
  
  function showcancelledBooking(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+  var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Cancelled Ticket Details";
 	 	$.ajax({
 	         url: "cancelticketList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -954,6 +1008,21 @@ document.getElementById('spinner').style.display = 'none';
 	             var tickets = JSON.parse(response);
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
+	             
+	             if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
+	             
 	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
@@ -1009,6 +1078,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 tableBody.appendChild(row);
 	                       hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -1103,7 +1173,8 @@ document.getElementById('spinner').style.display = 'none';
 	
  function rating(){
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+          var dashboardHeader = document.querySelector("#dashboardHeader h1");
+            dashboardHeader.textContent = "Ratings";
 	 	$.ajax({
 	         url: "ratingList", // Replace with the actual URL of your service
 	         method: "GET",
@@ -1111,6 +1182,20 @@ document.getElementById('spinner').style.display = 'none';
 	             var tickets = JSON.parse(response);
 	             var tableBody = document.querySelector("#ticketDetails table tbody");
 	             tableBody.innerHTML = ""; // Clear existing table rows
+	             
+	               if (tickets.length === 0) {
+       			 	// Display a message indicating no tickets available
+       			 		            hideBufferingLayer();
+        			var noTicketsRow = document.createElement("tr");
+        			var noTicketsCell = document.createElement("td");
+      				  noTicketsCell.textContent = "No tickets available for rating ";
+        			noTicketsCell.colSpan = 7; // Adjust the colspan based on the number of columns in your table
+       				 noTicketsCell.style.textAlign = "center";
+       				  noTicketsCell.style.fontWeight = "bold"; // Apply the 'font-weight' inline style
+        				noTicketsCell.style.color = "grey";
+        			noTicketsRow.appendChild(noTicketsCell);
+        			tableBody.appendChild(noTicketsRow);
+   			 } else {
 	             
 	             // Iterate over the services and populate the table
 	             for (var i = 0; i < tickets.length; i++) {
@@ -1162,6 +1247,7 @@ document.getElementById('spinner').style.display = 'none';
 	                 document.getElementById('spinner').style.display = 'none';
 	                 hideBufferingLayer();
 
+	             }
 	             }
 	         },
 	         error: function(xhr, status, error) {
@@ -1287,7 +1373,8 @@ document.getElementById('spinner').style.display = 'none';
 	 
  function showPassengers() {
 	 	  showBufferingLayer(); // Show the spinner before form submission
-
+ var dashboardHeader = document.querySelector("#dashboardHeader h1");
+                dashboardHeader.textContent = " Passengers Details";
 	    $.ajax({
 	        url: "passengersList", // Replace with the actual URL of your service
 	        method: "GET",
@@ -1329,8 +1416,12 @@ document.getElementById('spinner').style.display = 'none';
 	                	    var age = selectedRow.cells[2].textContent;
 	                	    var gender = selectedRow.cells[3].textContent;
 
-	                    // Call the controller method to delete the passenger
-	                    deletePassenger(userId,name,age,gender);
+	                    var isConfirmed = confirm("Are you sure you want to delete this passenger?");
+
+    					if (isConfirmed) {
+      						  // Call the controller method to delete the passenger
+       							 deletePassenger(userId, name, age, gender);
+    						}
 	                });
 	                actionCell2.appendChild(deleteButton);
  

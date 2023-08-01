@@ -14,10 +14,10 @@
     <ul class="menu">
       <li><h4>AVENGERS BTRS</h4></li>
       <li><a href="home">Home</a></li>
-      <li><a href="dashboard">Dashboard</a></li>
+      <li><a href="dashboard">Profile</a></li>
       <li><a href="about">About Us</a></li>
       <li><a href="contact">Contact Us</a></li>
-      <li><a href="dashboard">Profile</a></li>
+      <li><a href="logout">Logout</a></li>
     </ul>
   </nav>
   <div>
